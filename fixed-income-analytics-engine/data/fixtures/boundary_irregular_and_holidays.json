@@ -1,0 +1,94 @@
+{
+  "fixture_version": "1.0.0",
+  "provenance": "Synthetic boundary cases covering holiday rolls, leap-year day counts, and irregular coupon stubs.",
+  "valuation_date": "2026-03-16",
+  "boundary_bonds": [
+    {
+      "case_name": "holiday_july_4_roll",
+      "description": "Coupon date falls on US July 4 holiday / weekend and rolls under Modified Following.",
+      "bond": {
+        "bond_id": "BND_HOLIDAY_JUL4",
+        "currency": "USD",
+        "notional": 1000.0,
+        "coupon_rate": 0.05,
+        "frequency": 2,
+        "issue_date": "2026-01-04",
+        "maturity_date": "2028-07-04",
+        "day_count": "ACT/ACT_ICMA",
+        "business_day_convention": "MODIFIED_FOLLOWING",
+        "calendar_name": "US_SYNTHETIC"
+      }
+    },
+    {
+      "case_name": "short_first_stub",
+      "description": "Bond with explicit 3-month short first coupon stub before regular semi-annual dates.",
+      "bond": {
+        "bond_id": "BND_SHORT_FIRST",
+        "currency": "USD",
+        "notional": 1000.0,
+        "coupon_rate": 0.06,
+        "frequency": 2,
+        "issue_date": "2026-03-15",
+        "first_coupon_date": "2026-06-15",
+        "maturity_date": "2028-06-15",
+        "day_count": "ACT/ACT_ICMA",
+        "business_day_convention": "FOLLOWING",
+        "calendar_name": "US_SYNTHETIC",
+        "stub_type": "SHORT_FIRST"
+      }
+    },
+    {
+      "case_name": "long_first_stub",
+      "description": "Bond with 9-month long first coupon stub spanning two ICMA reference periods.",
+      "bond": {
+        "bond_id": "BND_LONG_FIRST",
+        "currency": "USD",
+        "notional": 1000.0,
+        "coupon_rate": 0.06,
+        "frequency": 2,
+        "issue_date": "2025-09-15",
+        "first_coupon_date": "2026-06-15",
+        "maturity_date": "2028-06-15",
+        "day_count": "ACT/ACT_ICMA",
+        "business_day_convention": "FOLLOWING",
+        "calendar_name": "US_SYNTHETIC",
+        "stub_type": "LONG_FIRST"
+      }
+    },
+    {
+      "case_name": "short_last_stub",
+      "description": "Bond with 3-month short final coupon stub.",
+      "bond": {
+        "bond_id": "BND_SHORT_LAST",
+        "currency": "USD",
+        "notional": 1000.0,
+        "coupon_rate": 0.04,
+        "frequency": 2,
+        "issue_date": "2026-01-15",
+        "penultimate_coupon_date": "2028-01-15",
+        "maturity_date": "2028-04-15",
+        "day_count": "30/360_US",
+        "business_day_convention": "MODIFIED_FOLLOWING",
+        "calendar_name": "US_SYNTHETIC",
+        "stub_type": "SHORT_LAST"
+      }
+    },
+    {
+      "case_name": "leap_year_feb_eom_30360",
+      "description": "Bond crossing leap-year Feb 29, 2028 with end-of-month schedule and 30/360_US day count.",
+      "bond": {
+        "bond_id": "BND_LEAP_EOM",
+        "currency": "USD",
+        "notional": 1000.0,
+        "coupon_rate": 0.048,
+        "frequency": 2,
+        "issue_date": "2026-02-28",
+        "maturity_date": "2029-02-28",
+        "day_count": "30/360_US",
+        "business_day_convention": "MODIFIED_FOLLOWING",
+        "calendar_name": "US_SYNTHETIC",
+        "end_of_month": true
+      }
+    }
+  ]
+}

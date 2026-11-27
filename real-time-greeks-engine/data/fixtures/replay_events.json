@@ -1,0 +1,85 @@
+{
+  "fixture_id": "replay-events-v1",
+  "description": "Deterministic replay sequence testing spot updates, duplicate tick rejection, position sign/multiplier changes, and vol refresh.",
+  "events": [
+    {
+      "type": "spot_tick",
+      "payload": {
+        "tick_id": "TICK-ACME-0002",
+        "underlying": "ACME",
+        "spot": 102.5,
+        "bid": 102.48,
+        "ask": 102.52,
+        "sequence_no": 2,
+        "event_time_utc": "2026-06-01T14:30:01Z",
+        "received_time_utc": "2026-06-01T14:30:01.050Z",
+        "source": "SYNTHETIC_FEED"
+      }
+    },
+    {
+      "type": "spot_tick",
+      "payload": {
+        "tick_id": "TICK-ACME-0002",
+        "underlying": "ACME",
+        "spot": 102.5,
+        "bid": 102.48,
+        "ask": 102.52,
+        "sequence_no": 2,
+        "event_time_utc": "2026-06-01T14:30:01Z",
+        "received_time_utc": "2026-06-01T14:30:01.060Z",
+        "source": "SYNTHETIC_FEED"
+      }
+    },
+    {
+      "type": "position_upsert",
+      "payload": {
+        "position_id": "POS-ACME-1Y-C100",
+        "account_id": "DESK-EQ-OPT",
+        "quantity": -12.0,
+        "version": 2,
+        "updated_at_utc": "2026-06-01T14:30:02Z",
+        "instrument": {
+          "instrument_id": "ACME-20270601-C-100",
+          "underlying": "ACME",
+          "option_type": "CALL",
+          "strike": 100.0,
+          "expiry_utc": "2027-06-01T14:30:00Z",
+          "currency": "USD",
+          "contract_multiplier": 50.0,
+          "exercise_style": "EUROPEAN",
+          "day_count": "ACT_365F"
+        }
+      }
+    },
+    {
+      "type": "spot_tick",
+      "payload": {
+        "tick_id": "TICK-SPX_SYN-0002",
+        "underlying": "SPX_SYN",
+        "spot": 5025.0,
+        "bid": 5024.5,
+        "ask": 5025.5,
+        "sequence_no": 2,
+        "event_time_utc": "2026-06-01T14:30:03Z",
+        "received_time_utc": "2026-06-01T14:30:03.050Z",
+        "source": "SYNTHETIC_FEED"
+      }
+    },
+    {
+      "type": "vol_surface",
+      "payload": {
+        "vol_version": "VOL-TECH_SYN-20260601-002",
+        "underlying": "TECH_SYN",
+        "as_of_utc": "2026-06-01T14:30:03Z",
+        "ttl_seconds": 60.0,
+        "expiries_years": [0.25, 0.5, 1.0],
+        "strikes": [180.0, 200.0, 220.0],
+        "vols": [
+          [0.36, 0.32, 0.30],
+          [0.35, 0.315, 0.295],
+          [0.34, 0.31, 0.29]
+        ]
+      }
+    }
+  ]
+}

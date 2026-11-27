@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Hand-calculated exact 2Y single-curve flat-4% continuous swap reference fixture.",
+    "provenance": "analytic_closed_form_fixture",
+    "hand_calculated_expected": {
+      "df_1y": 0.9607894391523232,
+      "df_2y": 0.9231163463866358,
+      "floating_leg_pv": 76883.65361336424,
+      "fixed_leg_pv": 75356.23142155836,
+      "npv": 1527.42219180588,
+      "par_rate": 0.040810774192388244,
+      "tolerance": 1e-6
+    }
+  },
+  "trade": {
+    "trade_id": "USD-2Y-HAND-ORACLE",
+    "currency": "USD",
+    "notional": 1000000.0,
+    "direction": "PAYER",
+    "effective_date": "2026-01-05",
+    "maturity_date": "2028-01-05",
+    "fixed_leg": {
+      "fixed_rate": 0.04,
+      "frequency": "ANNUAL",
+      "day_count": "ACT/365F",
+      "business_day_convention": "UNADJUSTED",
+      "calendar": "NONE",
+      "stub_type": "NONE",
+      "end_of_month": false,
+      "payment_lag_days": 0
+    },
+    "floating_leg": {
+      "index_name": "USD-FLAT-1Y",
+      "frequency": "ANNUAL",
+      "day_count": "ACT/365F",
+      "spread": 0.0,
+      "business_day_convention": "UNADJUSTED",
+      "calendar": "NONE",
+      "stub_type": "NONE",
+      "end_of_month": false,
+      "fixing_lag_days": 0,
+      "payment_lag_days": 0
+    }
+  },
+  "discount_curve": {
+    "curve_id": "USD-FLAT-4PCT-DISC",
+    "role": "DISCOUNT",
+    "currency": "USD",
+    "valuation_date": "2026-01-05",
+    "day_count": "ACT/365F",
+    "compounding": "CONTINUOUS",
+    "interpolation": "LINEAR_ZERO",
+    "nodes": [
+      { "tenor_years": 1.0, "zero_rate": 0.04, "label": "1Y" },
+      { "tenor_years": 2.0, "zero_rate": 0.04, "label": "2Y" },
+      { "tenor_years": 5.0, "zero_rate": 0.04, "label": "5Y" }
+    ]
+  },
+  "forward_curve": {
+    "curve_id": "USD-FLAT-4PCT-FWD",
+    "role": "FORWARD",
+    "currency": "USD",
+    "index_name": "USD-FLAT-1Y",
+    "valuation_date": "2026-01-05",
+    "day_count": "ACT/365F",
+    "compounding": "CONTINUOUS",
+    "interpolation": "LINEAR_ZERO",
+    "nodes": [
+      { "tenor_years": 1.0, "zero_rate": 0.04, "label": "1Y" },
+      { "tenor_years": 2.0, "zero_rate": 0.04, "label": "2Y" },
+      { "tenor_years": 5.0, "zero_rate": 0.04, "label": "5Y" }
+    ]
+  },
+  "fixing_history": { "entries": [] }
+}

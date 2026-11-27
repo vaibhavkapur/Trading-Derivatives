@@ -1,0 +1,55 @@
+{
+  "reference_surface": {
+    "surface_id": "vse-048c9911e785",
+    "is_valid": true,
+    "deterministic_replay_match": true,
+    "accepted_quotes": 44,
+    "rejected_quotes": 20,
+    "overall_svi_weighted_rmse_iv": 1.073992379654123e-07,
+    "overall_sabr_weighted_rmse_iv": 0.0004995543224342626,
+    "butterfly_violations": 0,
+    "calendar_violations": 0,
+    "snapshot_path": "reports/demo_snapshot.json",
+    "html_path": "reports/demo_surface.html"
+  },
+  "interpolated_query_60d_atm": {
+    "underlying": "SYNTH-EQX",
+    "expiry_years": 0.1643835616438356,
+    "strike": 100.4943686749627,
+    "forward": 100.4943686749627,
+    "log_moneyness": 0.0,
+    "implied_vol": 0.25837595625836357,
+    "total_variance": 0.010973939962590213,
+    "model": "svi",
+    "extrapolated": false,
+    "surface_id": "vse-048c9911e785",
+    "surface_valid": true
+  },
+  "extrapolation_rejected_by_default": true,
+  "heldout_evaluation": {
+    "train_surface_id": "vse-4220f8feb3e1",
+    "train_surface_valid": true,
+    "train_svi_weighted_rmse_iv": 0.0005063332097800262,
+    "svi_heldout_rmse_iv": 0.000504953070166515,
+    "svi_heldout_weighted_rmse_iv": 0.0004841313733345382,
+    "sabr_heldout_rmse_iv": 0.00036341952880611063,
+    "sabr_heldout_weighted_rmse_iv": 0.00039359063421978143,
+    "evaluated_count": 16
+  },
+  "arbitrage_violation_scenario": {
+    "surface_id": "vse-d99f43098763",
+    "is_valid": false,
+    "calendar_violations": 81,
+    "butterfly_violations": 0,
+    "min_calendar_variance_diff": -0.00792158295452143
+  },
+  "runtime_metadata": {
+    "python_version": "3.9.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "numpy_version": "2.0.2",
+    "scipy_version": "1.13.1",
+    "polars_version": "1.36.1",
+    "plotly_version": "7.1.0"
+  },
+  "config_hash": "1d170c4694db4aba"
+}

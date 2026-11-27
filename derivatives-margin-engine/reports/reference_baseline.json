@@ -1,0 +1,603 @@
+{
+  "oracles": {
+    "OFFSET-DIVERSIFICATION-ORACLE-V1": {
+      "comparison": {
+        "all_passed": true,
+        "checks_count": 13,
+        "comparisons": [
+          {
+            "abs_diff": "0.00",
+            "actual": "4700000.00",
+            "expected": "4700000.00",
+            "field": "total_mtm",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "0.00",
+            "expected": "0.00",
+            "field": "daily_mtm_movement",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "0.00",
+            "expected": "0.00",
+            "field": "variation_margin",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "338000.00",
+            "expected": "338000.00",
+            "field": "gross_im",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "206000.00",
+            "expected": "206000.00",
+            "field": "joint_im",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "66000.00",
+            "expected": "66000.00",
+            "field": "offset_credit",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "272000.00",
+            "expected": "272000.00",
+            "field": "net_im",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "250000.00",
+            "expected": "250000.00",
+            "field": "eligible_collateral_value",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "22000.00",
+            "expected": "22000.00",
+            "field": "im_shortfall",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "0.00",
+            "expected": "0.00",
+            "field": "im_excess",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "0.00",
+            "expected": "0.00",
+            "field": "vm_call",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "0.00",
+            "expected": "0.00",
+            "field": "vm_credit",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "22000.00",
+            "expected": "22000.00",
+            "field": "total_call_due",
+            "netting_set_id": "NS-HEDGED",
+            "passed": true,
+            "tolerance": "0.00"
+          }
+        ],
+        "tolerance": "0.00"
+      },
+      "fixture_file": "reference_offset_oracle.json",
+      "run_result": {
+        "diagnostics": {
+          "collateral_lots_valued": 1,
+          "duplicate_calls_blocked": 0,
+          "ineligible_collateral_lots": 0,
+          "journal_entries_posted": 0,
+          "margin_calls_issued": 1,
+          "positions_valued": 2,
+          "scenarios_evaluated": 4
+        },
+        "input_hash": "0cdd73f8ceec87e4b1f84a487daa983a6d7286b842a1f72da13d12b3d800ba70",
+        "is_settlement_correction": false,
+        "netting_set_results": [
+          {
+            "account_id": "ACCT-002",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-HEDGED",
+                "market_value_base": "250000.00",
+                "market_value_native": "250000.00",
+                "netting_set_id": "NS-HEDGED",
+                "post_haircut_value_base": "250000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              }
+            ],
+            "daily_mtm_movement": "0.00",
+            "eligible_collateral_value": "250000.00",
+            "gross_collateral_value": "250000.00",
+            "im_excess": "0.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0.50",
+              "base_currency": "USD",
+              "diversification_benefit": "132000.00",
+              "gross_im": "338000.00",
+              "group_standalone_im": [
+                [
+                  "EQUITY_INDEX",
+                  "250000.00"
+                ],
+                [
+                  "RATES",
+                  "88000.00"
+                ]
+              ],
+              "joint_im": "206000.00",
+              "net_im": "272000.00",
+              "netting_set_id": "NS-HEDGED",
+              "offset_credit": "66000.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "206000.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "188000.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "97000.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_EQ_DOWN_10"
+            },
+            "im_shortfall": "22000.00",
+            "margin_calls": [
+              {
+                "account_id": "ACCT-002",
+                "amount": "22000.00",
+                "call_id": "MC-826BE9ABCF31",
+                "call_type": "IM_CALL",
+                "currency": "USD",
+                "idempotency_key": "2026-01-15|NS-HEDGED|IM_CALL|rev1",
+                "netting_set_id": "NS-HEDGED",
+                "reason": "IM shortfall 22000.00 (net_im=272000.00, eligible_collateral=250000.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-15"
+              }
+            ],
+            "netting_set_id": "NS-HEDGED",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "50",
+                "currency": "USD",
+                "current_mtm_base": "2500000.00",
+                "current_price": "5000.00",
+                "daily_mtm_movement_base": "0.00",
+                "instrument_id": "ES_MAR26",
+                "netting_set_id": "NS-HEDGED",
+                "position_id": "POS-ES-LONG",
+                "prior_mtm_base": "2500000.00",
+                "prior_price": "5000.00",
+                "quantity": "10",
+                "risk_group": "EQUITY_INDEX",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "0.00"
+              },
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "2200000.00",
+                "current_price": "110.00",
+                "daily_mtm_movement_base": "0.00",
+                "instrument_id": "ZN_MAR26",
+                "netting_set_id": "NS-HEDGED",
+                "position_id": "POS-ZN-LONG",
+                "prior_mtm_base": "2200000.00",
+                "prior_price": "110.00",
+                "quantity": "20",
+                "risk_group": "RATES",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "0.00"
+              }
+            ],
+            "revision": 1,
+            "total_call_due": "22000.00",
+            "total_mtm": "4700000.00",
+            "total_settled_cash_adjustment": "0.00",
+            "valuation_date": "2026-01-15",
+            "variation_margin": "0.00",
+            "vm_call": "0.00",
+            "vm_credit": "0.00"
+          }
+        ],
+        "policy_hash": "a1c75bc6202f8897caa25bd8e10424cb323c3686320d9f922467368c5bc2ffc5",
+        "policy_id": "EDU-DEFAULT-V1",
+        "revision": 1,
+        "run_id": "RUN-20260115-R1-2BA6C2B8781135DF",
+        "scenario_hash": "1e98246f6782578aa30c03d8c61b275cc71ace57dbf69ee001bcd9286aaef8cf",
+        "scenario_set_id": "REF-SCENARIOS-V1",
+        "schema_version": "1.0.0",
+        "seed": null,
+        "valuation_date": "2026-01-15",
+        "valuation_time_utc": "21:00:00Z"
+      }
+    },
+    "REFERENCE-HAND-CALC-V1": {
+      "comparison": {
+        "all_passed": true,
+        "checks_count": 13,
+        "comparisons": [
+          {
+            "abs_diff": "0.00",
+            "actual": "280000.00",
+            "expected": "280000.00",
+            "field": "total_mtm",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "-20000.00",
+            "expected": "-20000.00",
+            "field": "daily_mtm_movement",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "-20000.00",
+            "expected": "-20000.00",
+            "field": "variation_margin",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "293200.00",
+            "expected": "293200.00",
+            "field": "gross_im",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "293200.00",
+            "expected": "293200.00",
+            "field": "joint_im",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "0.00",
+            "expected": "0.00",
+            "field": "offset_credit",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "293200.00",
+            "expected": "293200.00",
+            "field": "net_im",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "292000.00",
+            "expected": "292000.00",
+            "field": "eligible_collateral_value",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "1200.00",
+            "expected": "1200.00",
+            "field": "im_shortfall",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "0.00",
+            "expected": "0.00",
+            "field": "im_excess",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "20000.00",
+            "expected": "20000.00",
+            "field": "vm_call",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "0.00",
+            "expected": "0.00",
+            "field": "vm_credit",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          },
+          {
+            "abs_diff": "0.00",
+            "actual": "21200.00",
+            "expected": "21200.00",
+            "field": "total_call_due",
+            "netting_set_id": "NS-ALPHA",
+            "passed": true,
+            "tolerance": "0.00"
+          }
+        ],
+        "tolerance": "0.00"
+      },
+      "fixture_file": "reference_hand_calc.json",
+      "run_result": {
+        "diagnostics": {
+          "collateral_lots_valued": 2,
+          "duplicate_calls_blocked": 0,
+          "ineligible_collateral_lots": 0,
+          "journal_entries_posted": 0,
+          "margin_calls_issued": 2,
+          "positions_valued": 2,
+          "scenarios_evaluated": 4
+        },
+        "input_hash": "ff3faf2efdefa4aa783877f68b4ab06db98664c4bf86a7b77f0448ef73dfccd6",
+        "is_settlement_correction": false,
+        "netting_set_results": [
+          {
+            "account_id": "ACCT-001",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-001",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "100000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "GOVT_BOND",
+                "base_currency": "USD",
+                "base_haircut": "0.04",
+                "currency": "USD",
+                "effective_haircut": "0.04",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-UST-001",
+                "market_value_base": "200000.00",
+                "market_value_native": "200000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "192000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": 516,
+                "security_id": "UST_2Y_2027",
+                "status": "ELIGIBLE"
+              }
+            ],
+            "daily_mtm_movement": "-20000.00",
+            "eligible_collateral_value": "292000.00",
+            "gross_collateral_value": "300000.00",
+            "im_excess": "0.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0.50",
+              "base_currency": "USD",
+              "diversification_benefit": "0.00",
+              "gross_im": "293200.00",
+              "group_standalone_im": [
+                [
+                  "EQUITY_INDEX",
+                  "249000.00"
+                ],
+                [
+                  "RATES",
+                  "44200.00"
+                ]
+              ],
+              "joint_im": "293200.00",
+              "net_im": "293200.00",
+              "netting_set_id": "NS-ALPHA",
+              "offset_credit": "0.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "293200.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "11200.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "52600.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_EQ_DOWN_10"
+            },
+            "im_shortfall": "1200.00",
+            "margin_calls": [
+              {
+                "account_id": "ACCT-001",
+                "amount": "1200.00",
+                "call_id": "MC-6E23E00D394F",
+                "call_type": "IM_CALL",
+                "currency": "USD",
+                "idempotency_key": "2026-01-15|NS-ALPHA|IM_CALL|rev1",
+                "netting_set_id": "NS-ALPHA",
+                "reason": "IM shortfall 1200.00 (net_im=293200.00, eligible_collateral=292000.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-15"
+              },
+              {
+                "account_id": "ACCT-001",
+                "amount": "20000.00",
+                "call_id": "MC-F0D936BA6A9E",
+                "call_type": "VM_CALL",
+                "currency": "USD",
+                "idempotency_key": "2026-01-15|NS-ALPHA|VM_CALL|rev1",
+                "netting_set_id": "NS-ALPHA",
+                "reason": "Daily VM loss transfer due (variation_margin=-20000.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-15"
+              }
+            ],
+            "netting_set_id": "NS-ALPHA",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "50",
+                "currency": "USD",
+                "current_mtm_base": "2490000.00",
+                "current_price": "4980.00",
+                "daily_mtm_movement_base": "-10000.00",
+                "instrument_id": "ES_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ES-1",
+                "prior_mtm_base": "2500000.00",
+                "prior_price": "5000.00",
+                "quantity": "10",
+                "risk_group": "EQUITY_INDEX",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "-10000.00"
+              },
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "-2210000.00",
+                "current_price": "110.50",
+                "daily_mtm_movement_base": "-10000.00",
+                "instrument_id": "ZN_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ZN-1",
+                "prior_mtm_base": "-2200000.00",
+                "prior_price": "110.00",
+                "quantity": "-20",
+                "risk_group": "RATES",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "-10000.00"
+              }
+            ],
+            "revision": 1,
+            "total_call_due": "21200.00",
+            "total_mtm": "280000.00",
+            "total_settled_cash_adjustment": "0.00",
+            "valuation_date": "2026-01-15",
+            "variation_margin": "-20000.00",
+            "vm_call": "20000.00",
+            "vm_credit": "0.00"
+          }
+        ],
+        "policy_hash": "a1c75bc6202f8897caa25bd8e10424cb323c3686320d9f922467368c5bc2ffc5",
+        "policy_id": "EDU-DEFAULT-V1",
+        "revision": 1,
+        "run_id": "RUN-20260115-R1-AAB1CF7F6D026E65",
+        "scenario_hash": "1e98246f6782578aa30c03d8c61b275cc71ace57dbf69ee001bcd9286aaef8cf",
+        "scenario_set_id": "REF-SCENARIOS-V1",
+        "schema_version": "1.0.0",
+        "seed": null,
+        "valuation_date": "2026-01-15",
+        "valuation_time_utc": "21:00:00Z"
+      }
+    }
+  },
+  "policy_id": "EDU-DEFAULT-V1",
+  "report_type": "reference_oracle_baseline",
+  "runtime_environment": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "sqlite_version": "3.51.0"
+  },
+  "scenario_set_id": "REF-SCENARIOS-V1"
+}

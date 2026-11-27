@@ -1,0 +1,38 @@
+{
+  "engine_id": "rt-greeks-engine-v1",
+  "base_currency": "USD",
+  "staleness": {
+    "spot_ttl_seconds": 5.0,
+    "curve_ttl_seconds": 300.0,
+    "vol_ttl_seconds": 60.0,
+    "freeze_on_stale": true,
+    "strict_raise_on_stale": false
+  },
+  "pricing": {
+    "default_method": "ANALYTIC_BSM",
+    "fallback_to_bump_and_revalue": true,
+    "min_reliable_tte_days": 1.0,
+    "min_sigma_sqrt_t": 0.001,
+    "extreme_moneyness_log_threshold": 0.75,
+    "spot_rel_bump": 0.0001,
+    "vol_abs_bump": 0.0001,
+    "rate_abs_bump": 0.0001,
+    "time_days_bump": 0.01
+  },
+  "cache": {
+    "max_entries": 50000,
+    "enabled": true
+  },
+  "reconciliation": {
+    "abs_tolerance": 1e-8,
+    "rel_tolerance": 1e-9
+  },
+  "scenarios": {
+    "max_workers": 4,
+    "default_seed": 42
+  },
+  "observability": {
+    "latency_window_size": 10000,
+    "log_level": "INFO"
+  }
+}

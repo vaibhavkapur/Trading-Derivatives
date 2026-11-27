@@ -1,0 +1,81 @@
+{
+  "fixture_version": "1.0.0",
+  "provenance": "Synthetic invalid inputs for negative validation and error-handling contract tests.",
+  "invalid_bonds": [
+    {
+      "case_name": "negative_notional",
+      "expected_error": "ValidationError",
+      "payload": {
+        "bond_id": "BAD_NEG_NOTIONAL",
+        "currency": "USD",
+        "notional": -100.0,
+        "coupon_rate": 0.05,
+        "frequency": 2,
+        "issue_date": "2026-03-16",
+        "maturity_date": "2028-03-16"
+      }
+    },
+    {
+      "case_name": "maturity_before_issue",
+      "expected_error": "ValidationError",
+      "payload": {
+        "bond_id": "BAD_DATES",
+        "currency": "USD",
+        "notional": 100.0,
+        "coupon_rate": 0.05,
+        "frequency": 2,
+        "issue_date": "2028-03-16",
+        "maturity_date": "2026-03-16"
+      }
+    },
+    {
+      "case_name": "unsupported_day_count",
+      "expected_error": "UnsupportedConventionError",
+      "payload": {
+        "bond_id": "BAD_DC",
+        "currency": "USD",
+        "notional": 100.0,
+        "coupon_rate": 0.05,
+        "frequency": 2,
+        "issue_date": "2026-03-16",
+        "maturity_date": "2028-03-16",
+        "day_count": "ACT/364_CUSTOM"
+      }
+    },
+    {
+      "case_name": "zero_coupon_with_nonzero_rate",
+      "expected_error": "ValidationError",
+      "payload": {
+        "bond_id": "BAD_ZERO",
+        "currency": "USD",
+        "notional": 100.0,
+        "coupon_rate": 0.04,
+        "frequency": 0,
+        "issue_date": "2026-03-16",
+        "maturity_date": "2028-03-16"
+      }
+    },
+    {
+      "case_name": "unsupported_frequency",
+      "expected_error": "ValidationError",
+      "payload": {
+        "bond_id": "BAD_FREQ",
+        "currency": "USD",
+        "notional": 100.0,
+        "coupon_rate": 0.05,
+        "frequency": 3,
+        "issue_date": "2026-03-16",
+        "maturity_date": "2028-03-16"
+      }
+    },
+    {
+      "case_name": "missing_required_field",
+      "expected_error": "ValidationError",
+      "payload": {
+        "bond_id": "BAD_MISSING",
+        "currency": "USD",
+        "notional": 100.0
+      }
+    }
+  ]
+}

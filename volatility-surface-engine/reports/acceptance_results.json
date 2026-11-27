@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "config_hash": "1d170c4694db4aba",
+  "seed": 42,
+  "runtime_metadata": {
+    "python_version": "3.9.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "numpy_version": "2.0.2",
+    "scipy_version": "1.13.1",
+    "polars_version": "1.36.1",
+    "plotly_version": "7.1.0"
+  },
+  "criteria": {
+    "bid_ask_weighted_fit_and_heldout_rmse": {
+      "passed": true,
+      "reference_svi_weighted_rmse_iv": 1.073992379654123e-07,
+      "reference_sabr_weighted_rmse_iv": 0.0004995543224342626,
+      "train_svi_weighted_rmse_iv": 0.0005063332097800262,
+      "svi_heldout_rmse_iv": 0.000504953070166515,
+      "svi_heldout_weighted_rmse_iv": 0.0004841313733345382,
+      "sabr_heldout_rmse_iv": 0.00036341952880611063,
+      "sabr_heldout_weighted_rmse_iv": 0.00039359063421978143,
+      "heldout_quote_count": 16
+    },
+    "zero_arbitrage_or_marked_invalid": {
+      "passed": true,
+      "reference_valid": true,
+      "reference_violations": 0,
+      "reference_min_durrleman_density": 0.44350579416644237,
+      "reference_min_call_convexity": 0.014621417815449542,
+      "reference_min_calendar_var_diff": 0.011016606336879214,
+      "arb_fixture_marked_invalid": true,
+      "arb_fixture_calendar_violations": 81,
+      "strict_query_rejected_invalid_surface": true
+    },
+    "deterministic_calibration_fixed_seed": {
+      "passed": true,
+      "surface_id_run1": "vse-048c9911e785",
+      "surface_id_run2": "vse-048c9911e785"
+    },
+    "edge_cases_cleaning": {
+      "passed": true,
+      "accepted_quotes": 14,
+      "rejected_quotes": 7,
+      "rejection_counts": {
+        "crossed_quote": 1,
+        "expired_or_short_expiry": 1,
+        "intrinsic_bound_violation": 1,
+        "near_zero_vega": 1,
+        "non_positive_bid": 1,
+        "wide_absolute_spread": 1,
+        "wide_relative_spread": 1
+      }
+    },
+    "extrapolation_rejection": {
+      "passed": true,
+      "strike_extrapolation_rejected": true,
+      "maturity_extrapolation_rejected": true
+    }
+  }
+}

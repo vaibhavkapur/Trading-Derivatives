@@ -1,0 +1,683 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_id": "ref-synth-eqx-20260115",
+  "underlying": "SYNTH-EQX",
+  "valuation_timestamp": "2026-01-15T16:00:00Z",
+  "spot": 100.0,
+  "conventions": {
+    "currency": "USD",
+    "day_count": "ACT/365F",
+    "exercise_style": "european",
+    "price_unit": "currency_per_unit",
+    "vol_unit": "annualized_decimal",
+    "time_unit": "year_fraction"
+  },
+  "expiries": [
+    {
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "time_to_expiry_years": 0.0821917808,
+      "forward": 100.24687959,
+      "discount_factor": 0.9963082014
+    },
+    {
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "time_to_expiry_years": 0.2465753425,
+      "forward": 100.74246876,
+      "discount_factor": 0.9889654419
+    },
+    {
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "time_to_expiry_years": 0.4931506849,
+      "forward": 101.49045012,
+      "discount_factor": 0.9780526453
+    },
+    {
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "time_to_expiry_years": 1.0,
+      "forward": 103.0454534,
+      "discount_factor": 0.9559974818
+    }
+  ],
+  "quotes": [
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0001",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 78.0723,
+      "option_type": "put",
+      "bid": 0.024214,
+      "ask": 0.024442,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0002",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 82.0752,
+      "option_type": "put",
+      "bid": 0.062451,
+      "ask": 0.062984,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0003",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 86.2833,
+      "option_type": "put",
+      "bid": 0.163837,
+      "ask": 0.165091,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0004",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 90.7071,
+      "option_type": "put",
+      "bid": 0.435864,
+      "ask": 0.438816,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0005",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 90.7071,
+      "option_type": "call",
+      "bid": 9.908346,
+      "ask": 9.975454,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0006",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 95.3578,
+      "option_type": "put",
+      "bid": 1.152543,
+      "ask": 1.159334,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0007",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 95.3578,
+      "option_type": "call",
+      "bid": 6.009265,
+      "ask": 6.044673,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0008",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 100.2469,
+      "option_type": "put",
+      "bid": 2.858815,
+      "ask": 2.873145,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0009",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 100.2469,
+      "option_type": "call",
+      "bid": 2.858795,
+      "ask": 2.873125,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0010",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 105.3866,
+      "option_type": "put",
+      "bid": 6.091094,
+      "ask": 6.126984,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0011",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 105.3866,
+      "option_type": "call",
+      "bid": 0.98539,
+      "ask": 0.991196,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0012",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 110.7899,
+      "option_type": "put",
+      "bid": 10.717407,
+      "ask": 10.789994,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0013",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 110.7899,
+      "option_type": "call",
+      "bid": 0.24876,
+      "ask": 0.250445,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0014",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 116.4703,
+      "option_type": "call",
+      "bid": 0.050244,
+      "ask": 0.050628,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0015",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 122.4418,
+      "option_type": "call",
+      "bid": 0.008823,
+      "ask": 0.009023,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0016",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 128.7195,
+      "option_type": "call",
+      "bid": 0.001366,
+      "ask": 0.001566,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0017",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 78.4583,
+      "option_type": "put",
+      "bid": 0.460757,
+      "ask": 0.465097,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0018",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 82.481,
+      "option_type": "put",
+      "bid": 0.731731,
+      "ask": 0.737977,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0019",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 86.7098,
+      "option_type": "put",
+      "bid": 1.177189,
+      "ask": 1.1862,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0020",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 91.1556,
+      "option_type": "put",
+      "bid": 1.918411,
+      "ask": 1.931405,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0021",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 91.1556,
+      "option_type": "call",
+      "bid": 11.367495,
+      "ask": 11.444485,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0022",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 95.8292,
+      "option_type": "put",
+      "bid": 3.149913,
+      "ask": 3.168473,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0023",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 95.8292,
+      "option_type": "call",
+      "bid": 7.994692,
+      "ask": 8.0418,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0024",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 100.7425,
+      "option_type": "put",
+      "bid": 5.131064,
+      "ask": 5.156783,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0025",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 100.7425,
+      "option_type": "call",
+      "bid": 5.131033,
+      "ask": 5.156752,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0026",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 105.9076,
+      "option_type": "put",
+      "bid": 8.079825,
+      "ask": 8.127433,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0027",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 105.9076,
+      "option_type": "call",
+      "bid": 2.986693,
+      "ask": 3.004292,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0028",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 111.3376,
+      "option_type": "put",
+      "bid": 12.041052,
+      "ask": 12.122605,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0029",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 111.3376,
+      "option_type": "call",
+      "bid": 1.598198,
+      "ask": 1.609022,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0030",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 117.046,
+      "option_type": "call",
+      "bid": 0.804768,
+      "ask": 0.810928,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0031",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 123.0471,
+      "option_type": "call",
+      "bid": 0.389857,
+      "ask": 0.393185,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0032",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 129.3559,
+      "option_type": "call",
+      "bid": 0.184557,
+      "ask": 0.186295,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0033",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 79.0408,
+      "option_type": "put",
+      "bid": 1.543699,
+      "ask": 1.558239,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0034",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 83.0934,
+      "option_type": "put",
+      "bid": 2.087269,
+      "ask": 2.105087,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0035",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 87.3536,
+      "option_type": "put",
+      "bid": 2.850109,
+      "ask": 2.871925,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0036",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 91.8324,
+      "option_type": "put",
+      "bid": 3.93059,
+      "ask": 3.957211,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0037",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 91.8324,
+      "option_type": "call",
+      "bid": 13.344791,
+      "ask": 13.435173,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0038",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 96.5407,
+      "option_type": "put",
+      "bid": 5.46134,
+      "ask": 5.49352,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0039",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 96.5407,
+      "option_type": "call",
+      "bid": 10.288236,
+      "ask": 10.348857,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0040",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 101.4905,
+      "option_type": "put",
+      "bid": 7.595004,
+      "ask": 7.633074,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0041",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 101.4905,
+      "option_type": "call",
+      "bid": 7.594955,
+      "ask": 7.633025,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0042",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 106.694,
+      "option_type": "put",
+      "bid": 10.451073,
+      "ask": 10.512654,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0043",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 106.694,
+      "option_type": "call",
+      "bid": 5.376677,
+      "ask": 5.408358,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0044",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 112.1643,
+      "option_type": "put",
+      "bid": 14.08623,
+      "ask": 14.181634,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0045",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 112.1643,
+      "option_type": "call",
+      "bid": 3.681877,
+      "ask": 3.706814,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0046",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 117.9151,
+      "option_type": "call",
+      "bid": 2.463707,
+      "ask": 2.482564,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0047",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 123.9607,
+      "option_type": "call",
+      "bid": 1.625496,
+      "ask": 1.639372,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0048",
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "strike": 130.3163,
+      "option_type": "call",
+      "bid": 1.064252,
+      "ask": 1.074277,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0049",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 80.2519,
+      "option_type": "put",
+      "bid": 3.67615,
+      "ask": 3.710777,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0050",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 84.3665,
+      "option_type": "put",
+      "bid": 4.533952,
+      "ask": 4.572655,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0051",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 88.692,
+      "option_type": "put",
+      "bid": 5.628912,
+      "ask": 5.671997,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0052",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 93.2394,
+      "option_type": "put",
+      "bid": 7.033153,
+      "ask": 7.080788,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0053",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 93.2394,
+      "option_type": "call",
+      "bid": 16.376077,
+      "ask": 16.48699,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0054",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 98.0199,
+      "option_type": "put",
+      "bid": 8.832,
+      "ask": 8.884041,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0055",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 98.0199,
+      "option_type": "call",
+      "bid": 13.622304,
+      "ask": 13.70257,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0056",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 103.0455,
+      "option_type": "put",
+      "bid": 11.11437,
+      "ask": 11.170081,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0057",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 103.0455,
+      "option_type": "call",
+      "bid": 11.114325,
+      "ask": 11.170036,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0058",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 108.3287,
+      "option_type": "put",
+      "bid": 13.943367,
+      "ask": 14.025526,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0059",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 108.3287,
+      "option_type": "call",
+      "bid": 8.907433,
+      "ask": 8.959919,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0060",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 113.8828,
+      "option_type": "put",
+      "bid": 17.370465,
+      "ask": 17.488113,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0061",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 113.8828,
+      "option_type": "call",
+      "bid": 7.044956,
+      "ask": 7.09267,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0062",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 119.7217,
+      "option_type": "call",
+      "bid": 5.521993,
+      "ask": 5.56426,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0063",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 125.86,
+      "option_type": "call",
+      "bid": 4.305577,
+      "ask": 4.34233,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "ref-synth-eqx-20260115-q0064",
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "strike": 132.313,
+      "option_type": "call",
+      "bid": 3.348902,
+      "ask": 3.380446,
+      "volume": 342,
+      "open_interest": 2218
+    }
+  ]
+}

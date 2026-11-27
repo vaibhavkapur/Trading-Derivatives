@@ -1,0 +1,71 @@
+{
+  "fixture_version": "1.0.0",
+  "provenance": "Synthetic boundary and limit fixtures.",
+  "cases": [
+    {
+      "name": "zero_maturity_itm_call",
+      "contract": {
+        "contract_id": "BND-ZERO-T-CALL",
+        "underlying": "SYNTH-EQ-01",
+        "currency": "USD",
+        "option_type": "call",
+        "exercise_style": "european",
+        "strike": 95.0,
+        "expiry_timestamp": "2026-01-15T16:00:00Z"
+      },
+      "market": {
+        "snapshot_id": "SNAP-BND-01",
+        "valuation_timestamp": "2026-01-15T16:00:00Z",
+        "spot": 100.0,
+        "risk_free_rate": 0.05,
+        "dividend_yield": 0.0,
+        "volatility": 0.20
+      },
+      "expected_price": 5.0
+    },
+    {
+      "name": "zero_vol_european_call",
+      "contract": {
+        "contract_id": "BND-ZERO-VOL-CALL",
+        "underlying": "SYNTH-EQ-01",
+        "currency": "USD",
+        "option_type": "call",
+        "exercise_style": "european",
+        "strike": 100.0,
+        "expiry_timestamp": "2027-01-15T16:00:00Z"
+      },
+      "market": {
+        "snapshot_id": "SNAP-BND-02",
+        "valuation_timestamp": "2026-01-15T16:00:00Z",
+        "spot": 100.0,
+        "risk_free_rate": 0.05,
+        "dividend_yield": 0.0,
+        "volatility": 0.0
+      },
+      "expected_price": 4.877057549928598
+    },
+    {
+      "name": "negative_rate_european_put",
+      "contract": {
+        "contract_id": "BND-NEG-RATE-PUT",
+        "underlying": "SYNTH-EUR-01",
+        "currency": "EUR",
+        "option_type": "put",
+        "exercise_style": "european",
+        "strike": 100.0,
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "day_count": "ACT/360",
+        "calendar": "TARGET"
+      },
+      "market": {
+        "snapshot_id": "SNAP-BND-03",
+        "valuation_timestamp": "2026-01-15T16:00:00Z",
+        "spot": 100.0,
+        "risk_free_rate": -0.01,
+        "dividend_yield": 0.0,
+        "volatility": 0.25
+      },
+      "expected_price_min": 9.0
+    }
+  ]
+}

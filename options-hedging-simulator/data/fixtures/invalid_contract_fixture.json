@@ -1,0 +1,56 @@
+{
+  "description": "Invalid and unsupported contract/config fixtures for negative validation tests.",
+  "cases": [
+    {
+      "name": "american_exercise_unsupported",
+      "expected_error": "UnsupportedContractError",
+      "contract": {
+        "contract_id": "BAD-AMER-1",
+        "underlying": "SYN_EQ",
+        "option_type": "call",
+        "strike": 100.0,
+        "maturity_years": 0.25,
+        "contracts": 1,
+        "multiplier": 100,
+        "position_side": "short",
+        "exercise_style": "american",
+        "settlement_type": "cash",
+        "currency": "USD"
+      }
+    },
+    {
+      "name": "negative_strike_invalid",
+      "expected_error": "ValidationError",
+      "contract": {
+        "contract_id": "BAD-STRIKE-1",
+        "underlying": "SYN_EQ",
+        "option_type": "put",
+        "strike": -50.0,
+        "maturity_years": 0.25,
+        "contracts": 1,
+        "multiplier": 100,
+        "position_side": "short",
+        "exercise_style": "european",
+        "settlement_type": "cash",
+        "currency": "USD"
+      }
+    },
+    {
+      "name": "unsupported_currency",
+      "expected_error": "UnsupportedContractError",
+      "contract": {
+        "contract_id": "BAD-CCY-1",
+        "underlying": "SYN_EQ",
+        "option_type": "call",
+        "strike": 100.0,
+        "maturity_years": 0.25,
+        "contracts": 1,
+        "multiplier": 100,
+        "position_side": "short",
+        "exercise_style": "european",
+        "settlement_type": "cash",
+        "currency": "CHF"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Invalid fixture: maturity_date before effective_date.",
+    "expected_error_code": "VALIDATION_ERROR"
+  },
+  "trade": {
+    "trade_id": "USD-BAD-DATES",
+    "currency": "USD",
+    "notional": 1000000.0,
+    "direction": "PAYER",
+    "effective_date": "2028-01-05",
+    "maturity_date": "2026-01-05",
+    "fixed_leg": {
+      "fixed_rate": 0.04,
+      "frequency": "SEMI_ANNUAL",
+      "day_count": "30/360",
+      "calendar": "USD_NY"
+    },
+    "floating_leg": {
+      "index_name": "USD-SOFR-3M",
+      "frequency": "QUARTERLY",
+      "day_count": "ACT/360",
+      "calendar": "USD_NY"
+    }
+  },
+  "discount_curve": {
+    "curve_id": "USD-OIS-DISC",
+    "role": "DISCOUNT",
+    "currency": "USD",
+    "valuation_date": "2026-01-05",
+    "nodes": [{ "tenor_years": 1.0, "zero_rate": 0.04, "label": "1Y" }]
+  },
+  "forward_curve": {
+    "curve_id": "USD-SOFR3M-FWD",
+    "role": "FORWARD",
+    "currency": "USD",
+    "index_name": "USD-SOFR-3M",
+    "valuation_date": "2026-01-05",
+    "nodes": [{ "tenor_years": 1.0, "zero_rate": 0.042, "label": "1Y" }]
+  }
+}

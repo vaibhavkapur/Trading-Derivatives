@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_id": "BOUNDARY-CASES-V1",
+  "description": "Boundary scenarios: zero-quantity flat position, 1-day residual maturity vs 0-day expired, FX mismatch haircut capping, ineligible asset class, MTA deferral, and rounding increment.",
+  "valuation_date": "2026-01-15",
+  "valuation_time_utc": "21:00:00Z",
+  "revision": 1,
+  "netting_sets": [
+    {
+      "netting_set_id": "NS-BOUNDARY",
+      "account_id": "ACCT-BND",
+      "base_currency": "USD",
+      "cross_group_offset_override": "0.00"
+    }
+  ],
+  "positions": [
+    {
+      "position_id": "POS-FLAT",
+      "netting_set_id": "NS-BOUNDARY",
+      "instrument_id": "ES_MAR26",
+      "risk_group": "EQUITY_INDEX",
+      "quantity": "0",
+      "contract_multiplier": "50",
+      "currency": "USD",
+      "prior_settlement_price": "5000.00",
+      "settled_cash_adjustment": "0.00"
+    },
+    {
+      "position_id": "POS-TINY-SHORT",
+      "netting_set_id": "NS-BOUNDARY",
+      "instrument_id": "CL_MAR26",
+      "risk_group": "COMMODITY",
+      "quantity": "-1",
+      "contract_multiplier": "100",
+      "currency": "USD",
+      "prior_settlement_price": "50.00",
+      "settled_cash_adjustment": "0.00"
+    }
+  ],
+  "settlement_prices": [
+    {"instrument_id": "ES_MAR26", "valuation_date": "2026-01-15", "price": "5100.00", "currency": "USD", "revision": 1},
+    {"instrument_id": "CL_MAR26", "valuation_date": "2026-01-15", "price": "51.00", "currency": "USD", "revision": 1}
+  ],
+  "collateral_inventory": [
+    {
+      "lot_id": "LOT-1DAY-MAT",
+      "netting_set_id": "NS-BOUNDARY",
+      "asset_class": "GOVT_BOND",
+      "security_id": "UST_1D",
+      "currency": "USD",
+      "market_value": "500.00",
+      "maturity_date": "2026-01-16"
+    },
+    {
+      "lot_id": "LOT-0DAY-EXPIRED",
+      "netting_set_id": "NS-BOUNDARY",
+      "asset_class": "GOVT_BOND",
+      "security_id": "UST_0D",
+      "currency": "USD",
+      "market_value": "1000.00",
+      "maturity_date": "2026-01-15"
+    },
+    {
+      "lot_id": "LOT-INELIGIBLE-CRYPTO",
+      "netting_set_id": "NS-BOUNDARY",
+      "asset_class": "CRYPTO",
+      "security_id": "BTC_SPOT",
+      "currency": "USD",
+      "market_value": "5000.00",
+      "maturity_date": null
+    },
+    {
+      "lot_id": "LOT-EUR-CASH",
+      "netting_set_id": "NS-BOUNDARY",
+      "asset_class": "CASH",
+      "security_id": "EUR_CASH",
+      "currency": "EUR",
+      "market_value": "100.00",
+      "maturity_date": null
+    }
+  ]
+}

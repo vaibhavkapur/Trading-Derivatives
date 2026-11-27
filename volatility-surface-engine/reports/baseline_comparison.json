@@ -1,0 +1,169 @@
+{
+  "reference_snapshot_id": "ref-synth-eqx-20260115",
+  "surface_id": "vse-048c9911e785",
+  "config_hash": "1d170c4694db4aba",
+  "calibration_time_ms": 256.88,
+  "is_valid": true,
+  "overall_svi_weighted_rmse_iv": 1.073992379654123e-07,
+  "overall_sabr_weighted_rmse_iv": 0.0004995543224342626,
+  "max_oracle_iv_abs_err": 7.788777733885865e-08,
+  "tolerance_max_iv_abs_err": 0.001,
+  "passed_oracle_tolerance": true,
+  "oracle_comparisons": [
+    {
+      "expiry_years": 0.0821917808,
+      "log_moneyness": -0.15,
+      "expected_iv": 0.313641059,
+      "calibrated_iv": 0.31364107021988946,
+      "abs_err_iv": 1.121988946195529e-08
+    },
+    {
+      "expiry_years": 0.0821917808,
+      "log_moneyness": 0.0,
+      "expected_iv": 0.2509438323,
+      "calibrated_iv": 0.2509438434811778,
+      "abs_err_iv": 1.1181177816954602e-08
+    },
+    {
+      "expiry_years": 0.0821917808,
+      "log_moneyness": 0.15,
+      "expected_iv": 0.2496783856,
+      "calibrated_iv": 0.24967830771222266,
+      "abs_err_iv": 7.788777733885865e-08
+    },
+    {
+      "expiry_years": 0.2465753425,
+      "log_moneyness": -0.15,
+      "expected_iv": 0.3046486738,
+      "calibrated_iv": 0.3046486866991318,
+      "abs_err_iv": 1.2899131818233656e-08
+    },
+    {
+      "expiry_years": 0.2465753425,
+      "log_moneyness": 0.0,
+      "expected_iv": 0.2608062746,
+      "calibrated_iv": 0.260806266864648,
+      "abs_err_iv": 7.735352025584064e-09
+    },
+    {
+      "expiry_years": 0.2465753425,
+      "log_moneyness": 0.15,
+      "expected_iv": 0.2570423639,
+      "calibrated_iv": 0.2570423708555355,
+      "abs_err_iv": 6.955535480912545e-09
+    },
+    {
+      "expiry_years": 0.4931506849,
+      "log_moneyness": -0.15,
+      "expected_iv": 0.3076589706,
+      "calibrated_iv": 0.30765897228685646,
+      "abs_err_iv": 1.6868564323146984e-09
+    },
+    {
+      "expiry_years": 0.4931506849,
+      "log_moneyness": 0.0,
+      "expected_iv": 0.2742186666,
+      "calibrated_iv": 0.27421867332882555,
+      "abs_err_iv": 6.728825552304585e-09
+    },
+    {
+      "expiry_years": 0.4931506849,
+      "log_moneyness": 0.15,
+      "expected_iv": 0.2701200625,
+      "calibrated_iv": 0.270120059393755,
+      "abs_err_iv": 3.1062449834529104e-09
+    },
+    {
+      "expiry_years": 1.0,
+      "log_moneyness": -0.15,
+      "expected_iv": 0.3080941383,
+      "calibrated_iv": 0.3080941380553589,
+      "abs_err_iv": 2.446410851675296e-10
+    },
+    {
+      "expiry_years": 1.0,
+      "log_moneyness": 0.0,
+      "expected_iv": 0.2844708592,
+      "calibrated_iv": 0.28447085452040827,
+      "abs_err_iv": 4.679591714129572e-09
+    },
+    {
+      "expiry_years": 1.0,
+      "log_moneyness": 0.15,
+      "expected_iv": 0.2803188811,
+      "calibrated_iv": 0.28031888652962667,
+      "abs_err_iv": 5.4296266926989745e-09
+    },
+    {
+      "expiry_years": 0.1643835616,
+      "log_moneyness": -0.1,
+      "expected_iv": 0.287782039,
+      "calibrated_iv": 0.28778201009494503,
+      "abs_err_iv": 2.890505496067064e-08
+    },
+    {
+      "expiry_years": 0.1643835616,
+      "log_moneyness": 0.0,
+      "expected_iv": 0.2583759594,
+      "calibrated_iv": 0.25837595625641013,
+      "abs_err_iv": 3.1435898883991342e-09
+    },
+    {
+      "expiry_years": 0.1643835616,
+      "log_moneyness": 0.1,
+      "expected_iv": 0.2512620424,
+      "calibrated_iv": 0.2512620463461359,
+      "abs_err_iv": 3.9461359180315014e-09
+    }
+  ],
+  "forward_estimates": [
+    {
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "time_to_expiry_years": 0.0821917808,
+      "supplied_forward": 100.24687959,
+      "estimated_forward": 100.24687992589043,
+      "used_forward": 100.24687959,
+      "discount_factor": 0.9963082014,
+      "parity_pairs_used": 5,
+      "relative_difference": 3.350632167825128e-09,
+      "source": "supplied_verified",
+      "notes": "Estimated from 5 matched call/put parity pairs."
+    },
+    {
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "time_to_expiry_years": 0.2465753425,
+      "supplied_forward": 100.74246876,
+      "estimated_forward": 100.74246865411199,
+      "used_forward": 100.74246876,
+      "discount_factor": 0.9889654419,
+      "parity_pairs_used": 5,
+      "relative_difference": 1.0510761471539847e-09,
+      "source": "supplied_verified",
+      "notes": "Estimated from 5 matched call/put parity pairs."
+    },
+    {
+      "expiry_timestamp": "2026-07-14T16:00:00Z",
+      "time_to_expiry_years": 0.4931506849,
+      "supplied_forward": 101.49045012,
+      "estimated_forward": 101.49044990044735,
+      "used_forward": 101.49045012,
+      "discount_factor": 0.9780526453,
+      "parity_pairs_used": 5,
+      "relative_difference": 2.1632839369305484e-09,
+      "source": "supplied_verified",
+      "notes": "Estimated from 5 matched call/put parity pairs."
+    },
+    {
+      "expiry_timestamp": "2027-01-15T16:00:00Z",
+      "time_to_expiry_years": 1.0,
+      "supplied_forward": 103.0454534,
+      "estimated_forward": 103.045453342812,
+      "used_forward": 103.0454534,
+      "discount_factor": 0.9559974818,
+      "parity_pairs_used": 5,
+      "relative_difference": 5.549784272766588e-10,
+      "source": "supplied_verified",
+      "notes": "Estimated from 5 matched call/put parity pairs."
+    }
+  ]
+}

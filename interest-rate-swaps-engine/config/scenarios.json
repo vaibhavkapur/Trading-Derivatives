@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "deterministic_scenarios": [
+    {
+      "scenario_id": "parallel_up_100bp",
+      "description": "Parallel +100 bps shock to both discount and forward curves",
+      "kind": "PARALLEL",
+      "discount_shift_bps": 100.0,
+      "forward_shift_bps": 100.0
+    },
+    {
+      "scenario_id": "parallel_down_100bp",
+      "description": "Parallel -100 bps shock to both discount and forward curves",
+      "kind": "PARALLEL",
+      "discount_shift_bps": -100.0,
+      "forward_shift_bps": -100.0
+    },
+    {
+      "scenario_id": "bear_steepener",
+      "description": "Short end -25 bps, long end +75 bps (linear pivot at 2Y/10Y)",
+      "kind": "TWIST",
+      "short_shift_bps": -25.0,
+      "long_shift_bps": 75.0,
+      "short_tenor": 0.5,
+      "long_tenor": 10.0,
+      "apply_to": "BOTH"
+    },
+    {
+      "scenario_id": "bull_flattener",
+      "description": "Short end +25 bps, long end -75 bps",
+      "kind": "TWIST",
+      "short_shift_bps": 25.0,
+      "long_shift_bps": -75.0,
+      "short_tenor": 0.5,
+      "long_tenor": 10.0,
+      "apply_to": "BOTH"
+    },
+    {
+      "scenario_id": "butterfly_belly_up",
+      "description": "Wings -25 bps, 5Y belly +50 bps",
+      "kind": "BUTTERFLY",
+      "wing_shift_bps": -25.0,
+      "belly_shift_bps": 50.0,
+      "belly_tenor": 5.0,
+      "apply_to": "BOTH"
+    },
+    {
+      "scenario_id": "basis_widening_25bp",
+      "description": "Forward-discount basis widens +25 bps (forward curve up, discount unchanged)",
+      "kind": "PARALLEL",
+      "discount_shift_bps": 0.0,
+      "forward_shift_bps": 25.0
+    },
+    {
+      "scenario_id": "discount_only_up_50bp",
+      "description": "Discount curve up +50 bps, forward curve unchanged",
+      "kind": "PARALLEL",
+      "discount_shift_bps": 50.0,
+      "forward_shift_bps": 0.0
+    }
+  ],
+  "stochastic_config": {
+    "seed": 42,
+    "num_paths": 250,
+    "level_vol_bps": 65.0,
+    "slope_vol_bps": 30.0,
+    "curvature_vol_bps": 15.0,
+    "basis_vol_bps": 8.0
+  }
+}

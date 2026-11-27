@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=58.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "derivatives-margin-engine"
+version = "0.1.0"
+description = "Educational derivatives initial/variation margin, collateral eligibility, and daily settlement journal engine."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Trading-Derivatives Contributors"}
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+margin-engine = "derivatives_margin_engine.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

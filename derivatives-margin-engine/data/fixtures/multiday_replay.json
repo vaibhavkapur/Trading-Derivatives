@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_id": "MULTIDAY-REPLAY-LIFECYCLE-V1",
+  "description": "4-day settlement replay exercising daily VM/IM, haircut policy increase on Day 2, collateral expiry on Day 3, and settlement price correction on Day 4.",
+  "netting_sets": [
+    {
+      "netting_set_id": "NS-ALPHA",
+      "account_id": "ACCT-001",
+      "base_currency": "USD",
+      "cross_group_offset_override": "0.50"
+    },
+    {
+      "netting_set_id": "NS-SHORT-COMM",
+      "account_id": "ACCT-002",
+      "base_currency": "USD",
+      "cross_group_offset_override": "0.00"
+    }
+  ],
+  "days": [
+    {
+      "day_label": "Day 1 - Baseline Settlement",
+      "valuation_date": "2026-01-15",
+      "valuation_time_utc": "21:00:00Z",
+      "revision": 1,
+      "policy_overrides": {},
+      "positions": [
+        {
+          "position_id": "POS-ES-1",
+          "netting_set_id": "NS-ALPHA",
+          "instrument_id": "ES_MAR26",
+          "risk_group": "EQUITY_INDEX",
+          "quantity": "10",
+          "contract_multiplier": "50",
+          "currency": "USD",
+          "prior_settlement_price": "5000.00",
+          "settled_cash_adjustment": "0.00"
+        },
+        {
+          "position_id": "POS-ZN-1",
+          "netting_set_id": "NS-ALPHA",
+          "instrument_id": "ZN_MAR26",
+          "risk_group": "RATES",
+          "quantity": "20",
+          "contract_multiplier": "1000",
+          "currency": "USD",
+          "prior_settlement_price": "110.00",
+          "settled_cash_adjustment": "0.00"
+        },
+        {
+          "position_id": "POS-CL-SHORT",
+          "netting_set_id": "NS-SHORT-COMM",
+          "instrument_id": "CL_MAR26",
+          "risk_group": "COMMODITY",
+          "quantity": "-15",
+          "contract_multiplier": "1000",
+          "currency": "USD",
+          "prior_settlement_price": "75.00",
+          "settled_cash_adjustment": "0.00"
+        }
+      ],
+      "settlement_prices": [
+        {"instrument_id": "ES_MAR26", "valuation_date": "2026-01-15", "price": "4980.00", "currency": "USD", "revision": 1},
+        {"instrument_id": "ZN_MAR26", "valuation_date": "2026-01-15", "price": "110.25", "currency": "USD", "revision": 1},
+        {"instrument_id": "CL_MAR26", "valuation_date": "2026-01-15", "price": "76.00", "currency": "USD", "revision": 1}
+      ],
+      "collateral_inventory": [
+        {
+          "lot_id": "COL-CASH-A",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "CASH",
+          "security_id": "USD_CASH",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": null
+        },
+        {
+          "lot_id": "COL-TBILL-EXPIRING",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "GOVT_BOND",
+          "security_id": "UST_BILL_JAN19",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": "2026-01-19"
+        },
+        {
+          "lot_id": "COL-CORP-A",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "CORP_BOND_IG",
+          "security_id": "CORP_IG_2028",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": "2028-01-15"
+        },
+        {
+          "lot_id": "COL-CASH-B",
+          "netting_set_id": "NS-SHORT-COMM",
+          "asset_class": "CASH",
+          "security_id": "USD_CASH",
+          "currency": "USD",
+          "market_value": "150000.00",
+          "maturity_date": null
+        }
+      ]
+    },
+    {
+      "day_label": "Day 2 - Haircut Increase on Corporate Bonds",
+      "valuation_date": "2026-01-16",
+      "valuation_time_utc": "21:00:00Z",
+      "revision": 1,
+      "policy_overrides": {
+        "haircut_overrides": {
+          "CORP_BOND_IG": "0.25"
+        }
+      },
+      "positions": [
+        {
+          "position_id": "POS-ES-1",
+          "netting_set_id": "NS-ALPHA",
+          "instrument_id": "ES_MAR26",
+          "risk_group": "EQUITY_INDEX",
+          "quantity": "10",
+          "contract_multiplier": "50",
+          "currency": "USD",
+          "prior_settlement_price": "4980.00",
+          "settled_cash_adjustment": "0.00"
+        },
+        {
+          "position_id": "POS-ZN-1",
+          "netting_set_id": "NS-ALPHA",
+          "instrument_id": "ZN_MAR26",
+          "risk_group": "RATES",
+          "quantity": "20",
+          "contract_multiplier": "1000",
+          "currency": "USD",
+          "prior_settlement_price": "110.25",
+          "settled_cash_adjustment": "0.00"
+        },
+        {
+          "position_id": "POS-CL-SHORT",
+          "netting_set_id": "NS-SHORT-COMM",
+          "instrument_id": "CL_MAR26",
+          "risk_group": "COMMODITY",
+          "quantity": "-15",
+          "contract_multiplier": "1000",
+          "currency": "USD",
+          "prior_settlement_price": "76.00",
+          "settled_cash_adjustment": "0.00"
+        }
+      ],
+      "settlement_prices": [
+        {"instrument_id": "ES_MAR26", "valuation_date": "2026-01-16", "price": "4980.00", "currency": "USD", "revision": 1},
+        {"instrument_id": "ZN_MAR26", "valuation_date": "2026-01-16", "price": "110.25", "currency": "USD", "revision": 1},
+        {"instrument_id": "CL_MAR26", "valuation_date": "2026-01-16", "price": "74.50", "currency": "USD", "revision": 1}
+      ],
+      "collateral_inventory": [
+        {
+          "lot_id": "COL-CASH-A",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "CASH",
+          "security_id": "USD_CASH",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": null
+        },
+        {
+          "lot_id": "COL-TBILL-EXPIRING",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "GOVT_BOND",
+          "security_id": "UST_BILL_JAN19",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": "2026-01-19"
+        },
+        {
+          "lot_id": "COL-CORP-A",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "CORP_BOND_IG",
+          "security_id": "CORP_IG_2028",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": "2028-01-15"
+        },
+        {
+          "lot_id": "COL-CASH-B",
+          "netting_set_id": "NS-SHORT-COMM",
+          "asset_class": "CASH",
+          "security_id": "USD_CASH",
+          "currency": "USD",
+          "market_value": "150000.00",
+          "maturity_date": null
+        }
+      ]
+    },
+    {
+      "day_label": "Day 3 - Collateral Expiry (T-Bill matures on 2026-01-19)",
+      "valuation_date": "2026-01-19",
+      "valuation_time_utc": "21:00:00Z",
+      "revision": 1,
+      "policy_overrides": {
+        "haircut_overrides": {
+          "CORP_BOND_IG": "0.25"
+        }
+      },
+      "positions": [
+        {
+          "position_id": "POS-ES-1",
+          "netting_set_id": "NS-ALPHA",
+          "instrument_id": "ES_MAR26",
+          "risk_group": "EQUITY_INDEX",
+          "quantity": "10",
+          "contract_multiplier": "50",
+          "currency": "USD",
+          "prior_settlement_price": "4980.00",
+          "settled_cash_adjustment": "0.00"
+        },
+        {
+          "position_id": "POS-ZN-1",
+          "netting_set_id": "NS-ALPHA",
+          "instrument_id": "ZN_MAR26",
+          "risk_group": "RATES",
+          "quantity": "20",
+          "contract_multiplier": "1000",
+          "currency": "USD",
+          "prior_settlement_price": "110.25",
+          "settled_cash_adjustment": "0.00"
+        },
+        {
+          "position_id": "POS-CL-SHORT",
+          "netting_set_id": "NS-SHORT-COMM",
+          "instrument_id": "CL_MAR26",
+          "risk_group": "COMMODITY",
+          "quantity": "-15",
+          "contract_multiplier": "1000",
+          "currency": "USD",
+          "prior_settlement_price": "74.50",
+          "settled_cash_adjustment": "0.00"
+        }
+      ],
+      "settlement_prices": [
+        {"instrument_id": "ES_MAR26", "valuation_date": "2026-01-19", "price": "4950.00", "currency": "USD", "revision": 1},
+        {"instrument_id": "ZN_MAR26", "valuation_date": "2026-01-19", "price": "110.10", "currency": "USD", "revision": 1},
+        {"instrument_id": "CL_MAR26", "valuation_date": "2026-01-19", "price": "75.50", "currency": "USD", "revision": 1}
+      ],
+      "collateral_inventory": [
+        {
+          "lot_id": "COL-CASH-A",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "CASH",
+          "security_id": "USD_CASH",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": null
+        },
+        {
+          "lot_id": "COL-TBILL-EXPIRING",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "GOVT_BOND",
+          "security_id": "UST_BILL_JAN19",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": "2026-01-19"
+        },
+        {
+          "lot_id": "COL-CORP-A",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "CORP_BOND_IG",
+          "security_id": "CORP_IG_2028",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": "2028-01-15"
+        },
+        {
+          "lot_id": "COL-CASH-B",
+          "netting_set_id": "NS-SHORT-COMM",
+          "asset_class": "CASH",
+          "security_id": "USD_CASH",
+          "currency": "USD",
+          "market_value": "150000.00",
+          "maturity_date": null
+        }
+      ]
+    },
+    {
+      "day_label": "Day 3 Revision 2 - Settlement Price Correction for ES_MAR26",
+      "valuation_date": "2026-01-19",
+      "valuation_time_utc": "22:30:00Z",
+      "revision": 2,
+      "is_settlement_correction": true,
+      "policy_overrides": {
+        "haircut_overrides": {
+          "CORP_BOND_IG": "0.25"
+        }
+      },
+      "positions": [
+        {
+          "position_id": "POS-ES-1",
+          "netting_set_id": "NS-ALPHA",
+          "instrument_id": "ES_MAR26",
+          "risk_group": "EQUITY_INDEX",
+          "quantity": "10",
+          "contract_multiplier": "50",
+          "currency": "USD",
+          "prior_settlement_price": "4980.00",
+          "settled_cash_adjustment": "-15000.00"
+        },
+        {
+          "position_id": "POS-ZN-1",
+          "netting_set_id": "NS-ALPHA",
+          "instrument_id": "ZN_MAR26",
+          "risk_group": "RATES",
+          "quantity": "20",
+          "contract_multiplier": "1000",
+          "currency": "USD",
+          "prior_settlement_price": "110.25",
+          "settled_cash_adjustment": "-3000.00"
+        },
+        {
+          "position_id": "POS-CL-SHORT",
+          "netting_set_id": "NS-SHORT-COMM",
+          "instrument_id": "CL_MAR26",
+          "risk_group": "COMMODITY",
+          "quantity": "-15",
+          "contract_multiplier": "1000",
+          "currency": "USD",
+          "prior_settlement_price": "74.50",
+          "settled_cash_adjustment": "-15000.00"
+        }
+      ],
+      "settlement_prices": [
+        {"instrument_id": "ES_MAR26", "valuation_date": "2026-01-19", "price": "4960.00", "currency": "USD", "revision": 2},
+        {"instrument_id": "ZN_MAR26", "valuation_date": "2026-01-19", "price": "110.10", "currency": "USD", "revision": 2},
+        {"instrument_id": "CL_MAR26", "valuation_date": "2026-01-19", "price": "75.50", "currency": "USD", "revision": 2}
+      ],
+      "collateral_inventory": [
+        {
+          "lot_id": "COL-CASH-A",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "CASH",
+          "security_id": "USD_CASH",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": null
+        },
+        {
+          "lot_id": "COL-TBILL-EXPIRING",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "GOVT_BOND",
+          "security_id": "UST_BILL_JAN19",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": "2026-01-19"
+        },
+        {
+          "lot_id": "COL-CORP-A",
+          "netting_set_id": "NS-ALPHA",
+          "asset_class": "CORP_BOND_IG",
+          "security_id": "CORP_IG_2028",
+          "currency": "USD",
+          "market_value": "100000.00",
+          "maturity_date": "2028-01-15"
+        },
+        {
+          "lot_id": "COL-CASH-B",
+          "netting_set_id": "NS-SHORT-COMM",
+          "asset_class": "CASH",
+          "security_id": "USD_CASH",
+          "currency": "USD",
+          "market_value": "150000.00",
+          "maturity_date": null
+        }
+      ]
+    }
+  ]
+}

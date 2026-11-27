@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "EDU-DEFAULT-V1",
+  "base_currency": "USD",
+  "calendar": "US_BUSINESS_DAYS",
+  "valuation_time_utc": "21:00:00Z",
+  "decimal_scale": 2,
+  "rounding_mode": "ROUND_HALF_UP",
+  "supported_currencies": ["USD", "EUR", "GBP"],
+  "fx_rates_to_base": {
+    "USD": "1.000000",
+    "EUR": "1.100000",
+    "GBP": "1.250000"
+  },
+  "im_policy": {
+    "aggregation_method": "WORST_CASE",
+    "confidence_level": "0.99",
+    "default_intra_group_offset": "1.00",
+    "default_cross_group_offset": "0.50",
+    "max_cross_group_offset": "0.80",
+    "group_intra_offsets": {
+      "EQUITY_INDEX": "1.00",
+      "RATES": "1.00",
+      "COMMODITY": "0.90",
+      "FX": "1.00"
+    },
+    "pair_cross_group_offsets": {
+      "EQUITY_INDEX:RATES": "0.40",
+      "EQUITY_INDEX:COMMODITY": "0.25",
+      "RATES:FX": "0.35"
+    }
+  },
+  "margin_call_policy": {
+    "minimum_transfer_amount": "0.00",
+    "rounding_increment": "0.00",
+    "vm_cash_only": true,
+    "allow_im_excess_offset_vm": false
+  },
+  "collateral_policy": {
+    "min_residual_maturity_days": 1,
+    "fx_mismatch_haircut_addon": "0.08",
+    "max_single_asset_class_concentration": "1.00",
+    "haircut_schedule": [
+      {
+        "asset_class": "CASH",
+        "eligible": true,
+        "min_maturity_days": 0,
+        "max_maturity_days": null,
+        "haircut": "0.00"
+      },
+      {
+        "asset_class": "GOVT_BOND",
+        "eligible": true,
+        "min_maturity_days": 1,
+        "max_maturity_days": 365,
+        "haircut": "0.02"
+      },
+      {
+        "asset_class": "GOVT_BOND",
+        "eligible": true,
+        "min_maturity_days": 366,
+        "max_maturity_days": 1825,
+        "haircut": "0.04"
+      },
+      {
+        "asset_class": "GOVT_BOND",
+        "eligible": true,
+        "min_maturity_days": 1826,
+        "max_maturity_days": null,
+        "haircut": "0.06"
+      },
+      {
+        "asset_class": "CORP_BOND_IG",
+        "eligible": true,
+        "min_maturity_days": 1,
+        "max_maturity_days": 1825,
+        "haircut": "0.10"
+      },
+      {
+        "asset_class": "EQUITY_ETF",
+        "eligible": true,
+        "min_maturity_days": 0,
+        "max_maturity_days": null,
+        "haircut": "0.15"
+      },
+      {
+        "asset_class": "CRYPTO",
+        "eligible": false,
+        "min_maturity_days": 0,
+        "max_maturity_days": null,
+        "haircut": "1.00"
+      }
+    ]
+  }
+}

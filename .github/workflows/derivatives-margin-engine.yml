@@ -1,0 +1,52 @@
+name: Derivatives Margin Engine CI
+
+on:
+  push:
+    paths:
+      - "derivatives-margin-engine/**"
+  pull_request:
+    paths:
+      - "derivatives-margin-engine/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: derivatives-margin-engine
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile check
+        run: python3 -m compileall -q src tests scripts
+
+      - name: Run unit, integration, and failure test suite
+        env:
+          PYTHONPATH: src
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Verify hand-calculated reference oracles
+        env:
+          PYTHONPATH: src
+        run: |
+          python3 -m derivatives_margin_engine.cli verify-oracle \
+            --policy config/default_policy.json \
+            --scenarios config/scenarios_reference.json \
+            --fixture data/fixtures/reference_hand_calc.json \
+            --tolerance 0.00
+          python3 -m derivatives_margin_engine.cli verify-oracle \
+            --policy config/default_policy.json \
+            --scenarios config/scenarios_reference.json \
+            --fixture data/fixtures/reference_offset_oracle.json \
+            --tolerance 0.00
+
+      - name: Run reproducible end-to-end demo and reconciliation
+        env:
+          PYTHONPATH: src
+        run: python3 scripts/run_demo.py

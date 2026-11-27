@@ -1,0 +1,49 @@
+{
+  "config_hash": "6d89dd6a791fdfcf",
+  "fills_digest": "b383a9755f8a36ece7f9c55efa90c7610e3695fac87de047342a07df4e038668",
+  "metrics": {
+    "exercise_rate": 0.488,
+    "fills_digest": "b383a9755f8a36ece7f9c55efa90c7610e3695fac87de047342a07df4e038668",
+    "hedge_error_cvar05": -1064.3184615384619,
+    "hedge_error_mae": 355.1454,
+    "hedge_error_max": 1297.61,
+    "hedge_error_mean": -184.211,
+    "hedge_error_min": -1361.05,
+    "hedge_error_p05": -861.7484999999999,
+    "hedge_error_p25": -456.605,
+    "hedge_error_p50": -159.555,
+    "hedge_error_p75": 67.27,
+    "hedge_error_p95": 385.83049999999986,
+    "hedge_error_rmse": 463.68690159761894,
+    "hedge_error_std": 426.37899382792165,
+    "hedge_error_std_pct_premium": 9.530066647323709,
+    "initial_option_value": 4474.04,
+    "max_abs_ledger_residual": "0.00",
+    "mean_fee_cost": 63.53304000000001,
+    "mean_gross_notional_traded": 357201.0943362125,
+    "mean_gross_shares_traded": 3542.496,
+    "mean_rebalance_count": 57.168,
+    "mean_spread_cost": 89.29884,
+    "mean_total_cost": 152.83188,
+    "mean_turnover_multiple": 3.5720109433621245,
+    "num_paths": 250,
+    "p95_total_cost": 201.3045,
+    "policy_name": "periodic_daily",
+    "policy_type": "periodic",
+    "total_gap_shock_events": 0,
+    "total_stale_fallbacks": 0,
+    "total_stale_skips": 0
+  },
+  "run_id": "baseline_gbm_daily_atm_call_6d89dd6a_s202601",
+  "runtime_metadata": {
+    "generated_at_utc": "2026-11-27T12:42:50Z",
+    "packages": {
+      "matplotlib": "3.9.4",
+      "numpy": "2.0.2",
+      "pandas": "2.3.3"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "schema_version": "1.0.0"
+  }
+}

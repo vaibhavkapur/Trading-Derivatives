@@ -1,0 +1,56 @@
+{
+  "criteria": {
+    "cash_flow_totals_reconcile": {
+      "measured_scenario_pnl_max_error": 1.4915713109076023e-10,
+      "measured_schedule_max_error": 2.2737367544323206e-13,
+      "passed": true,
+      "target": "<= 1e-9"
+    },
+    "deterministic_reproducibility": {
+      "passed": true,
+      "run_a_fingerprint": "logical_3b68ec80fd9f7edc",
+      "run_b_fingerprint": "logical_3b68ec80fd9f7edc",
+      "target": "identical logical_fingerprint across repeated runs"
+    },
+    "dv01_agrees_with_finite_differences_within_0_5_pct": {
+      "measured_all_bonds_max_diff_pct": 1.6157308675108817e-05,
+      "measured_portfolio_max_diff_pct": 1.6157308675108817e-05,
+      "passed": true,
+      "target": "<= 0.5%"
+    },
+    "optional_quantlib_cross_check": {
+      "note": "Optional QuantLib external cross-check not run because QuantLib is not installed in the offline environment; independent closed-form analytical oracles are verified instead.",
+      "status": "NOT_RUN_UNAVAILABLE"
+    },
+    "oracle_reference_comparison": {
+      "all_passed": true,
+      "passed": true,
+      "target": "all hand-calculated closed-form oracles within tolerance"
+    },
+    "reprice_calibration_within_1bp": {
+      "measured_max_error_bp": 1.4495071809506044e-10,
+      "passed": true,
+      "target": "<= 1.0 bp"
+    }
+  },
+  "logical_fingerprint": "logical_3b68ec80fd9f7edc",
+  "runtime_metadata": {
+    "engine_version": "0.1.0",
+    "generated_at_utc": "2026-11-27T12:41:19Z",
+    "optional_packages": {
+      "QuantLib": "not_installed",
+      "numpy": "not_installed",
+      "pytest": "not_installed",
+      "scipy": "not_installed"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "schema_version": "1.0.0"
+  },
+  "test_suite": {
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "tests_run": 21
+  }
+}

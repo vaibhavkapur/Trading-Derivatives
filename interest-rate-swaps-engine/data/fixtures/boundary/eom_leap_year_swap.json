@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Boundary fixture: End-of-Month (EOM) roll across 2028 leap year (Feb 29) using ACT/ACT ISDA.",
+    "provenance": "synthetic_boundary_fixture"
+  },
+  "trade": {
+    "trade_id": "GBP-EOM-LEAP-2028",
+    "currency": "GBP",
+    "notional": 2500000.0,
+    "direction": "RECEIVER",
+    "effective_date": "2027-02-28",
+    "maturity_date": "2029-02-28",
+    "fixed_leg": {
+      "fixed_rate": 0.0410,
+      "frequency": "SEMI_ANNUAL",
+      "day_count": "ACT/ACT",
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "GBP_LON",
+      "stub_type": "FRONT_SHORT",
+      "end_of_month": true
+    },
+    "floating_leg": {
+      "index_name": "GBP-SONIA-6M",
+      "frequency": "SEMI_ANNUAL",
+      "day_count": "ACT/365F",
+      "spread": 0.0,
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "GBP_LON",
+      "stub_type": "FRONT_SHORT",
+      "end_of_month": true,
+      "fixing_lag_days": 0
+    }
+  },
+  "discount_curve": {
+    "curve_id": "GBP-SONIA-DISC-20270226",
+    "role": "DISCOUNT",
+    "currency": "GBP",
+    "valuation_date": "2027-02-26",
+    "nodes": [
+      { "tenor_years": 0.5, "zero_rate": 0.0390, "label": "6M" },
+      { "tenor_years": 1.0, "zero_rate": 0.0395, "label": "1Y" },
+      { "tenor_years": 2.0, "zero_rate": 0.0405, "label": "2Y" },
+      { "tenor_years": 3.0, "zero_rate": 0.0412, "label": "3Y" }
+    ]
+  },
+  "forward_curve": {
+    "curve_id": "GBP-SONIA-FWD-20270226",
+    "role": "FORWARD",
+    "currency": "GBP",
+    "index_name": "GBP-SONIA-6M",
+    "valuation_date": "2027-02-26",
+    "nodes": [
+      { "tenor_years": 0.5, "zero_rate": 0.0392, "label": "6M" },
+      { "tenor_years": 1.0, "zero_rate": 0.0398, "label": "1Y" },
+      { "tenor_years": 2.0, "zero_rate": 0.0408, "label": "2Y" },
+      { "tenor_years": 3.0, "zero_rate": 0.0415, "label": "3Y" }
+    ]
+  },
+  "fixing_history": { "entries": [] }
+}

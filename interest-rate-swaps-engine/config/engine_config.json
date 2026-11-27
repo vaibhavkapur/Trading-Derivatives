@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "engine_version": "0.1.0",
+  "default_bump_bps": 1.0,
+  "finite_difference_scheme": "CENTRAL",
+  "missing_fixing_policy": "ERROR",
+  "valuation_date_fixing_policy": "ALLOW_PROJECT",
+  "par_swap_pv_tolerance": 1e-6,
+  "symmetry_pv_tolerance": 1e-9,
+  "kr01_reconciliation_rel_tolerance": 0.005,
+  "kr01_reconciliation_abs_tolerance": 0.5,
+  "oracle_pv_tolerance": 1e-6,
+  "default_stochastic_seed": 42,
+  "default_stochastic_paths": 250,
+  "log_level": "INFO"
+}

@@ -1,0 +1,54 @@
+{
+  "description": "Independent pure-stdlib expected ledger for deterministic_3step_bars.csv (short 1 ATM call, K=100, T=0.25, r=0.05, q=0, sigma=0.20, zero costs, cash settled).",
+  "terminal_hedge_error": "-484.02",
+  "steps": [
+    {
+      "step": 0,
+      "spot": 100.0,
+      "bs_price": 4.61499713,
+      "bs_delta": 0.56946018,
+      "financing": "0.00",
+      "trade_shares": 56.94601832,
+      "trade_mid_cash": "-5694.60",
+      "option_cash_flow": "461.50",
+      "cash_after": "-5233.10",
+      "shares_after": 56.94601832
+    },
+    {
+      "step": 1,
+      "spot": 105.0,
+      "bs_price": 7.02052619,
+      "bs_delta": 0.77048406,
+      "financing": "-21.85",
+      "trade_shares": 20.10238761,
+      "trade_mid_cash": "-2110.75",
+      "option_cash_flow": "0.00",
+      "cash_after": "-7365.70",
+      "shares_after": 77.04840593
+    },
+    {
+      "step": 2,
+      "spot": 96.0,
+      "bs_price": 0.89908844,
+      "bs_delta": 0.27225028,
+      "financing": "-30.75",
+      "trade_shares": -49.82337841,
+      "trade_mid_cash": "4783.04",
+      "option_cash_flow": "0.00",
+      "cash_after": "-2613.41",
+      "shares_after": 27.22502752
+    },
+    {
+      "step": 3,
+      "spot": 108.0,
+      "bs_price": 8.0,
+      "bs_delta": 1.0,
+      "financing": "-10.91",
+      "trade_shares": -27.22502752,
+      "trade_mid_cash": "2940.30",
+      "option_cash_flow": "-800.00",
+      "cash_after": "-484.02",
+      "shares_after": 0.0
+    }
+  ]
+}

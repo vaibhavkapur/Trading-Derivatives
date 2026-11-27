@@ -1,0 +1,281 @@
+{
+  "after_replay": {
+    "alerts": [
+      {
+        "age_seconds": null,
+        "alert_id": "DUP-ACME-TICK-ACME-0002",
+        "code": "DUPLICATE_TICK",
+        "detected_at_utc": "2026-06-01T14:30:00Z",
+        "max_age_seconds": null,
+        "message": "Ignored duplicate tick_id=TICK-ACME-0002 (seq=2) for ACME.",
+        "resource": "spot:ACME",
+        "severity": "WARNING"
+      }
+    ],
+    "by_underlying": {
+      "ACME": {
+        "bucket_key": "ACME",
+        "charm": -0.26779157750202226,
+        "currency": "USD",
+        "delta_shares": -74.3661739382784,
+        "dollar_delta": -7622.532828673517,
+        "dollar_gamma_1pct": -4221.289039269175,
+        "expiry_date": null,
+        "flags": [
+          "OK"
+        ],
+        "frozen_count": 0,
+        "gamma_shares": -40.178836780670316,
+        "position_count": 2,
+        "pv": -10387.494186802624,
+        "rho": -159.09544994824296,
+        "theta": 24.05853710774271,
+        "underlying": "ACME",
+        "unreliable_count": 0,
+        "vanna": 16.186711636583166,
+        "vega": -544.3911223346873,
+        "volga": -8.746760585683203
+      },
+      "SPX_SYN": {
+        "bucket_key": "SPX_SYN",
+        "charm": -0.5732484581961137,
+        "currency": "USD",
+        "delta_shares": 499.6789924363141,
+        "dollar_delta": 2510886.9369924786,
+        "dollar_gamma_1pct": -19794.077996301756,
+        "expiry_date": null,
+        "flags": [
+          "OK"
+        ],
+        "frozen_count": 0,
+        "gamma_shares": -0.0783904477465478,
+        "position_count": 2,
+        "pv": 35846.3695166844,
+        "rho": 6238.458416651318,
+        "theta": -0.09177318253171052,
+        "underlying": "SPX_SYN",
+        "unreliable_count": 0,
+        "vanna": 6.101789827698452,
+        "vega": -1652.0260336572792,
+        "volga": -114.5213874791419
+      },
+      "TECH_SYN": {
+        "bucket_key": "TECH_SYN",
+        "charm": -0.9396787537120626,
+        "currency": "USD",
+        "delta_shares": 986.7695284086657,
+        "dollar_delta": 197353.90568173313,
+        "dollar_gamma_1pct": 7370.253969917856,
+        "expiry_date": null,
+        "flags": [
+          "OK"
+        ],
+        "frozen_count": 0,
+        "gamma_shares": 18.42563492479464,
+        "position_count": 1,
+        "pv": 29717.332307980316,
+        "rho": 840.4792582848429,
+        "theta": -114.17225653239903,
+        "underlying": "TECH_SYN",
+        "unreliable_count": 0,
+        "vanna": 5.9866539258991,
+        "vega": 1126.9924636023254,
+        "volga": 0.11426775542112172
+      }
+    },
+    "reconciliation_max_abs_diff": 4.656612873077393e-10,
+    "reconciliation_passed": true,
+    "snapshot_id": "SNAP-000018-28ac8c40ef2a",
+    "totals": {
+      "dollar_delta": 2700618.3098455383,
+      "dollar_gamma_1pct": -16645.11306565307,
+      "frozen_count": 0,
+      "position_count": 5,
+      "pv": 55176.2076378621,
+      "rho": 6919.842224987919,
+      "theta": -90.2054926071881,
+      "unreliable_count": 0,
+      "vega": -1069.4246923896405
+    }
+  },
+  "diagnostics": {
+    "active_positions": 5,
+    "active_staleness_alerts": 6,
+    "cache": {
+      "enabled": 1,
+      "evictions": 0,
+      "hit_rate": 0.0,
+      "hits": 0,
+      "invalidations": 2,
+      "max_entries": 50000,
+      "misses": 11,
+      "size": 9
+    },
+    "counters": {
+      "curves_updated": 1,
+      "duplicate_ticks_ignored": 1,
+      "out_of_order_ticks_ignored": 0,
+      "positions_recomputed": 16,
+      "positions_removed": 0,
+      "positions_upserted": 6,
+      "reconciliations_run": 2,
+      "scenarios_evaluated": 5,
+      "snapshot_race_conflicts": 0,
+      "stale_freezes": 5,
+      "ticks_accepted": 5,
+      "vols_updated": 4
+    },
+    "engine_config_hash": "e463af0804e45828",
+    "engine_id": "rt-greeks-engine-v1",
+    "operational_alerts": 1,
+    "snapshot_seq": 19,
+    "update_latency_ms": {
+      "count": 19,
+      "max": 0.1289,
+      "mean": 0.0472,
+      "p50": 0.0455,
+      "p95": 0.1138,
+      "p99": 0.1259
+    }
+  },
+  "initial_snapshot": {
+    "by_underlying": {
+      "ACME": {
+        "bucket_key": "ACME",
+        "charm": -0.32393714192888146,
+        "currency": "USD",
+        "delta_shares": 1051.611725406756,
+        "dollar_delta": 105161.17254067562,
+        "dollar_gamma_1pct": -1539.6975463666583,
+        "expiry_date": null,
+        "flags": [
+          "OK"
+        ],
+        "frozen_count": 0,
+        "gamma_shares": -15.396975463666582,
+        "position_count": 2,
+        "pv": 6388.274685353807,
+        "rho": 760.650738322805,
+        "theta": -3.6650497588658517,
+        "underlying": "ACME",
+        "unreliable_count": 0,
+        "vanna": 7.98012209102045,
+        "vega": 19.881569181215582,
+        "volga": -3.549042881899468
+      },
+      "SPX_SYN": {
+        "bucket_key": "SPX_SYN",
+        "charm": -0.5784853043323656,
+        "currency": "USD",
+        "delta_shares": 501.80918247216135,
+        "dollar_delta": 2509045.912360807,
+        "dollar_gamma_1pct": -23046.473436892353,
+        "expiry_date": null,
+        "flags": [
+          "OK"
+        ],
+        "frozen_count": 0,
+        "gamma_shares": -0.09218589374756941,
+        "position_count": 2,
+        "pv": 23328.485891568664,
+        "rho": 6265.36995164849,
+        "theta": 14.315213075833867,
+        "underlying": "SPX_SYN",
+        "unreliable_count": 0,
+        "vanna": 6.314477822924739,
+        "vega": -1807.3174069851266,
+        "volga": -100.98092713551013
+      },
+      "TECH_SYN": {
+        "bucket_key": "TECH_SYN",
+        "charm": -0.9745422940461048,
+        "currency": "USD",
+        "delta_shares": 974.3532126378486,
+        "dollar_delta": 194870.64252756973,
+        "dollar_gamma_1pct": 7884.8709186352735,
+        "expiry_date": null,
+        "flags": [
+          "OK"
+        ],
+        "frozen_count": 0,
+        "gamma_shares": 19.712177296588184,
+        "position_count": 1,
+        "pv": 27463.67122502201,
+        "rho": 839.3281026949653,
+        "theta": -107.98725782126476,
+        "underlying": "TECH_SYN",
+        "unreliable_count": 0,
+        "vanna": 6.444939379521718,
+        "vega": 1126.6182919949617,
+        "volga": 0.26543544876578806
+      }
+    },
+    "reconciliation_max_abs_diff": 0.0,
+    "reconciliation_passed": true,
+    "snapshot_id": "SNAP-000013-a29ed0cd2709",
+    "totals": {
+      "dollar_delta": 2809077.727429052,
+      "dollar_gamma_1pct": -16701.30006462374,
+      "frozen_count": 0,
+      "position_count": 5,
+      "pv": 57180.43180194449,
+      "rho": 7865.348792666261,
+      "theta": -97.33709450429674,
+      "unreliable_count": 0,
+      "vega": -660.8175458089488
+    }
+  },
+  "metadata": {
+    "engine_config_hash": "e463af0804e45828",
+    "engine_id": "rt-greeks-engine-v1",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.12.15"
+  },
+  "scenarios": [
+    {
+      "base_pv": 55176.207638,
+      "elapsed_ms": 0.1047,
+      "pnl": -138776.864258,
+      "scenario_id": "SPOT_DOWN_5PCT",
+      "scenario_pv": -83600.65662
+    },
+    {
+      "base_pv": 55176.207638,
+      "elapsed_ms": 0.0932,
+      "pnl": 134114.080876,
+      "scenario_id": "SPOT_UP_5PCT",
+      "scenario_pv": 189290.288514
+    },
+    {
+      "base_pv": 55176.207638,
+      "elapsed_ms": 0.0741,
+      "pnl": -3693.809762,
+      "scenario_id": "VOL_UP_3PTS",
+      "scenario_pv": 51482.397876
+    },
+    {
+      "base_pv": 55176.207638,
+      "elapsed_ms": 0.0771,
+      "pnl": 3456.170057,
+      "scenario_id": "RATES_UP_50BPS",
+      "scenario_pv": 58632.377695
+    },
+    {
+      "base_pv": 55176.207638,
+      "elapsed_ms": 0.0745,
+      "pnl": -119.575629,
+      "scenario_id": "THETA_1D_CARRY",
+      "scenario_pv": 55056.632008
+    }
+  ],
+  "staleness_freeze_demo": {
+    "alert_codes": [
+      "DUPLICATE_TICK",
+      "STALE_SPOT",
+      "STALE_VOL_SURFACE"
+    ],
+    "frozen_count": 5,
+    "has_frozen_positions": true,
+    "snapshot_id": "SNAP-000019-aa50e5bd2263"
+  }
+}

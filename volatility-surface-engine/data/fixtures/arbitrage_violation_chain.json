@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_id": "arb-calendar-violation-20260115",
+  "underlying": "SYNTH-EQX",
+  "valuation_timestamp": "2026-01-15T16:00:00Z",
+  "spot": 100.0,
+  "conventions": {
+    "currency": "USD",
+    "day_count": "ACT/365F",
+    "exercise_style": "european",
+    "price_unit": "currency_per_unit",
+    "vol_unit": "annualized_decimal",
+    "time_unit": "year_fraction"
+  },
+  "expiries": [
+    {
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "time_to_expiry_years": 0.0821917808,
+      "forward": 100.24687959,
+      "discount_factor": 0.9963082014
+    },
+    {
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "time_to_expiry_years": 0.2465753425,
+      "forward": 100.74246876,
+      "discount_factor": 0.9889654419
+    }
+  ],
+  "quotes": [
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0001",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 78.0723,
+      "option_type": "put",
+      "bid": 0.482529,
+      "ask": 0.487074,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0002",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 82.0752,
+      "option_type": "put",
+      "bid": 0.801292,
+      "ask": 0.808132,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0003",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 86.2833,
+      "option_type": "put",
+      "bid": 1.327513,
+      "ask": 1.337674,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0004",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 90.7071,
+      "option_type": "put",
+      "bid": 2.187789,
+      "ask": 2.202607,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0005",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 90.7071,
+      "option_type": "call",
+      "bid": 11.660272,
+      "ask": 11.739245,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0006",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 95.3578,
+      "option_type": "put",
+      "bid": 3.564268,
+      "ask": 3.585269,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0007",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 95.3578,
+      "option_type": "call",
+      "bid": 8.420989,
+      "ask": 8.470608,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0008",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 100.2469,
+      "option_type": "put",
+      "bid": 5.671976,
+      "ask": 5.700407,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0009",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 100.2469,
+      "option_type": "call",
+      "bid": 5.671956,
+      "ask": 5.700387,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0010",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 105.3866,
+      "option_type": "put",
+      "bid": 8.666636,
+      "ask": 8.717703,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0011",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 105.3866,
+      "option_type": "call",
+      "bid": 3.560933,
+      "ask": 3.581915,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0012",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 110.7899,
+      "option_type": "put",
+      "bid": 12.571666,
+      "ask": 12.656812,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0013",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 110.7899,
+      "option_type": "call",
+      "bid": 2.10302,
+      "ask": 2.117263,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0014",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 116.4703,
+      "option_type": "call",
+      "bid": 1.180338,
+      "ask": 1.189372,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0015",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 122.4418,
+      "option_type": "call",
+      "bid": 0.634974,
+      "ask": 0.640395,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0016",
+      "expiry_timestamp": "2026-02-14T16:00:00Z",
+      "strike": 128.7195,
+      "option_type": "call",
+      "bid": 0.329571,
+      "ask": 0.332675,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0017",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 78.4583,
+      "option_type": "put",
+      "bid": 0.230003,
+      "ask": 0.23217,
+      "volume": 342,
+      "open_interest": 2218
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0018",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 82.481,
+      "option_type": "put",
+      "bid": 0.423314,
+      "ask": 0.426928,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0019",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 86.7098,
+      "option_type": "put",
+      "bid": 0.781203,
+      "ask": 0.787182,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0020",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 91.1556,
+      "option_type": "put",
+      "bid": 1.439834,
+      "ask": 1.449585,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0021",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 91.1556,
+      "option_type": "call",
+      "bid": 10.888917,
+      "ask": 10.962666,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0022",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 95.8292,
+      "option_type": "put",
+      "bid": 2.622402,
+      "ask": 2.637854,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0023",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 95.8292,
+      "option_type": "call",
+      "bid": 7.467181,
+      "ask": 7.51118,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0024",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 100.7425,
+      "option_type": "put",
+      "bid": 4.621059,
+      "ask": 4.644223,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0025",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 100.7425,
+      "option_type": "call",
+      "bid": 4.621028,
+      "ask": 4.644192,
+      "volume": 499,
+      "open_interest": 2999
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0026",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 105.9076,
+      "option_type": "put",
+      "bid": 7.657175,
+      "ask": 7.702293,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0027",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 105.9076,
+      "option_type": "call",
+      "bid": 2.564044,
+      "ask": 2.579152,
+      "volume": 492,
+      "open_interest": 2962
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0028",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 111.3376,
+      "option_type": "put",
+      "bid": 11.734967,
+      "ask": 11.814447,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0029",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 111.3376,
+      "option_type": "call",
+      "bid": 1.292113,
+      "ask": 1.300864,
+      "volume": 469,
+      "open_interest": 2854
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0030",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 117.046,
+      "option_type": "call",
+      "bid": 0.603262,
+      "ask": 0.60788,
+      "volume": 434,
+      "open_interest": 2684
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0031",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 123.0471,
+      "option_type": "call",
+      "bid": 0.265714,
+      "ask": 0.267982,
+      "volume": 390,
+      "open_interest": 2466
+    },
+    {
+      "quote_id": "arb-calendar-violation-20260115-q0032",
+      "expiry_timestamp": "2026-04-15T16:00:00Z",
+      "strike": 129.3559,
+      "option_type": "call",
+      "bid": 0.111941,
+      "ask": 0.112995,
+      "volume": 342,
+      "open_interest": 2218
+    }
+  ]
+}

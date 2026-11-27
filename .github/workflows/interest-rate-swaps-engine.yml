@@ -1,0 +1,44 @@
+name: Interest Rate Swaps Engine CI
+
+on:
+  push:
+    paths:
+      - "interest-rate-swaps-engine/**"
+  pull_request:
+    paths:
+      - "interest-rate-swaps-engine/**"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: interest-rate-swaps-engine
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-lock.txt
+          pip install --no-deps -e .
+
+      - name: Run full test suite
+        run: pytest -v
+
+      - name: Run reproducible demo
+        run: python scripts/run_demo.py
+
+      - name: Verify CLI price & sensitivities
+        run: |
+          python -m irs_engine.cli price data/fixtures/valid/usd_5y_vanilla_swap.json > /dev/null
+          python -m irs_engine.cli sensitivities data/fixtures/valid/usd_5y_vanilla_swap.json > /dev/null
+          python -m irs_engine.cli oracle data/fixtures/valid/hand_calculated_2y_oracle.json > /dev/null

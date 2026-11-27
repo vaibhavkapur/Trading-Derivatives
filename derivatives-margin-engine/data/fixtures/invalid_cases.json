@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_id": "INVALID-CASES-V1",
+  "cases": [
+    {
+      "case_id": "ERR_DOUBLE_COUNTED_COLLATERAL",
+      "expected_error_code": "DUPLICATE_COLLATERAL_LOT",
+      "description": "Same collateral lot_id pledged to two netting sets simultaneously.",
+      "payload": {
+        "valuation_date": "2026-01-15",
+        "valuation_time_utc": "21:00:00Z",
+        "revision": 1,
+        "netting_sets": [
+          {"netting_set_id": "NS-1", "account_id": "ACCT-1", "base_currency": "USD"},
+          {"netting_set_id": "NS-2", "account_id": "ACCT-2", "base_currency": "USD"}
+        ],
+        "positions": [
+          {
+            "position_id": "P1",
+            "netting_set_id": "NS-1",
+            "instrument_id": "ES_MAR26",
+            "risk_group": "EQUITY_INDEX",
+            "quantity": "1",
+            "contract_multiplier": "50",
+            "currency": "USD",
+            "prior_settlement_price": "5000.00"
+          }
+        ],
+        "settlement_prices": [
+          {"instrument_id": "ES_MAR26", "valuation_date": "2026-01-15", "price": "5000.00", "currency": "USD", "revision": 1}
+        ],
+        "collateral_inventory": [
+          {"lot_id": "DUP-LOT-1", "netting_set_id": "NS-1", "asset_class": "CASH", "security_id": "USD_CASH", "currency": "USD", "market_value": "50000.00", "maturity_date": null},
+          {"lot_id": "DUP-LOT-1", "netting_set_id": "NS-2", "asset_class": "CASH", "security_id": "USD_CASH", "currency": "USD", "market_value": "50000.00", "maturity_date": null}
+        ]
+      }
+    },
+    {
+      "case_id": "ERR_MISSING_SETTLEMENT_PRICE",
+      "expected_error_code": "MISSING_SETTLEMENT_PRICE",
+      "description": "Position references an instrument without a settlement price for valuation_date.",
+      "payload": {
+        "valuation_date": "2026-01-15",
+        "valuation_time_utc": "21:00:00Z",
+        "revision": 1,
+        "netting_sets": [
+          {"netting_set_id": "NS-1", "account_id": "ACCT-1", "base_currency": "USD"}
+        ],
+        "positions": [
+          {
+            "position_id": "P1",
+            "netting_set_id": "NS-1",
+            "instrument_id": "UNKNOWN_FUT",
+            "risk_group": "EQUITY_INDEX",
+            "quantity": "2",
+            "contract_multiplier": "50",
+            "currency": "USD",
+            "prior_settlement_price": "100.00"
+          }
+        ],
+        "settlement_prices": [],
+        "collateral_inventory": []
+      }
+    },
+    {
+      "case_id": "ERR_UNSUPPORTED_CURRENCY",
+      "expected_error_code": "UNSUPPORTED_CURRENCY",
+      "description": "Position uses a currency not in policy supported_currencies.",
+      "payload": {
+        "valuation_date": "2026-01-15",
+        "valuation_time_utc": "21:00:00Z",
+        "revision": 1,
+        "netting_sets": [
+          {"netting_set_id": "NS-1", "account_id": "ACCT-1", "base_currency": "USD"}
+        ],
+        "positions": [
+          {
+            "position_id": "P1",
+            "netting_set_id": "NS-1",
+            "instrument_id": "JPY_FUT",
+            "risk_group": "FX",
+            "quantity": "1",
+            "contract_multiplier": "1000",
+            "currency": "JPY",
+            "prior_settlement_price": "150.00"
+          }
+        ],
+        "settlement_prices": [
+          {"instrument_id": "JPY_FUT", "valuation_date": "2026-01-15", "price": "151.00", "currency": "JPY", "revision": 1}
+        ],
+        "collateral_inventory": []
+      }
+    },
+    {
+      "case_id": "ERR_NEGATIVE_MULTIPLIER",
+      "expected_error_code": "INVALID_POSITION",
+      "description": "Position has non-positive contract_multiplier.",
+      "payload": {
+        "valuation_date": "2026-01-15",
+        "valuation_time_utc": "21:00:00Z",
+        "revision": 1,
+        "netting_sets": [
+          {"netting_set_id": "NS-1", "account_id": "ACCT-1", "base_currency": "USD"}
+        ],
+        "positions": [
+          {
+            "position_id": "P1",
+            "netting_set_id": "NS-1",
+            "instrument_id": "ES_MAR26",
+            "risk_group": "EQUITY_INDEX",
+            "quantity": "1",
+            "contract_multiplier": "-50",
+            "currency": "USD",
+            "prior_settlement_price": "5000.00"
+          }
+        ],
+        "settlement_prices": [
+          {"instrument_id": "ES_MAR26", "valuation_date": "2026-01-15", "price": "5000.00", "currency": "USD", "revision": 1}
+        ],
+        "collateral_inventory": []
+      }
+    }
+  ]
+}

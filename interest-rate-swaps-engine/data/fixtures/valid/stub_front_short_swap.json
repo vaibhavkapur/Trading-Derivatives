@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Swap with a front short stub (2M stub before regular semi-annual/quarterly periods).",
+    "provenance": "synthetic_offline_fixture"
+  },
+  "trade": {
+    "trade_id": "USD-STUB-FRONT-SHORT",
+    "currency": "USD",
+    "notional": 10000000.0,
+    "direction": "PAYER",
+    "effective_date": "2026-01-15",
+    "maturity_date": "2028-03-15",
+    "fixed_leg": {
+      "fixed_rate": 0.0430,
+      "frequency": "SEMI_ANNUAL",
+      "day_count": "30/360",
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "USD_NY",
+      "stub_type": "FRONT_SHORT",
+      "end_of_month": false,
+      "payment_lag_days": 0
+    },
+    "floating_leg": {
+      "index_name": "USD-SOFR-3M",
+      "frequency": "QUARTERLY",
+      "day_count": "ACT/360",
+      "spread": 0.0,
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "USD_NY",
+      "stub_type": "FRONT_SHORT",
+      "end_of_month": false,
+      "fixing_lag_days": 2,
+      "payment_lag_days": 0
+    }
+  },
+  "discount_curve": {
+    "curve_id": "USD-OIS-DISC-20260115",
+    "role": "DISCOUNT",
+    "currency": "USD",
+    "valuation_date": "2026-01-15",
+    "day_count": "ACT/365F",
+    "compounding": "CONTINUOUS",
+    "interpolation": "LINEAR_ZERO",
+    "nodes": [
+      { "tenor_years": 0.25, "zero_rate": 0.0410, "label": "3M" },
+      { "tenor_years": 1.00, "zero_rate": 0.0420, "label": "1Y" },
+      { "tenor_years": 2.00, "zero_rate": 0.0428, "label": "2Y" },
+      { "tenor_years": 5.00, "zero_rate": 0.0440, "label": "5Y" }
+    ]
+  },
+  "forward_curve": {
+    "curve_id": "USD-SOFR3M-FWD-20260115",
+    "role": "FORWARD",
+    "currency": "USD",
+    "index_name": "USD-SOFR-3M",
+    "valuation_date": "2026-01-15",
+    "day_count": "ACT/365F",
+    "compounding": "CONTINUOUS",
+    "interpolation": "LINEAR_ZERO",
+    "nodes": [
+      { "tenor_years": 0.25, "zero_rate": 0.0425, "label": "3M" },
+      { "tenor_years": 1.00, "zero_rate": 0.0435, "label": "1Y" },
+      { "tenor_years": 2.00, "zero_rate": 0.0442, "label": "2Y" },
+      { "tenor_years": 5.00, "zero_rate": 0.0455, "label": "5Y" }
+    ]
+  },
+  "fixing_history": {
+    "entries": [
+      { "index_name": "USD-SOFR-3M", "fixing_date": "2026-01-13", "rate": 0.0424 }
+    ]
+  }
+}

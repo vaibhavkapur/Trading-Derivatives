@@ -1,0 +1,36 @@
+name: Volatility Surface Engine CI
+
+on:
+  push:
+    paths:
+      - "volatility-surface-engine/**"
+  pull_request:
+    paths:
+      - "volatility-surface-engine/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: volatility-surface-engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install --no-deps -e .
+      - name: Run unit, integration, and boundary tests
+        run: pytest
+      - name: Run reproducible demo and acceptance verification
+        run: |
+          python scripts/run_demo.py
+          python scripts/run_acceptance.py
+      - name: Verify deterministic CLI replay
+        run: |
+          vse validate --input data/fixtures/valid_chain_reference.json
+          vse replay --input data/fixtures/valid_chain_reference.json --snapshot reports/demo_snapshot.json --config config/default_config.json

@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_id": "REFERENCE-HAND-CALC-V1",
+  "description": "Hand-calculated reference fixture with long equity future and short rates future in one netting set.",
+  "valuation_date": "2026-01-15",
+  "valuation_time_utc": "21:00:00Z",
+  "revision": 1,
+  "netting_sets": [
+    {
+      "netting_set_id": "NS-ALPHA",
+      "account_id": "ACCT-001",
+      "base_currency": "USD",
+      "cross_group_offset_override": "0.50"
+    }
+  ],
+  "positions": [
+    {
+      "position_id": "POS-ES-1",
+      "netting_set_id": "NS-ALPHA",
+      "instrument_id": "ES_MAR26",
+      "risk_group": "EQUITY_INDEX",
+      "quantity": "10",
+      "contract_multiplier": "50",
+      "currency": "USD",
+      "prior_settlement_price": "5000.00",
+      "settled_cash_adjustment": "0.00",
+      "allow_negative_price": false
+    },
+    {
+      "position_id": "POS-ZN-1",
+      "netting_set_id": "NS-ALPHA",
+      "instrument_id": "ZN_MAR26",
+      "risk_group": "RATES",
+      "quantity": "-20",
+      "contract_multiplier": "1000",
+      "currency": "USD",
+      "prior_settlement_price": "110.00",
+      "settled_cash_adjustment": "0.00",
+      "allow_negative_price": false
+    }
+  ],
+  "settlement_prices": [
+    {
+      "instrument_id": "ES_MAR26",
+      "valuation_date": "2026-01-15",
+      "price": "4980.00",
+      "currency": "USD",
+      "revision": 1
+    },
+    {
+      "instrument_id": "ZN_MAR26",
+      "valuation_date": "2026-01-15",
+      "price": "110.50",
+      "currency": "USD",
+      "revision": 1
+    }
+  ],
+  "collateral_inventory": [
+    {
+      "lot_id": "COL-CASH-001",
+      "netting_set_id": "NS-ALPHA",
+      "asset_class": "CASH",
+      "security_id": "USD_CASH",
+      "currency": "USD",
+      "market_value": "100000.00",
+      "maturity_date": null
+    },
+    {
+      "lot_id": "COL-UST-001",
+      "netting_set_id": "NS-ALPHA",
+      "asset_class": "GOVT_BOND",
+      "security_id": "UST_2Y_2027",
+      "currency": "USD",
+      "market_value": "200000.00",
+      "maturity_date": "2027-06-15"
+    }
+  ],
+  "expected_oracle": {
+    "notes": [
+      "ES_MAR26: qty=10, mult=50, prior=5000, curr=4980 -> prior_mtm=2500000, curr_mtm=2490000, delta_mtm=-10000.00",
+      "ZN_MAR26: qty=-20, mult=1000, prior=110, curr=110.50 -> prior_mtm=-2200000, curr_mtm=-2210000, delta_mtm=-10000.00",
+      "Total VM = -20000.00 (vm_call = 20000.00, vm_credit = 0.00)",
+      "Scenarios on curr_mtm (ES=2490000, ZN=-2210000):",
+      "  SCN_EQ_DOWN_10: ES=-249000, ZN=-44200 -> joint=-293200 (loss 293200)",
+      "  SCN_EQ_UP_10:   ES=+249000, ZN=+44200 -> joint=+293200 (loss 0)",
+      "  SCN_RATES_SHOCK_DOWN: ES=-99600, ZN=+88400 -> joint=-11200 (loss 11200)",
+      "  SCN_COMM_SPIKE: ES=-74700, ZN=+22100 -> joint=-52600 (loss 52600)",
+      "Standalone group worst-case IM: EQUITY_INDEX=249000.00, RATES=44200.00 -> gross_im=293200.00",
+      "Joint worst-case IM: 293200.00 -> diversification_benefit=0.00 -> net_im=293200.00",
+      "Collateral: CASH=100000*(1-0.00)=100000.00; UST residual days=516 (366..1825 => 4% haircut) -> 200000*0.96=192000.00; total_collateral=292000.00",
+      "IM shortfall = 293200.00 - 292000.00 = 1200.00; VM call = 20000.00; Total margin call = 21200.00"
+    ],
+    "netting_sets": {
+      "NS-ALPHA": {
+        "total_mtm": "280000.00",
+        "daily_mtm_movement": "-20000.00",
+        "variation_margin": "-20000.00",
+        "gross_im": "293200.00",
+        "joint_im": "293200.00",
+        "offset_credit": "0.00",
+        "net_im": "293200.00",
+        "eligible_collateral_value": "292000.00",
+        "im_shortfall": "1200.00",
+        "im_excess": "0.00",
+        "vm_call": "20000.00",
+        "vm_credit": "0.00",
+        "total_call_due": "21200.00"
+      }
+    }
+  }
+}

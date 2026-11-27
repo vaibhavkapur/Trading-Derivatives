@@ -1,0 +1,62 @@
+{
+  "fixture_version": "1.0.0",
+  "provenance": "Synthetic textbook and hand-verified closed-form reference fixtures (no market or proprietary data).",
+  "cases": [
+    {
+      "name": "hull_example_15_6_call",
+      "description": "Classic European call S=42, K=40, r=0.10, q=0, sigma=0.20, T=0.5 (Hull textbook benchmark, 12-digit independent erfc reference).",
+      "spot": 42.0,
+      "strike": 40.0,
+      "risk_free_rate": 0.10,
+      "dividend_yield": 0.0,
+      "volatility": 0.20,
+      "time_to_maturity": 0.5,
+      "option_type": "call",
+      "exercise_style": "european",
+      "expected_price": 4.759422392871532,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "hull_example_15_6_put",
+      "description": "Classic European put S=42, K=40, r=0.10, q=0, sigma=0.20, T=0.5 (12-digit independent erfc reference).",
+      "spot": 42.0,
+      "strike": 40.0,
+      "risk_free_rate": 0.10,
+      "dividend_yield": 0.0,
+      "volatility": 0.20,
+      "time_to_maturity": 0.5,
+      "option_type": "put",
+      "exercise_style": "european",
+      "expected_price": 0.8085993729000922,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "atm_dividend_european_call",
+      "description": "1Y ATM European call with continuous dividend yield S=100, K=100, r=0.05, q=0.02, sigma=0.20, T=1.0.",
+      "spot": 100.0,
+      "strike": 100.0,
+      "risk_free_rate": 0.05,
+      "dividend_yield": 0.02,
+      "volatility": 0.20,
+      "time_to_maturity": 1.0,
+      "option_type": "call",
+      "exercise_style": "european",
+      "expected_price": 9.227005508154036,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "atm_nodiv_european_put",
+      "description": "1Y ATM European put S=100, K=100, r=0.05, q=0.0, sigma=0.20, T=1.0.",
+      "spot": 100.0,
+      "strike": 100.0,
+      "risk_free_rate": 0.05,
+      "dividend_yield": 0.0,
+      "volatility": 0.20,
+      "time_to_maturity": 1.0,
+      "option_type": "put",
+      "exercise_style": "european",
+      "expected_price": 5.573526022256971,
+      "tolerance": 1e-10
+    }
+  ]
+}

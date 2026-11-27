@@ -1,0 +1,28 @@
+{
+  "measurements": {
+    "domain_evaluation_ms": 400.81,
+    "journal_entries_posted": 400,
+    "margin_calls_posted": 100,
+    "position_scenario_evals_per_sec": 623732.8,
+    "reconciled": true,
+    "run_id": "RUN-20260115-R1-B36450D4F25D4554",
+    "sqlite_persist_and_reconcile_ms": 3.02,
+    "total_ms": 403.83
+  },
+  "parameters": {
+    "collateral_lots": 100,
+    "netting_sets": 50,
+    "position_scenario_evaluations": 250000,
+    "positions": 1000,
+    "scenarios": 250,
+    "seed": 20260115
+  },
+  "report_type": "synthetic_benchmark_results",
+  "runtime_environment": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "sqlite_version": "3.51.0"
+  },
+  "workload_kind": "synthetic_in_memory_fixture"
+}

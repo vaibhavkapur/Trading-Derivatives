@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interest-rate-swaps-engine"
+version = "0.1.0"
+description = "Dual-curve vanilla fixed-floating interest rate swaps valuation, sensitivity, and scenario engine."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Trading-Derivatives Research" }
+]
+dependencies = [
+  "fastapi==0.165.0",
+  "pydantic==2.14.4",
+  "uvicorn==0.54.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.4.2",
+  "httpx==0.28.1",
+]
+quantlib = [
+  "QuantLib>=1.32",
+]
+
+[project.scripts]
+irs-engine = "irs_engine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra -q"

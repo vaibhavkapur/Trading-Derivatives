@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_set_id": "REF-SCENARIOS-V1",
+  "description": "Deterministic reference price shock scenarios for educational IM calculation.",
+  "scenarios": [
+    {
+      "scenario_id": "SCN_EQ_DOWN_10",
+      "description": "Equity index -10%, rates +2%, commodity -5%",
+      "shocks": [
+        {"target_type": "RISK_GROUP", "target_id": "EQUITY_INDEX", "shock_type": "RELATIVE", "value": "-0.10"},
+        {"target_type": "RISK_GROUP", "target_id": "RATES", "shock_type": "RELATIVE", "value": "0.02"},
+        {"target_type": "RISK_GROUP", "target_id": "COMMODITY", "shock_type": "RELATIVE", "value": "-0.05"}
+      ]
+    },
+    {
+      "scenario_id": "SCN_EQ_UP_10",
+      "description": "Equity index +10%, rates -2%, commodity +6%",
+      "shocks": [
+        {"target_type": "RISK_GROUP", "target_id": "EQUITY_INDEX", "shock_type": "RELATIVE", "value": "0.10"},
+        {"target_type": "RISK_GROUP", "target_id": "RATES", "shock_type": "RELATIVE", "value": "-0.02"},
+        {"target_type": "RISK_GROUP", "target_id": "COMMODITY", "shock_type": "RELATIVE", "value": "0.06"}
+      ]
+    },
+    {
+      "scenario_id": "SCN_RATES_SHOCK_DOWN",
+      "description": "Rates sharp drop -4%, equities -4%",
+      "shocks": [
+        {"target_type": "RISK_GROUP", "target_id": "EQUITY_INDEX", "shock_type": "RELATIVE", "value": "-0.04"},
+        {"target_type": "RISK_GROUP", "target_id": "RATES", "shock_type": "RELATIVE", "value": "-0.04"},
+        {"target_type": "RISK_GROUP", "target_id": "COMMODITY", "shock_type": "RELATIVE", "value": "-0.02"}
+      ]
+    },
+    {
+      "scenario_id": "SCN_COMM_SPIKE",
+      "description": "Commodity +12%, equities -3%, rates -1%",
+      "shocks": [
+        {"target_type": "RISK_GROUP", "target_id": "EQUITY_INDEX", "shock_type": "RELATIVE", "value": "-0.03"},
+        {"target_type": "RISK_GROUP", "target_id": "RATES", "shock_type": "RELATIVE", "value": "-0.01"},
+        {"target_type": "RISK_GROUP", "target_id": "COMMODITY", "shock_type": "RELATIVE", "value": "0.12"}
+      ]
+    }
+  ]
+}

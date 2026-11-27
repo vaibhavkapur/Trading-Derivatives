@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Boundary fixture: single-period 3M swap (1 fixed period, 1 floating period).",
+    "provenance": "synthetic_boundary_fixture"
+  },
+  "trade": {
+    "trade_id": "USD-1P-BOUNDARY",
+    "currency": "USD",
+    "notional": 1000000.0,
+    "direction": "PAYER",
+    "effective_date": "2026-01-05",
+    "maturity_date": "2026-04-05",
+    "fixed_leg": {
+      "fixed_rate": 0.0420,
+      "frequency": "QUARTERLY",
+      "day_count": "ACT/360",
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "USD_NY",
+      "stub_type": "FRONT_SHORT"
+    },
+    "floating_leg": {
+      "index_name": "USD-SOFR-3M",
+      "frequency": "QUARTERLY",
+      "day_count": "ACT/360",
+      "spread": 0.0,
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "USD_NY",
+      "stub_type": "FRONT_SHORT",
+      "fixing_lag_days": 0
+    }
+  },
+  "discount_curve": {
+    "curve_id": "USD-OIS-DISC-1P",
+    "role": "DISCOUNT",
+    "currency": "USD",
+    "valuation_date": "2026-01-05",
+    "nodes": [
+      { "tenor_years": 0.25, "zero_rate": 0.0410, "label": "3M" },
+      { "tenor_years": 1.00, "zero_rate": 0.0420, "label": "1Y" }
+    ]
+  },
+  "forward_curve": {
+    "curve_id": "USD-SOFR3M-FWD-1P",
+    "role": "FORWARD",
+    "currency": "USD",
+    "index_name": "USD-SOFR-3M",
+    "valuation_date": "2026-01-05",
+    "nodes": [
+      { "tenor_years": 0.25, "zero_rate": 0.0425, "label": "3M" },
+      { "tenor_years": 1.00, "zero_rate": 0.0435, "label": "1Y" }
+    ]
+  },
+  "fixing_history": { "entries": [] }
+}

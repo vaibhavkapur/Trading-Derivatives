@@ -1,0 +1,247 @@
+{
+  "config_version": "1.0.0",
+  "environment": {
+    "engine_version": "0.1.0",
+    "machine": "arm64",
+    "numpy_version": "2.0.2",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_implementation": "CPython",
+    "python_version": "3.9.6",
+    "schema_version": "1.0.0",
+    "scipy_version": "1.13.1"
+  },
+  "generated_at_utc": "2026-11-27T12:39:54Z",
+  "parameters": {
+    "dividend_yield": 0.0,
+    "option_type": "put",
+    "risk_free_rate": 0.05,
+    "spot": 100.0,
+    "strike": 100.0,
+    "time_to_maturity": 1.0,
+    "volatility": 0.2
+  },
+  "studies": {
+    "american_put_binomial": {
+      "exercise_style": "american",
+      "method": "binomial",
+      "option_type": "put",
+      "reference_price": 6.08998995255233,
+      "reference_source": "crr_high_res_2000",
+      "resolutions": [
+        {
+          "abs_error": 0.016261966827473273,
+          "early_exercise_nodes": 514,
+          "empirical_order": null,
+          "price": 6.073727985724857,
+          "rel_error": 0.0026702781045899494,
+          "runtime_ms": 0.20904199999999262,
+          "signed_error": -0.016261966827473273,
+          "steps": 50
+        },
+        {
+          "abs_error": 0.007635543409844736,
+          "early_exercise_nodes": 2162,
+          "empirical_order": 1.0906990166684465,
+          "price": 6.082354409142486,
+          "rel_error": 0.0012537858796704024,
+          "runtime_ms": 0.438082999999978,
+          "signed_error": -0.007635543409844736,
+          "steps": 100
+        },
+        {
+          "abs_error": 0.0036072026362292675,
+          "early_exercise_nodes": 8986,
+          "empirical_order": 1.081850365612009,
+          "price": 6.086382749916101,
+          "rel_error": 0.0005923166810345032,
+          "runtime_ms": 0.9401249999999861,
+          "signed_error": -0.0036072026362292675,
+          "steps": 200
+        },
+        {
+          "abs_error": 0.0015840555135833156,
+          "early_exercise_nodes": 37013,
+          "empirical_order": 1.187257573567125,
+          "price": 6.088405897038747,
+          "rel_error": 0.0002601080668317743,
+          "runtime_ms": 2.022707999999984,
+          "signed_error": -0.0015840555135833156,
+          "steps": 400
+        },
+        {
+          "abs_error": 0.0005883372174402268,
+          "early_exercise_nodes": 151316,
+          "empirical_order": 1.4289076886316718,
+          "price": 6.08940161533489,
+          "rel_error": 9.660725584508612e-05,
+          "runtime_ms": 5.0531669999999975,
+          "signed_error": -0.0005883372174402268,
+          "steps": 800
+        }
+      ]
+    },
+    "american_put_pde_crank_nicolson": {
+      "exercise_style": "american",
+      "method": "pde_fd",
+      "option_type": "put",
+      "reference_price": 6.08958629664811,
+      "reference_source": "pde_crank_nicolson_800x800",
+      "resolutions": [
+        {
+          "abs_error": 0.0461641728959421,
+          "cfl_number": 3.920900000000001,
+          "empirical_order": null,
+          "grid_ds": 4.0,
+          "grid_dt": 0.01,
+          "price": 6.043422123752168,
+          "psor_max_iterations_used": 15,
+          "rel_error": 0.00758083893504428,
+          "runtime_ms": 15.705999999999998,
+          "signed_error": -0.0461641728959421,
+          "spot_steps": 100,
+          "time_steps": 100
+        },
+        {
+          "abs_error": 0.010803498607378614,
+          "cfl_number": 7.920450000000002,
+          "empirical_order": 2.0952750479829776,
+          "grid_ds": 2.0,
+          "grid_dt": 0.005,
+          "price": 6.078782798040732,
+          "psor_max_iterations_used": 15,
+          "rel_error": 0.0017740940157667496,
+          "runtime_ms": 32.83829100000002,
+          "signed_error": -0.010803498607378614,
+          "spot_steps": 200,
+          "time_steps": 200
+        },
+        {
+          "abs_error": 0.002222345112071089,
+          "cfl_number": 15.920225000000004,
+          "empirical_order": 2.2813438127249577,
+          "grid_ds": 1.0,
+          "grid_dt": 0.0025,
+          "price": 6.087363951536039,
+          "psor_max_iterations_used": 15,
+          "rel_error": 0.0003649418866589236,
+          "runtime_ms": 75.85700000000001,
+          "signed_error": -0.002222345112071089,
+          "spot_steps": 400,
+          "time_steps": 400
+        }
+      ],
+      "scheme": "crank_nicolson"
+    },
+    "european_put_binomial": {
+      "exercise_style": "european",
+      "method": "binomial",
+      "option_type": "put",
+      "reference_price": 5.573526022256971,
+      "reference_source": "black_scholes_analytic",
+      "resolutions": [
+        {
+          "abs_error": 0.039892031453204524,
+          "early_exercise_nodes": 0,
+          "empirical_order": null,
+          "price": 5.533633990803766,
+          "rel_error": 0.007157413689987663,
+          "runtime_ms": 0.11449999999998961,
+          "signed_error": -0.039892031453204524,
+          "steps": 50
+        },
+        {
+          "abs_error": 0.019971909935565968,
+          "early_exercise_nodes": 0,
+          "empirical_order": 0.9981282869046968,
+          "price": 5.553554112321405,
+          "rel_error": 0.0035833527744934517,
+          "runtime_ms": 0.1167499999999988,
+          "signed_error": -0.019971909935565968,
+          "steps": 100
+        },
+        {
+          "abs_error": 0.009992312326359887,
+          "early_exercise_nodes": 0,
+          "empirical_order": 0.9990818292831315,
+          "price": 5.563533709930611,
+          "rel_error": 0.001792817022196938,
+          "runtime_ms": 0.21933299999998823,
+          "signed_error": -0.009992312326359887,
+          "steps": 200
+        },
+        {
+          "abs_error": 0.004997730898112174,
+          "early_exercise_nodes": 0,
+          "empirical_order": 0.9995453496157577,
+          "price": 5.5685282913588585,
+          "rel_error": 0.0008966910494639385,
+          "runtime_ms": 0.45070800000002187,
+          "signed_error": -0.004997730898112174,
+          "steps": 400
+        },
+        {
+          "abs_error": 0.00249925730428302,
+          "early_exercise_nodes": 0,
+          "empirical_order": 0.9997737840298446,
+          "price": 5.571026764952688,
+          "rel_error": 0.0004484158312534367,
+          "runtime_ms": 0.9763750000000015,
+          "signed_error": -0.00249925730428302,
+          "steps": 800
+        }
+      ]
+    },
+    "european_put_pde_crank_nicolson": {
+      "exercise_style": "european",
+      "method": "pde_fd",
+      "option_type": "put",
+      "reference_price": 5.573526022256971,
+      "reference_source": "black_scholes_analytic",
+      "resolutions": [
+        {
+          "abs_error": 0.039886068378094386,
+          "cfl_number": 3.920900000000001,
+          "empirical_order": null,
+          "grid_ds": 4.0,
+          "grid_dt": 0.01,
+          "price": 5.533639953878876,
+          "psor_max_iterations_used": 0,
+          "rel_error": 0.0071563437972328205,
+          "runtime_ms": 1.2572080000000097,
+          "signed_error": -0.039886068378094386,
+          "spot_steps": 100,
+          "time_steps": 100
+        },
+        {
+          "abs_error": 0.009915440668232911,
+          "cfl_number": 7.920450000000002,
+          "empirical_order": 2.008136125947737,
+          "grid_ds": 2.0,
+          "grid_dt": 0.005,
+          "price": 5.563610581588738,
+          "psor_max_iterations_used": 0,
+          "rel_error": 0.0017790247374170694,
+          "runtime_ms": 2.335625000000008,
+          "signed_error": -0.009915440668232911,
+          "spot_steps": 200,
+          "time_steps": 200
+        },
+        {
+          "abs_error": 0.0024754362713368394,
+          "cfl_number": 15.920225000000004,
+          "empirical_order": 2.0019940826010734,
+          "grid_ds": 1.0,
+          "grid_dt": 0.0025,
+          "price": 5.571050585985634,
+          "psor_max_iterations_used": 0,
+          "rel_error": 0.00044414187023646915,
+          "runtime_ms": 5.4857499999999835,
+          "signed_error": -0.0024754362713368394,
+          "spot_steps": 400,
+          "time_steps": 400
+        }
+      ],
+      "scheme": "crank_nicolson"
+    }
+  }
+}

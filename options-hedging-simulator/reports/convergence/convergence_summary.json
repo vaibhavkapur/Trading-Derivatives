@@ -1,0 +1,76 @@
+{
+  "empirical_loglog_slope_vs_steps": -0.4900459172921288,
+  "monotone_std_reduction": true,
+  "num_paths": 300,
+  "points": [
+    {
+      "dt_years": 0.020833333333333332,
+      "hedge_error_mean": -48.974800000000016,
+      "hedge_error_rmse": 1037.1242811649915,
+      "hedge_error_std": 1037.6982392130412,
+      "hedge_error_std_pct_premium": 22.48533562758486,
+      "max_abs_ledger_residual": "0.00",
+      "mean_rebalance_count": 12.0,
+      "num_steps": 12,
+      "sqrt_dt": 0.14433756729740643
+    },
+    {
+      "dt_years": 0.010416666666666666,
+      "hedge_error_mean": -46.367833333333344,
+      "hedge_error_rmse": 659.850883338804,
+      "hedge_error_std": 659.3195125839104,
+      "hedge_error_std_pct_premium": 14.286446643204993,
+      "max_abs_ledger_residual": "0.00",
+      "mean_rebalance_count": 23.99,
+      "num_steps": 24,
+      "sqrt_dt": 0.10206207261596575
+    },
+    {
+      "dt_years": 0.003968253968253968,
+      "hedge_error_mean": -19.1525,
+      "hedge_error_rmse": 420.251414438627,
+      "hedge_error_std": 420.5162058065099,
+      "hedge_error_std_pct_premium": 9.11194378779003,
+      "max_abs_ledger_residual": "0.00",
+      "mean_rebalance_count": 62.806666666666665,
+      "num_steps": 63,
+      "sqrt_dt": 0.06299407883487121
+    },
+    {
+      "dt_years": 0.001984126984126984,
+      "hedge_error_mean": 12.311999999999992,
+      "hedge_error_rmse": 323.6545541736333,
+      "hedge_error_std": 323.9606768738069,
+      "hedge_error_std_pct_premium": 7.01973297668054,
+      "max_abs_ledger_residual": "0.00",
+      "mean_rebalance_count": 125.03666666666666,
+      "num_steps": 126,
+      "sqrt_dt": 0.0445435403187374
+    },
+    {
+      "dt_years": 0.000992063492063492,
+      "hedge_error_mean": -0.43876666666666553,
+      "hedge_error_rmse": 221.15612525770115,
+      "hedge_error_std": 221.5252068736504,
+      "hedge_error_std_pct_premium": 4.800112824997841,
+      "max_abs_ledger_residual": "0.00",
+      "mean_rebalance_count": 249.33,
+      "num_steps": 252,
+      "sqrt_dt": 0.031497039417435604
+    }
+  ],
+  "runtime_metadata": {
+    "generated_at_utc": "2026-11-27T12:42:57Z",
+    "packages": {
+      "matplotlib": "3.9.4",
+      "numpy": "2.0.2",
+      "pandas": "2.3.3"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "schema_version": "1.0.0"
+  },
+  "scenario_name": "zero_cost_convergence_atm_call",
+  "seed": 424242,
+  "theoretical_slope_vs_steps": -0.5
+}

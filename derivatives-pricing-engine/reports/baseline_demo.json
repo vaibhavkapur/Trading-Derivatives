@@ -1,0 +1,450 @@
+{
+  "config_version": "1.0.0",
+  "engine_metrics": {
+    "errors_by_code": {},
+    "requests_by_method": {
+      "binomial": 2,
+      "black_scholes": 3,
+      "monte_carlo": 1,
+      "pde_fd": 2
+    },
+    "requests_failed": 0,
+    "requests_succeeded": 8,
+    "requests_total": 8,
+    "total_runtime_ms": 87.591165
+  },
+  "environment": {
+    "engine_version": "0.1.0",
+    "machine": "arm64",
+    "numpy_version": "2.0.2",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_implementation": "CPython",
+    "python_version": "3.9.6",
+    "schema_version": "1.0.0",
+    "scipy_version": "1.13.1"
+  },
+  "generated_at_utc": "2026-11-27T12:41:12Z",
+  "scenarios": {
+    "american_put_vs_european": {
+      "contract": {
+        "calendar": "NONE_365",
+        "contract_id": "DEMO-AMR-PUT-100",
+        "contract_multiplier": 100.0,
+        "currency": "USD",
+        "day_count": "ACT/365F",
+        "exercise_style": "american",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "option_type": "put",
+        "strike": 100.0,
+        "underlying": "SYNTH-EQ-01"
+      },
+      "diff_vs_european_bs": {
+        "binomial": 0.5148798747817764,
+        "pde_fd": 0.5138379292790685
+      },
+      "european_black_scholes_reference": 5.573526022256971,
+      "market": {
+        "dividend_yield": 0.0,
+        "rate_compounding": "continuous",
+        "risk_free_rate": 0.05,
+        "snapshot_id": "SNAP-DEMO-NODIV-01",
+        "spot": 100.0,
+        "valuation_timestamp": "2026-01-15T16:00:00Z",
+        "volatility": 0.2
+      },
+      "results": {
+        "binomial": {
+          "contract_id": "DEMO-AMR-PUT-100",
+          "currency": "USD",
+          "diagnostics": {
+            "down_factor": 0.9900498337491681,
+            "early_exercise_nodes": 37013,
+            "regime": "crr_standard",
+            "risk_neutral_prob": 0.5037503073024359,
+            "service_runtime_ms": 2.116500000000021,
+            "solver_runtime_ms": 2.1086670000000085,
+            "steps": 400,
+            "up_factor": 1.010050167084168
+          },
+          "discount_factor": 0.951229424500714,
+          "engine_version": "0.1.0",
+          "greeks": {
+            "delta": -0.4111966158539374,
+            "gamma": 0.023024104679147,
+            "rho": null,
+            "theta": -2.243671565971006,
+            "vega": null
+          },
+          "intrinsic_value": 0.0,
+          "metadata": {
+            "calendar": "NONE_365",
+            "config_version": "1.0.0",
+            "contract_multiplier": 100.0,
+            "day_count": "ACT/365F",
+            "effective_params": {
+              "steps": 400
+            },
+            "environment": {
+              "engine_version": "0.1.0",
+              "machine": "arm64",
+              "numpy_version": "2.0.2",
+              "platform": "macOS-26.5.1-arm64-arm-64bit",
+              "python_implementation": "CPython",
+              "python_version": "3.9.6",
+              "schema_version": "1.0.0",
+              "scipy_version": "1.13.1"
+            },
+            "exercise_style": "american",
+            "option_type": "put",
+            "rate_compounding": "continuous"
+          },
+          "method": "binomial",
+          "request_id": "req-0289bde701479120",
+          "result_id": "res-d05bdef593e6e199",
+          "schema_version": "1.0.0",
+          "snapshot_id": "SNAP-DEMO-NODIV-01",
+          "time_to_maturity": 1.0,
+          "time_value": 6.088405897038747,
+          "total_price": 608.8405897038747,
+          "unit_price": 6.088405897038747
+        },
+        "pde_fd": {
+          "contract_id": "DEMO-AMR-PUT-100",
+          "currency": "USD",
+          "diagnostics": {
+            "cfl_number": 15.920225000000004,
+            "grid_ds": 1.0,
+            "grid_dt": 0.0025,
+            "is_stable": true,
+            "psor_converged": true,
+            "psor_max_iterations_used": 15,
+            "rannacher_steps": 4,
+            "regime": "pde_crank_nicolson",
+            "s_max": 400.0,
+            "scheme": "crank_nicolson",
+            "service_runtime_ms": 77.67554200000001,
+            "solver_runtime_ms": 77.65979199999998,
+            "spot_steps": 400,
+            "time_steps": 400
+          },
+          "discount_factor": 0.951229424500714,
+          "engine_version": "0.1.0",
+          "greeks": {
+            "delta": -0.41101819924878247,
+            "gamma": 0.022997845339645107,
+            "rho": null,
+            "theta": null,
+            "vega": null
+          },
+          "intrinsic_value": 0.0,
+          "metadata": {
+            "calendar": "NONE_365",
+            "config_version": "1.0.0",
+            "contract_multiplier": 100.0,
+            "day_count": "ACT/365F",
+            "effective_params": {
+              "psor_max_iter": 10000,
+              "psor_omega": 1.2,
+              "psor_tol": 1e-10,
+              "rannacher_steps": 4,
+              "s_max_multiplier": 4.0,
+              "scheme": "crank_nicolson",
+              "spot_steps": 400,
+              "time_steps": 400
+            },
+            "environment": {
+              "engine_version": "0.1.0",
+              "machine": "arm64",
+              "numpy_version": "2.0.2",
+              "platform": "macOS-26.5.1-arm64-arm-64bit",
+              "python_implementation": "CPython",
+              "python_version": "3.9.6",
+              "schema_version": "1.0.0",
+              "scipy_version": "1.13.1"
+            },
+            "exercise_style": "american",
+            "option_type": "put",
+            "rate_compounding": "continuous"
+          },
+          "method": "pde_fd",
+          "request_id": "req-adc2f12c815cafc2",
+          "result_id": "res-25647150c27f8e23",
+          "schema_version": "1.0.0",
+          "snapshot_id": "SNAP-DEMO-NODIV-01",
+          "time_to_maturity": 1.0,
+          "time_value": 6.087363951536039,
+          "total_price": 608.7363951536039,
+          "unit_price": 6.087363951536039
+        }
+      }
+    },
+    "european_call_cross_method": {
+      "contract": {
+        "calendar": "NONE_365",
+        "contract_id": "DEMO-EUR-CALL-100",
+        "contract_multiplier": 100.0,
+        "currency": "USD",
+        "day_count": "ACT/365F",
+        "exercise_style": "european",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "option_type": "call",
+        "strike": 100.0,
+        "underlying": "SYNTH-EQ-01"
+      },
+      "diff_vs_european_bs": {
+        "binomial": -0.004858510808698924,
+        "black_scholes": 0.0,
+        "monte_carlo": 0.014288080390951308,
+        "pde_fd": -0.0024053171552687047
+      },
+      "european_black_scholes_reference": 9.227005508154036,
+      "market": {
+        "dividend_yield": 0.02,
+        "rate_compounding": "continuous",
+        "risk_free_rate": 0.05,
+        "snapshot_id": "SNAP-DEMO-DIV-01",
+        "spot": 100.0,
+        "valuation_timestamp": "2026-01-15T16:00:00Z",
+        "volatility": 0.2
+      },
+      "results": {
+        "binomial": {
+          "contract_id": "DEMO-EUR-CALL-100",
+          "currency": "USD",
+          "diagnostics": {
+            "down_factor": 0.9900498337491681,
+            "early_exercise_nodes": 0,
+            "regime": "crr_standard",
+            "risk_neutral_prob": 0.5012500989600229,
+            "service_runtime_ms": 0.5321660000000006,
+            "solver_runtime_ms": 0.5183750000000154,
+            "steps": 400,
+            "up_factor": 1.010050167084168
+          },
+          "discount_factor": 0.951229424500714,
+          "engine_version": "0.1.0",
+          "greeks": {
+            "delta": 0.5868215899142422,
+            "gamma": 0.018989799878065587,
+            "rho": null,
+            "theta": -5.097487730770567,
+            "vega": null
+          },
+          "intrinsic_value": 0.0,
+          "metadata": {
+            "calendar": "NONE_365",
+            "config_version": "1.0.0",
+            "contract_multiplier": 100.0,
+            "day_count": "ACT/365F",
+            "effective_params": {
+              "steps": 400
+            },
+            "environment": {
+              "engine_version": "0.1.0",
+              "machine": "arm64",
+              "numpy_version": "2.0.2",
+              "platform": "macOS-26.5.1-arm64-arm-64bit",
+              "python_implementation": "CPython",
+              "python_version": "3.9.6",
+              "schema_version": "1.0.0",
+              "scipy_version": "1.13.1"
+            },
+            "exercise_style": "european",
+            "option_type": "call",
+            "rate_compounding": "continuous"
+          },
+          "method": "binomial",
+          "request_id": "req-057fd4c486425eb2",
+          "result_id": "res-b7fd3eabe594eaa5",
+          "schema_version": "1.0.0",
+          "snapshot_id": "SNAP-DEMO-DIV-01",
+          "time_to_maturity": 1.0,
+          "time_value": 9.222146997345337,
+          "total_price": 922.2146997345337,
+          "unit_price": 9.222146997345337
+        },
+        "black_scholes": {
+          "contract_id": "DEMO-EUR-CALL-100",
+          "currency": "USD",
+          "diagnostics": {
+            "d1": 0.25,
+            "d2": 0.04999999999999999,
+            "dividend_discount_factor": 0.9801986733067553,
+            "forward": 103.0454533953517,
+            "regime": "analytic_standard",
+            "service_runtime_ms": 0.05404100000000467
+          },
+          "discount_factor": 0.951229424500714,
+          "engine_version": "0.1.0",
+          "greeks": {
+            "delta": 0.586851146134764,
+            "gamma": 0.018950578755008714,
+            "rho": 49.45810910532236,
+            "theta": -5.089318913998333,
+            "vega": 37.90115751001743
+          },
+          "intrinsic_value": 0.0,
+          "metadata": {
+            "calendar": "NONE_365",
+            "config_version": "1.0.0",
+            "contract_multiplier": 100.0,
+            "day_count": "ACT/365F",
+            "effective_params": {},
+            "environment": {
+              "engine_version": "0.1.0",
+              "machine": "arm64",
+              "numpy_version": "2.0.2",
+              "platform": "macOS-26.5.1-arm64-arm-64bit",
+              "python_implementation": "CPython",
+              "python_version": "3.9.6",
+              "schema_version": "1.0.0",
+              "scipy_version": "1.13.1"
+            },
+            "exercise_style": "european",
+            "option_type": "call",
+            "rate_compounding": "continuous"
+          },
+          "method": "black_scholes",
+          "request_id": "req-83fa3c5419224ab2",
+          "result_id": "res-e240a636627af563",
+          "schema_version": "1.0.0",
+          "snapshot_id": "SNAP-DEMO-DIV-01",
+          "time_to_maturity": 1.0,
+          "time_value": 9.227005508154036,
+          "total_price": 922.7005508154036,
+          "unit_price": 9.227005508154036
+        },
+        "monte_carlo": {
+          "contract_id": "DEMO-EUR-CALL-100",
+          "currency": "USD",
+          "diagnostics": {
+            "antithetic": true,
+            "ci_half_width": 0.06426474725013445,
+            "ci_high": 9.305558335795123,
+            "ci_low": 9.177028841294852,
+            "confidence_level": 0.95,
+            "paths": 100000,
+            "regime": "mc_antithetic",
+            "seed": 42,
+            "service_runtime_ms": 1.1386660000000104,
+            "solver_runtime_ms": 1.1199580000000042,
+            "standard_error": 0.03278873885288025,
+            "variance_reduction_ratio": 1.7941382030370017
+          },
+          "discount_factor": 0.951229424500714,
+          "engine_version": "0.1.0",
+          "greeks": {
+            "delta": null,
+            "gamma": null,
+            "rho": null,
+            "theta": null,
+            "vega": null
+          },
+          "intrinsic_value": 0.0,
+          "metadata": {
+            "calendar": "NONE_365",
+            "config_version": "1.0.0",
+            "contract_multiplier": 100.0,
+            "day_count": "ACT/365F",
+            "effective_params": {
+              "antithetic": true,
+              "confidence_level": 0.95,
+              "paths": 100000,
+              "seed": 42
+            },
+            "environment": {
+              "engine_version": "0.1.0",
+              "machine": "arm64",
+              "numpy_version": "2.0.2",
+              "platform": "macOS-26.5.1-arm64-arm-64bit",
+              "python_implementation": "CPython",
+              "python_version": "3.9.6",
+              "schema_version": "1.0.0",
+              "scipy_version": "1.13.1"
+            },
+            "exercise_style": "european",
+            "option_type": "call",
+            "rate_compounding": "continuous"
+          },
+          "method": "monte_carlo",
+          "request_id": "req-44aa62f89291e81d",
+          "result_id": "res-6209241ba3b9fab4",
+          "schema_version": "1.0.0",
+          "snapshot_id": "SNAP-DEMO-DIV-01",
+          "time_to_maturity": 1.0,
+          "time_value": 9.241293588544988,
+          "total_price": 924.1293588544987,
+          "unit_price": 9.241293588544988
+        },
+        "pde_fd": {
+          "contract_id": "DEMO-EUR-CALL-100",
+          "currency": "USD",
+          "diagnostics": {
+            "cfl_number": 15.920225000000004,
+            "grid_ds": 1.0,
+            "grid_dt": 0.0025,
+            "is_stable": true,
+            "psor_converged": true,
+            "psor_max_iterations_used": 0,
+            "rannacher_steps": 4,
+            "regime": "pde_crank_nicolson",
+            "s_max": 400.0,
+            "scheme": "crank_nicolson",
+            "service_runtime_ms": 6.04470800000001,
+            "solver_runtime_ms": 6.019999999999998,
+            "spot_steps": 400,
+            "time_steps": 400
+          },
+          "discount_factor": 0.951229424500714,
+          "engine_version": "0.1.0",
+          "greeks": {
+            "delta": 0.5868692226026933,
+            "gamma": 0.018962867355783786,
+            "rho": null,
+            "theta": null,
+            "vega": null
+          },
+          "intrinsic_value": 0.0,
+          "metadata": {
+            "calendar": "NONE_365",
+            "config_version": "1.0.0",
+            "contract_multiplier": 100.0,
+            "day_count": "ACT/365F",
+            "effective_params": {
+              "psor_max_iter": 10000,
+              "psor_omega": 1.2,
+              "psor_tol": 1e-10,
+              "rannacher_steps": 4,
+              "s_max_multiplier": 4.0,
+              "scheme": "crank_nicolson",
+              "spot_steps": 400,
+              "time_steps": 400
+            },
+            "environment": {
+              "engine_version": "0.1.0",
+              "machine": "arm64",
+              "numpy_version": "2.0.2",
+              "platform": "macOS-26.5.1-arm64-arm-64bit",
+              "python_implementation": "CPython",
+              "python_version": "3.9.6",
+              "schema_version": "1.0.0",
+              "scipy_version": "1.13.1"
+            },
+            "exercise_style": "european",
+            "option_type": "call",
+            "rate_compounding": "continuous"
+          },
+          "method": "pde_fd",
+          "request_id": "req-3ce21501581db7cb",
+          "result_id": "res-d6e7b1879265ab2c",
+          "schema_version": "1.0.0",
+          "snapshot_id": "SNAP-DEMO-DIV-01",
+          "time_to_maturity": 1.0,
+          "time_value": 9.224600190998768,
+          "total_price": 922.4600190998767,
+          "unit_price": 9.224600190998768
+        }
+      }
+    }
+  }
+}

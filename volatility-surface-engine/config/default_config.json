@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "seed": 42,
+  "conventions": {
+    "currency": "USD",
+    "day_count": "ACT/365F",
+    "exercise_style": "european",
+    "price_unit": "currency_per_unit",
+    "vol_unit": "annualized_decimal",
+    "time_unit": "year_fraction"
+  },
+  "cleaning": {
+    "min_bid": 0.0,
+    "allow_zero_bid": false,
+    "max_relative_spread": 0.35,
+    "max_absolute_spread": 25.0,
+    "min_time_to_expiry_years": 0.0027397260273972603,
+    "min_vega": 1e-4,
+    "min_moneyness_ratio": 0.4,
+    "max_moneyness_ratio": 2.5,
+    "intrinsic_tolerance": 1e-8,
+    "use_otm_wings": true
+  },
+  "forward_estimation": {
+    "method": "parity_weighted_median",
+    "max_forward_deviation_rel": 0.05,
+    "min_parity_pairs": 1,
+    "prefer_estimated_forward": false
+  },
+  "iv_solver": {
+    "vol_lower": 1e-5,
+    "vol_upper": 5.0,
+    "tol": 1e-10,
+    "max_iter": 100
+  },
+  "svi": {
+    "num_restarts": 8,
+    "max_nfev": 1500,
+    "butterfly_penalty_weight": 500.0,
+    "min_slice_quotes": 5,
+    "spread_weight_floor": 1e-4
+  },
+  "sabr": {
+    "beta": 0.5,
+    "num_restarts": 6,
+    "max_nfev": 1000,
+    "min_slice_quotes": 4
+  },
+  "arbitrage": {
+    "k_grid_points": 81,
+    "t_grid_points": 25,
+    "butterfly_density_tol": -1e-6,
+    "butterfly_call_convexity_tol": -1e-6,
+    "calendar_variance_tol": -1e-8,
+    "reject_on_violation": false
+  },
+  "interpolation": {
+    "method": "piecewise_linear_total_variance",
+    "allow_extrapolation_by_default": false,
+    "domain_padding_k": 0.0
+  }
+}

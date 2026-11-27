@@ -1,0 +1,183 @@
+{
+  "fixture_version": "1.0.0",
+  "provenance": "Synthetic negative test fixtures for strict contract and stability rejection.",
+  "cases": [
+    {
+      "name": "unsupported_exercise_style_bermudan",
+      "expected_error_code": "UNSUPPORTED_FEATURE",
+      "payload": {
+        "contract": {
+          "contract_id": "INV-BERM-01",
+          "underlying": "SYNTH-EQ-01",
+          "currency": "USD",
+          "option_type": "put",
+          "exercise_style": "bermudan",
+          "strike": 100.0,
+          "expiry_timestamp": "2027-01-15T16:00:00Z"
+        },
+        "market": {
+          "snapshot_id": "SNAP-INV-01",
+          "valuation_timestamp": "2026-01-15T16:00:00Z",
+          "spot": 100.0,
+          "risk_free_rate": 0.05,
+          "dividend_yield": 0.0,
+          "volatility": 0.20
+        },
+        "method": "binomial"
+      }
+    },
+    {
+      "name": "negative_volatility",
+      "expected_error_code": "VALIDATION_ERROR",
+      "payload": {
+        "contract": {
+          "contract_id": "INV-NEGVOL-01",
+          "underlying": "SYNTH-EQ-01",
+          "currency": "USD",
+          "option_type": "call",
+          "exercise_style": "european",
+          "strike": 100.0,
+          "expiry_timestamp": "2027-01-15T16:00:00Z"
+        },
+        "market": {
+          "snapshot_id": "SNAP-INV-02",
+          "valuation_timestamp": "2026-01-15T16:00:00Z",
+          "spot": 100.0,
+          "risk_free_rate": 0.05,
+          "dividend_yield": 0.0,
+          "volatility": -0.15
+        },
+        "method": "black_scholes"
+      }
+    },
+    {
+      "name": "expired_contract",
+      "expected_error_code": "VALIDATION_ERROR",
+      "payload": {
+        "contract": {
+          "contract_id": "INV-EXP-01",
+          "underlying": "SYNTH-EQ-01",
+          "currency": "USD",
+          "option_type": "call",
+          "exercise_style": "european",
+          "strike": 100.0,
+          "expiry_timestamp": "2025-12-31T16:00:00Z"
+        },
+        "market": {
+          "snapshot_id": "SNAP-INV-03",
+          "valuation_timestamp": "2026-01-15T16:00:00Z",
+          "spot": 100.0,
+          "risk_free_rate": 0.05,
+          "dividend_yield": 0.0,
+          "volatility": 0.20
+        },
+        "method": "black_scholes"
+      }
+    },
+    {
+      "name": "naive_timestamp_rejected",
+      "expected_error_code": "VALIDATION_ERROR",
+      "payload": {
+        "contract": {
+          "contract_id": "INV-TZ-01",
+          "underlying": "SYNTH-EQ-01",
+          "currency": "USD",
+          "option_type": "call",
+          "exercise_style": "european",
+          "strike": 100.0,
+          "expiry_timestamp": "2027-01-15T16:00:00"
+        },
+        "market": {
+          "snapshot_id": "SNAP-INV-04",
+          "valuation_timestamp": "2026-01-15T16:00:00Z",
+          "spot": 100.0,
+          "risk_free_rate": 0.05,
+          "dividend_yield": 0.0,
+          "volatility": 0.20
+        },
+        "method": "black_scholes"
+      }
+    },
+    {
+      "name": "american_on_black_scholes_rejected",
+      "expected_error_code": "UNSUPPORTED_FEATURE",
+      "payload": {
+        "contract": {
+          "contract_id": "INV-AMR-BS-01",
+          "underlying": "SYNTH-EQ-01",
+          "currency": "USD",
+          "option_type": "put",
+          "exercise_style": "american",
+          "strike": 100.0,
+          "expiry_timestamp": "2027-01-15T16:00:00Z"
+        },
+        "market": {
+          "snapshot_id": "SNAP-INV-05",
+          "valuation_timestamp": "2026-01-15T16:00:00Z",
+          "spot": 100.0,
+          "risk_free_rate": 0.05,
+          "dividend_yield": 0.0,
+          "volatility": 0.20
+        },
+        "method": "black_scholes"
+      }
+    },
+    {
+      "name": "american_on_monte_carlo_rejected",
+      "expected_error_code": "UNSUPPORTED_FEATURE",
+      "payload": {
+        "contract": {
+          "contract_id": "INV-AMR-MC-01",
+          "underlying": "SYNTH-EQ-01",
+          "currency": "USD",
+          "option_type": "put",
+          "exercise_style": "american",
+          "strike": 100.0,
+          "expiry_timestamp": "2027-01-15T16:00:00Z"
+        },
+        "market": {
+          "snapshot_id": "SNAP-INV-06",
+          "valuation_timestamp": "2026-01-15T16:00:00Z",
+          "spot": 100.0,
+          "risk_free_rate": 0.05,
+          "dividend_yield": 0.0,
+          "volatility": 0.20
+        },
+        "method": "monte_carlo",
+        "method_params": {
+          "paths": 10000,
+          "seed": 42
+        }
+      }
+    },
+    {
+      "name": "explicit_pde_cfl_violation",
+      "expected_error_code": "NUMERICAL_STABILITY_ERROR",
+      "payload": {
+        "contract": {
+          "contract_id": "INV-PDE-CFL-01",
+          "underlying": "SYNTH-EQ-01",
+          "currency": "USD",
+          "option_type": "put",
+          "exercise_style": "european",
+          "strike": 100.0,
+          "expiry_timestamp": "2027-01-15T16:00:00Z"
+        },
+        "market": {
+          "snapshot_id": "SNAP-INV-07",
+          "valuation_timestamp": "2026-01-15T16:00:00Z",
+          "spot": 100.0,
+          "risk_free_rate": 0.05,
+          "dividend_yield": 0.0,
+          "volatility": 0.30
+        },
+        "method": "pde_fd",
+        "method_params": {
+          "scheme": "explicit",
+          "spot_steps": 100,
+          "time_steps": 50
+        }
+      }
+    }
+  ]
+}

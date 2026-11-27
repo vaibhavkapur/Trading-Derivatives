@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Invalid fixture: EUR discount curve paired with USD swap trade.",
+    "expected_error_code": "CURVE_ERROR"
+  },
+  "trade": {
+    "trade_id": "USD-CCY-MISMATCH",
+    "currency": "USD",
+    "notional": 1000000.0,
+    "direction": "PAYER",
+    "effective_date": "2026-01-05",
+    "maturity_date": "2028-01-05",
+    "fixed_leg": {
+      "fixed_rate": 0.04,
+      "frequency": "ANNUAL",
+      "day_count": "30/360",
+      "calendar": "USD_NY"
+    },
+    "floating_leg": {
+      "index_name": "USD-SOFR-3M",
+      "frequency": "QUARTERLY",
+      "day_count": "ACT/360",
+      "calendar": "USD_NY",
+      "fixing_lag_days": 0
+    }
+  },
+  "discount_curve": {
+    "curve_id": "EUR-ESTR-DISC",
+    "role": "DISCOUNT",
+    "currency": "EUR",
+    "valuation_date": "2026-01-05",
+    "nodes": [
+      { "tenor_years": 1.0, "zero_rate": 0.025, "label": "1Y" },
+      { "tenor_years": 5.0, "zero_rate": 0.028, "label": "5Y" }
+    ]
+  },
+  "forward_curve": {
+    "curve_id": "USD-SOFR3M-FWD",
+    "role": "FORWARD",
+    "currency": "USD",
+    "index_name": "USD-SOFR-3M",
+    "valuation_date": "2026-01-05",
+    "nodes": [
+      { "tenor_years": 1.0, "zero_rate": 0.043, "label": "1Y" },
+      { "tenor_years": 5.0, "zero_rate": 0.046, "label": "5Y" }
+    ]
+  }
+}

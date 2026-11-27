@@ -1,0 +1,1463 @@
+{
+  "days": [
+    {
+      "day_label": "Day 1 - Baseline Settlement",
+      "duplicate_calls_blocked": 0,
+      "journal_entries_posted": 12,
+      "margin_calls_posted": 2,
+      "persist_status": "COMMITTED",
+      "run_result": {
+        "diagnostics": {
+          "collateral_lots_valued": 4,
+          "duplicate_calls_blocked": 0,
+          "ineligible_collateral_lots": 0,
+          "journal_entries_posted": 0,
+          "margin_calls_issued": 2,
+          "positions_valued": 3,
+          "scenarios_evaluated": 8
+        },
+        "input_hash": "8082b6105388c6a5d49ff698bccc304122dc0a78befca3cf17db6f5e403e29e7",
+        "is_settlement_correction": false,
+        "netting_set_results": [
+          {
+            "account_id": "ACCT-001",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-A",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "100000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "CORP_BOND_IG",
+                "base_currency": "USD",
+                "base_haircut": "0.10",
+                "currency": "USD",
+                "effective_haircut": "0.10",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CORP-A",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "90000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": 730,
+                "security_id": "CORP_IG_2028",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "GOVT_BOND",
+                "base_currency": "USD",
+                "base_haircut": "0.02",
+                "currency": "USD",
+                "effective_haircut": "0.02",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-TBILL-EXPIRING",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "98000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": 4,
+                "security_id": "UST_BILL_JAN19",
+                "status": "ELIGIBLE"
+              }
+            ],
+            "daily_mtm_movement": "-5000.00",
+            "eligible_collateral_value": "288000.00",
+            "gross_collateral_value": "300000.00",
+            "im_excess": "16950.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0.50",
+              "base_currency": "USD",
+              "diversification_benefit": "132300.00",
+              "gross_im": "337200.00",
+              "group_standalone_im": [
+                [
+                  "EQUITY_INDEX",
+                  "249000.00"
+                ],
+                [
+                  "RATES",
+                  "88200.00"
+                ]
+              ],
+              "joint_im": "204900.00",
+              "net_im": "271050.00",
+              "netting_set_id": "NS-ALPHA",
+              "offset_credit": "66150.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "204900.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "187800.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "96750.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_EQ_DOWN_10"
+            },
+            "im_shortfall": "0.00",
+            "margin_calls": [
+              {
+                "account_id": "ACCT-001",
+                "amount": "5000.00",
+                "call_id": "MC-F0D936BA6A9E",
+                "call_type": "VM_CALL",
+                "currency": "USD",
+                "idempotency_key": "2026-01-15|NS-ALPHA|VM_CALL|rev1",
+                "netting_set_id": "NS-ALPHA",
+                "reason": "Daily VM loss transfer due (variation_margin=-5000.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-15"
+              }
+            ],
+            "netting_set_id": "NS-ALPHA",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "50",
+                "currency": "USD",
+                "current_mtm_base": "2490000.00",
+                "current_price": "4980.00",
+                "daily_mtm_movement_base": "-10000.00",
+                "instrument_id": "ES_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ES-1",
+                "prior_mtm_base": "2500000.00",
+                "prior_price": "5000.00",
+                "quantity": "10",
+                "risk_group": "EQUITY_INDEX",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "-10000.00"
+              },
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "2205000.00",
+                "current_price": "110.25",
+                "daily_mtm_movement_base": "5000.00",
+                "instrument_id": "ZN_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ZN-1",
+                "prior_mtm_base": "2200000.00",
+                "prior_price": "110.00",
+                "quantity": "20",
+                "risk_group": "RATES",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "5000.00"
+              }
+            ],
+            "revision": 1,
+            "total_call_due": "5000.00",
+            "total_mtm": "4695000.00",
+            "total_settled_cash_adjustment": "0.00",
+            "valuation_date": "2026-01-15",
+            "variation_margin": "-5000.00",
+            "vm_call": "5000.00",
+            "vm_credit": "0.00"
+          },
+          {
+            "account_id": "ACCT-002",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-B",
+                "market_value_base": "150000.00",
+                "market_value_native": "150000.00",
+                "netting_set_id": "NS-SHORT-COMM",
+                "post_haircut_value_base": "150000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              }
+            ],
+            "daily_mtm_movement": "-15000.00",
+            "eligible_collateral_value": "150000.00",
+            "gross_collateral_value": "150000.00",
+            "im_excess": "13200.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0",
+              "base_currency": "USD",
+              "diversification_benefit": "0.00",
+              "gross_im": "136800.00",
+              "group_standalone_im": [
+                [
+                  "COMMODITY",
+                  "136800.00"
+                ]
+              ],
+              "joint_im": "136800.00",
+              "net_im": "136800.00",
+              "netting_set_id": "NS-SHORT-COMM",
+              "offset_credit": "0.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "68400.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "0.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "136800.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_COMM_SPIKE"
+            },
+            "im_shortfall": "0.00",
+            "margin_calls": [
+              {
+                "account_id": "ACCT-002",
+                "amount": "15000.00",
+                "call_id": "MC-50901EBBFB27",
+                "call_type": "VM_CALL",
+                "currency": "USD",
+                "idempotency_key": "2026-01-15|NS-SHORT-COMM|VM_CALL|rev1",
+                "netting_set_id": "NS-SHORT-COMM",
+                "reason": "Daily VM loss transfer due (variation_margin=-15000.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-15"
+              }
+            ],
+            "netting_set_id": "NS-SHORT-COMM",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "-1140000.00",
+                "current_price": "76.00",
+                "daily_mtm_movement_base": "-15000.00",
+                "instrument_id": "CL_MAR26",
+                "netting_set_id": "NS-SHORT-COMM",
+                "position_id": "POS-CL-SHORT",
+                "prior_mtm_base": "-1125000.00",
+                "prior_price": "75.00",
+                "quantity": "-15",
+                "risk_group": "COMMODITY",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "-15000.00"
+              }
+            ],
+            "revision": 1,
+            "total_call_due": "15000.00",
+            "total_mtm": "-1140000.00",
+            "total_settled_cash_adjustment": "0.00",
+            "valuation_date": "2026-01-15",
+            "variation_margin": "-15000.00",
+            "vm_call": "15000.00",
+            "vm_credit": "0.00"
+          }
+        ],
+        "policy_hash": "a1c75bc6202f8897caa25bd8e10424cb323c3686320d9f922467368c5bc2ffc5",
+        "policy_id": "EDU-DEFAULT-V1",
+        "revision": 1,
+        "run_id": "RUN-20260115-R1-AE30BD4315EAC7E5",
+        "scenario_hash": "1e98246f6782578aa30c03d8c61b275cc71ace57dbf69ee001bcd9286aaef8cf",
+        "scenario_set_id": "REF-SCENARIOS-V1",
+        "schema_version": "1.0.0",
+        "seed": null,
+        "valuation_date": "2026-01-15",
+        "valuation_time_utc": "21:00:00Z"
+      }
+    },
+    {
+      "day_label": "Day 2 - Haircut Increase on Corporate Bonds",
+      "duplicate_calls_blocked": 0,
+      "journal_entries_posted": 10,
+      "margin_calls_posted": 1,
+      "persist_status": "COMMITTED",
+      "run_result": {
+        "diagnostics": {
+          "collateral_lots_valued": 4,
+          "duplicate_calls_blocked": 0,
+          "ineligible_collateral_lots": 0,
+          "journal_entries_posted": 0,
+          "margin_calls_issued": 1,
+          "positions_valued": 3,
+          "scenarios_evaluated": 8
+        },
+        "input_hash": "d47e239b35f3984f606bbbcad1fa57fc82dbc09915edeb6bfd6eab993e99d9b1",
+        "is_settlement_correction": false,
+        "netting_set_results": [
+          {
+            "account_id": "ACCT-001",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-A",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "100000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "CORP_BOND_IG",
+                "base_currency": "USD",
+                "base_haircut": "0.25",
+                "currency": "USD",
+                "effective_haircut": "0.25",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CORP-A",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "75000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": 729,
+                "security_id": "CORP_IG_2028",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "GOVT_BOND",
+                "base_currency": "USD",
+                "base_haircut": "0.02",
+                "currency": "USD",
+                "effective_haircut": "0.02",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-TBILL-EXPIRING",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "98000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": 3,
+                "security_id": "UST_BILL_JAN19",
+                "status": "ELIGIBLE"
+              }
+            ],
+            "daily_mtm_movement": "0.00",
+            "eligible_collateral_value": "273000.00",
+            "gross_collateral_value": "300000.00",
+            "im_excess": "1950.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0.50",
+              "base_currency": "USD",
+              "diversification_benefit": "132300.00",
+              "gross_im": "337200.00",
+              "group_standalone_im": [
+                [
+                  "EQUITY_INDEX",
+                  "249000.00"
+                ],
+                [
+                  "RATES",
+                  "88200.00"
+                ]
+              ],
+              "joint_im": "204900.00",
+              "net_im": "271050.00",
+              "netting_set_id": "NS-ALPHA",
+              "offset_credit": "66150.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "204900.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "187800.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "96750.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_EQ_DOWN_10"
+            },
+            "im_shortfall": "0.00",
+            "margin_calls": [],
+            "netting_set_id": "NS-ALPHA",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "50",
+                "currency": "USD",
+                "current_mtm_base": "2490000.00",
+                "current_price": "4980.00",
+                "daily_mtm_movement_base": "0.00",
+                "instrument_id": "ES_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ES-1",
+                "prior_mtm_base": "2490000.00",
+                "prior_price": "4980.00",
+                "quantity": "10",
+                "risk_group": "EQUITY_INDEX",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "0.00"
+              },
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "2205000.00",
+                "current_price": "110.25",
+                "daily_mtm_movement_base": "0.00",
+                "instrument_id": "ZN_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ZN-1",
+                "prior_mtm_base": "2205000.00",
+                "prior_price": "110.25",
+                "quantity": "20",
+                "risk_group": "RATES",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "0.00"
+              }
+            ],
+            "revision": 1,
+            "total_call_due": "0.00",
+            "total_mtm": "4695000.00",
+            "total_settled_cash_adjustment": "0.00",
+            "valuation_date": "2026-01-16",
+            "variation_margin": "0.00",
+            "vm_call": "0.00",
+            "vm_credit": "0.00"
+          },
+          {
+            "account_id": "ACCT-002",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-B",
+                "market_value_base": "150000.00",
+                "market_value_native": "150000.00",
+                "netting_set_id": "NS-SHORT-COMM",
+                "post_haircut_value_base": "150000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              }
+            ],
+            "daily_mtm_movement": "22500.00",
+            "eligible_collateral_value": "150000.00",
+            "gross_collateral_value": "150000.00",
+            "im_excess": "15900.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0",
+              "base_currency": "USD",
+              "diversification_benefit": "0.00",
+              "gross_im": "134100.00",
+              "group_standalone_im": [
+                [
+                  "COMMODITY",
+                  "134100.00"
+                ]
+              ],
+              "joint_im": "134100.00",
+              "net_im": "134100.00",
+              "netting_set_id": "NS-SHORT-COMM",
+              "offset_credit": "0.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "67050.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "0.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "134100.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_COMM_SPIKE"
+            },
+            "im_shortfall": "0.00",
+            "margin_calls": [
+              {
+                "account_id": "ACCT-002",
+                "amount": "22500.00",
+                "call_id": "MC-B4A462A86D82",
+                "call_type": "VM_CREDIT",
+                "currency": "USD",
+                "idempotency_key": "2026-01-16|NS-SHORT-COMM|VM_CREDIT|rev1",
+                "netting_set_id": "NS-SHORT-COMM",
+                "reason": "Daily VM gain credit payable (variation_margin=22500.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-16"
+              }
+            ],
+            "netting_set_id": "NS-SHORT-COMM",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "-1117500.00",
+                "current_price": "74.50",
+                "daily_mtm_movement_base": "22500.00",
+                "instrument_id": "CL_MAR26",
+                "netting_set_id": "NS-SHORT-COMM",
+                "position_id": "POS-CL-SHORT",
+                "prior_mtm_base": "-1140000.00",
+                "prior_price": "76.00",
+                "quantity": "-15",
+                "risk_group": "COMMODITY",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "22500.00"
+              }
+            ],
+            "revision": 1,
+            "total_call_due": "0.00",
+            "total_mtm": "-1117500.00",
+            "total_settled_cash_adjustment": "0.00",
+            "valuation_date": "2026-01-16",
+            "variation_margin": "22500.00",
+            "vm_call": "0.00",
+            "vm_credit": "22500.00"
+          }
+        ],
+        "policy_hash": "9fffd0bb314d5a110d82d24f9b8461125d373ea0d7409c77aaf5f2098abd211c",
+        "policy_id": "EDU-DEFAULT-V1",
+        "revision": 1,
+        "run_id": "RUN-20260116-R1-18C8B5C4E4042D9E",
+        "scenario_hash": "1e98246f6782578aa30c03d8c61b275cc71ace57dbf69ee001bcd9286aaef8cf",
+        "scenario_set_id": "REF-SCENARIOS-V1",
+        "schema_version": "1.0.0",
+        "seed": null,
+        "valuation_date": "2026-01-16",
+        "valuation_time_utc": "21:00:00Z"
+      }
+    },
+    {
+      "day_label": "Day 3 - Collateral Expiry (T-Bill matures on 2026-01-19)",
+      "duplicate_calls_blocked": 0,
+      "journal_entries_posted": 12,
+      "margin_calls_posted": 3,
+      "persist_status": "COMMITTED",
+      "run_result": {
+        "diagnostics": {
+          "collateral_lots_valued": 4,
+          "duplicate_calls_blocked": 0,
+          "ineligible_collateral_lots": 1,
+          "journal_entries_posted": 0,
+          "margin_calls_issued": 3,
+          "positions_valued": 3,
+          "scenarios_evaluated": 8
+        },
+        "input_hash": "55618ed963d194dab20f59e56dfe2d264523272e6df3348cfaab4616b64087fd",
+        "is_settlement_correction": false,
+        "netting_set_results": [
+          {
+            "account_id": "ACCT-001",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-A",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "100000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "CORP_BOND_IG",
+                "base_currency": "USD",
+                "base_haircut": "0.25",
+                "currency": "USD",
+                "effective_haircut": "0.25",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CORP-A",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "75000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": 726,
+                "security_id": "CORP_IG_2028",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "GOVT_BOND",
+                "base_currency": "USD",
+                "base_haircut": "1",
+                "currency": "USD",
+                "effective_haircut": "1",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-TBILL-EXPIRING",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "0.00",
+                "reason": "Collateral matured on 2026-01-19 (residual_days=0)",
+                "residual_maturity_days": 0,
+                "security_id": "UST_BILL_JAN19",
+                "status": "EXPIRED"
+              }
+            ],
+            "daily_mtm_movement": "-18000.00",
+            "eligible_collateral_value": "175000.00",
+            "gross_collateral_value": "300000.00",
+            "im_excess": "0.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0.50",
+              "base_currency": "USD",
+              "diversification_benefit": "132120.00",
+              "gross_im": "335580.00",
+              "group_standalone_im": [
+                [
+                  "EQUITY_INDEX",
+                  "247500.00"
+                ],
+                [
+                  "RATES",
+                  "88080.00"
+                ]
+              ],
+              "joint_im": "203460.00",
+              "net_im": "269520.00",
+              "netting_set_id": "NS-ALPHA",
+              "offset_credit": "66060.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "203460.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "187080.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "96270.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_EQ_DOWN_10"
+            },
+            "im_shortfall": "94520.00",
+            "margin_calls": [
+              {
+                "account_id": "ACCT-001",
+                "amount": "94520.00",
+                "call_id": "MC-623700520206",
+                "call_type": "IM_CALL",
+                "currency": "USD",
+                "idempotency_key": "2026-01-19|NS-ALPHA|IM_CALL|rev1",
+                "netting_set_id": "NS-ALPHA",
+                "reason": "IM shortfall 94520.00 (net_im=269520.00, eligible_collateral=175000.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-19"
+              },
+              {
+                "account_id": "ACCT-001",
+                "amount": "18000.00",
+                "call_id": "MC-84AAD436AC7D",
+                "call_type": "VM_CALL",
+                "currency": "USD",
+                "idempotency_key": "2026-01-19|NS-ALPHA|VM_CALL|rev1",
+                "netting_set_id": "NS-ALPHA",
+                "reason": "Daily VM loss transfer due (variation_margin=-18000.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-19"
+              }
+            ],
+            "netting_set_id": "NS-ALPHA",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "50",
+                "currency": "USD",
+                "current_mtm_base": "2475000.00",
+                "current_price": "4950.00",
+                "daily_mtm_movement_base": "-15000.00",
+                "instrument_id": "ES_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ES-1",
+                "prior_mtm_base": "2490000.00",
+                "prior_price": "4980.00",
+                "quantity": "10",
+                "risk_group": "EQUITY_INDEX",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "-15000.00"
+              },
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "2202000.00",
+                "current_price": "110.10",
+                "daily_mtm_movement_base": "-3000.00",
+                "instrument_id": "ZN_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ZN-1",
+                "prior_mtm_base": "2205000.00",
+                "prior_price": "110.25",
+                "quantity": "20",
+                "risk_group": "RATES",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "-3000.00"
+              }
+            ],
+            "revision": 1,
+            "total_call_due": "112520.00",
+            "total_mtm": "4677000.00",
+            "total_settled_cash_adjustment": "0.00",
+            "valuation_date": "2026-01-19",
+            "variation_margin": "-18000.00",
+            "vm_call": "18000.00",
+            "vm_credit": "0.00"
+          },
+          {
+            "account_id": "ACCT-002",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-B",
+                "market_value_base": "150000.00",
+                "market_value_native": "150000.00",
+                "netting_set_id": "NS-SHORT-COMM",
+                "post_haircut_value_base": "150000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              }
+            ],
+            "daily_mtm_movement": "-15000.00",
+            "eligible_collateral_value": "150000.00",
+            "gross_collateral_value": "150000.00",
+            "im_excess": "14100.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0",
+              "base_currency": "USD",
+              "diversification_benefit": "0.00",
+              "gross_im": "135900.00",
+              "group_standalone_im": [
+                [
+                  "COMMODITY",
+                  "135900.00"
+                ]
+              ],
+              "joint_im": "135900.00",
+              "net_im": "135900.00",
+              "netting_set_id": "NS-SHORT-COMM",
+              "offset_credit": "0.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "67950.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "0.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "135900.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_COMM_SPIKE"
+            },
+            "im_shortfall": "0.00",
+            "margin_calls": [
+              {
+                "account_id": "ACCT-002",
+                "amount": "15000.00",
+                "call_id": "MC-793D1632BAB7",
+                "call_type": "VM_CALL",
+                "currency": "USD",
+                "idempotency_key": "2026-01-19|NS-SHORT-COMM|VM_CALL|rev1",
+                "netting_set_id": "NS-SHORT-COMM",
+                "reason": "Daily VM loss transfer due (variation_margin=-15000.00)",
+                "reference_call_id": null,
+                "revision": 1,
+                "valuation_date": "2026-01-19"
+              }
+            ],
+            "netting_set_id": "NS-SHORT-COMM",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "-1132500.00",
+                "current_price": "75.50",
+                "daily_mtm_movement_base": "-15000.00",
+                "instrument_id": "CL_MAR26",
+                "netting_set_id": "NS-SHORT-COMM",
+                "position_id": "POS-CL-SHORT",
+                "prior_mtm_base": "-1117500.00",
+                "prior_price": "74.50",
+                "quantity": "-15",
+                "risk_group": "COMMODITY",
+                "settled_cash_adjustment_base": "0.00",
+                "variation_margin_base": "-15000.00"
+              }
+            ],
+            "revision": 1,
+            "total_call_due": "15000.00",
+            "total_mtm": "-1132500.00",
+            "total_settled_cash_adjustment": "0.00",
+            "valuation_date": "2026-01-19",
+            "variation_margin": "-15000.00",
+            "vm_call": "15000.00",
+            "vm_credit": "0.00"
+          }
+        ],
+        "policy_hash": "9fffd0bb314d5a110d82d24f9b8461125d373ea0d7409c77aaf5f2098abd211c",
+        "policy_id": "EDU-DEFAULT-V1",
+        "revision": 1,
+        "run_id": "RUN-20260119-R1-BDA7F23101C1A3E5",
+        "scenario_hash": "1e98246f6782578aa30c03d8c61b275cc71ace57dbf69ee001bcd9286aaef8cf",
+        "scenario_set_id": "REF-SCENARIOS-V1",
+        "schema_version": "1.0.0",
+        "seed": null,
+        "valuation_date": "2026-01-19",
+        "valuation_time_utc": "21:00:00Z"
+      }
+    },
+    {
+      "day_label": "Day 3 Revision 2 - Settlement Price Correction for ES_MAR26",
+      "duplicate_calls_blocked": 0,
+      "journal_entries_posted": 8,
+      "margin_calls_posted": 1,
+      "persist_status": "COMMITTED",
+      "run_result": {
+        "diagnostics": {
+          "collateral_lots_valued": 4,
+          "duplicate_calls_blocked": 0,
+          "ineligible_collateral_lots": 1,
+          "journal_entries_posted": 0,
+          "margin_calls_issued": 1,
+          "positions_valued": 3,
+          "scenarios_evaluated": 8
+        },
+        "input_hash": "7dddae3501c97cb4992a1947ddd3abab598ce6bcb2a5c4a79e935979e4343106",
+        "is_settlement_correction": true,
+        "netting_set_results": [
+          {
+            "account_id": "ACCT-001",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-A",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "100000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "CORP_BOND_IG",
+                "base_currency": "USD",
+                "base_haircut": "0.25",
+                "currency": "USD",
+                "effective_haircut": "0.25",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CORP-A",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "75000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": 726,
+                "security_id": "CORP_IG_2028",
+                "status": "ELIGIBLE"
+              },
+              {
+                "asset_class": "GOVT_BOND",
+                "base_currency": "USD",
+                "base_haircut": "1",
+                "currency": "USD",
+                "effective_haircut": "1",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-TBILL-EXPIRING",
+                "market_value_base": "100000.00",
+                "market_value_native": "100000.00",
+                "netting_set_id": "NS-ALPHA",
+                "post_haircut_value_base": "0.00",
+                "reason": "Collateral matured on 2026-01-19 (residual_days=0)",
+                "residual_maturity_days": 0,
+                "security_id": "UST_BILL_JAN19",
+                "status": "EXPIRED"
+              }
+            ],
+            "daily_mtm_movement": "-13000.00",
+            "eligible_collateral_value": "175000.00",
+            "gross_collateral_value": "300000.00",
+            "im_excess": "0.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0.50",
+              "base_currency": "USD",
+              "diversification_benefit": "132120.00",
+              "gross_im": "336080.00",
+              "group_standalone_im": [
+                [
+                  "EQUITY_INDEX",
+                  "248000.00"
+                ],
+                [
+                  "RATES",
+                  "88080.00"
+                ]
+              ],
+              "joint_im": "203960.00",
+              "net_im": "270020.00",
+              "netting_set_id": "NS-ALPHA",
+              "offset_credit": "66060.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "203960.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "187280.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "96420.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_EQ_DOWN_10"
+            },
+            "im_shortfall": "95020.00",
+            "margin_calls": [
+              {
+                "account_id": "ACCT-001",
+                "amount": "5000.00",
+                "call_id": "MC-42D99E2329A3",
+                "call_type": "SETTLEMENT_CORRECTION",
+                "currency": "USD",
+                "idempotency_key": "2026-01-19|NS-ALPHA|SETTLEMENT_CORRECTION|rev2",
+                "netting_set_id": "NS-ALPHA",
+                "reason": "SETTLEMENT_CORRECTION_CREDIT for rev 2 (delta_vm=5000.00)",
+                "reference_call_id": "MC-84AAD436AC7D",
+                "revision": 2,
+                "valuation_date": "2026-01-19"
+              }
+            ],
+            "netting_set_id": "NS-ALPHA",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "50",
+                "currency": "USD",
+                "current_mtm_base": "2480000.00",
+                "current_price": "4960.00",
+                "daily_mtm_movement_base": "-10000.00",
+                "instrument_id": "ES_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ES-1",
+                "prior_mtm_base": "2490000.00",
+                "prior_price": "4980.00",
+                "quantity": "10",
+                "risk_group": "EQUITY_INDEX",
+                "settled_cash_adjustment_base": "-15000.00",
+                "variation_margin_base": "5000.00"
+              },
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "2202000.00",
+                "current_price": "110.10",
+                "daily_mtm_movement_base": "-3000.00",
+                "instrument_id": "ZN_MAR26",
+                "netting_set_id": "NS-ALPHA",
+                "position_id": "POS-ZN-1",
+                "prior_mtm_base": "2205000.00",
+                "prior_price": "110.25",
+                "quantity": "20",
+                "risk_group": "RATES",
+                "settled_cash_adjustment_base": "-3000.00",
+                "variation_margin_base": "0.00"
+              }
+            ],
+            "revision": 2,
+            "total_call_due": "0.00",
+            "total_mtm": "4682000.00",
+            "total_settled_cash_adjustment": "-18000.00",
+            "valuation_date": "2026-01-19",
+            "variation_margin": "5000.00",
+            "vm_call": "0.00",
+            "vm_credit": "5000.00"
+          },
+          {
+            "account_id": "ACCT-002",
+            "base_currency": "USD",
+            "collateral_valuations": [
+              {
+                "asset_class": "CASH",
+                "base_currency": "USD",
+                "base_haircut": "0.00",
+                "currency": "USD",
+                "effective_haircut": "0.00",
+                "fx_haircut_addon": "0",
+                "lot_id": "COL-CASH-B",
+                "market_value_base": "150000.00",
+                "market_value_native": "150000.00",
+                "netting_set_id": "NS-SHORT-COMM",
+                "post_haircut_value_base": "150000.00",
+                "reason": "Eligible under haircut schedule",
+                "residual_maturity_days": null,
+                "security_id": "USD_CASH",
+                "status": "ELIGIBLE"
+              }
+            ],
+            "daily_mtm_movement": "-15000.00",
+            "eligible_collateral_value": "150000.00",
+            "gross_collateral_value": "150000.00",
+            "im_excess": "14100.00",
+            "im_result": {
+              "aggregation_method": "WORST_CASE",
+              "applied_cross_group_offset": "0",
+              "base_currency": "USD",
+              "diversification_benefit": "0.00",
+              "gross_im": "135900.00",
+              "group_standalone_im": [
+                [
+                  "COMMODITY",
+                  "135900.00"
+                ]
+              ],
+              "joint_im": "135900.00",
+              "net_im": "135900.00",
+              "netting_set_id": "NS-SHORT-COMM",
+              "offset_credit": "0.00",
+              "scenario_losses": [
+                [
+                  "SCN_EQ_DOWN_10",
+                  "0.00"
+                ],
+                [
+                  "SCN_EQ_UP_10",
+                  "67950.00"
+                ],
+                [
+                  "SCN_RATES_SHOCK_DOWN",
+                  "0.00"
+                ],
+                [
+                  "SCN_COMM_SPIKE",
+                  "135900.00"
+                ]
+              ],
+              "worst_scenario_id": "SCN_COMM_SPIKE"
+            },
+            "im_shortfall": "0.00",
+            "margin_calls": [],
+            "netting_set_id": "NS-SHORT-COMM",
+            "position_valuations": [
+              {
+                "base_currency": "USD",
+                "contract_multiplier": "1000",
+                "currency": "USD",
+                "current_mtm_base": "-1132500.00",
+                "current_price": "75.50",
+                "daily_mtm_movement_base": "-15000.00",
+                "instrument_id": "CL_MAR26",
+                "netting_set_id": "NS-SHORT-COMM",
+                "position_id": "POS-CL-SHORT",
+                "prior_mtm_base": "-1117500.00",
+                "prior_price": "74.50",
+                "quantity": "-15",
+                "risk_group": "COMMODITY",
+                "settled_cash_adjustment_base": "-15000.00",
+                "variation_margin_base": "0.00"
+              }
+            ],
+            "revision": 2,
+            "total_call_due": "0.00",
+            "total_mtm": "-1132500.00",
+            "total_settled_cash_adjustment": "-15000.00",
+            "valuation_date": "2026-01-19",
+            "variation_margin": "0.00",
+            "vm_call": "0.00",
+            "vm_credit": "0.00"
+          }
+        ],
+        "policy_hash": "9fffd0bb314d5a110d82d24f9b8461125d373ea0d7409c77aaf5f2098abd211c",
+        "policy_id": "EDU-DEFAULT-V1",
+        "revision": 2,
+        "run_id": "RUN-20260119-R2-8239C3B3EEECAD3C",
+        "scenario_hash": "1e98246f6782578aa30c03d8c61b275cc71ace57dbf69ee001bcd9286aaef8cf",
+        "scenario_set_id": "REF-SCENARIOS-V1",
+        "schema_version": "1.0.0",
+        "seed": null,
+        "valuation_date": "2026-01-19",
+        "valuation_time_utc": "22:30:00Z"
+      }
+    }
+  ],
+  "fixture_id": "MULTIDAY-REPLAY-LIFECYCLE-V1",
+  "idempotent_rerun_summary": [
+    {
+      "day_label": "Day 1 - Baseline Settlement",
+      "duplicate_calls_blocked": 2,
+      "persist_status": "IDEMPOTENT_REPLAY"
+    },
+    {
+      "day_label": "Day 2 - Haircut Increase on Corporate Bonds",
+      "duplicate_calls_blocked": 1,
+      "persist_status": "IDEMPOTENT_REPLAY"
+    },
+    {
+      "day_label": "Day 3 - Collateral Expiry (T-Bill matures on 2026-01-19)",
+      "duplicate_calls_blocked": 3,
+      "persist_status": "IDEMPOTENT_REPLAY"
+    },
+    {
+      "day_label": "Day 3 Revision 2 - Settlement Price Correction for ES_MAR26",
+      "duplicate_calls_blocked": 1,
+      "persist_status": "IDEMPOTENT_REPLAY"
+    }
+  ],
+  "margin_calls": [
+    {
+      "account_id": "ACCT-001",
+      "amount": "5000.00",
+      "call_id": "MC-F0D936BA6A9E",
+      "call_type": "VM_CALL",
+      "currency": "USD",
+      "idempotency_key": "2026-01-15|NS-ALPHA|VM_CALL|rev1",
+      "netting_set_id": "NS-ALPHA",
+      "reason": "Daily VM loss transfer due (variation_margin=-5000.00)",
+      "reference_call_id": null,
+      "revision": 1,
+      "run_id": "RUN-20260115-R1-AE30BD4315EAC7E5",
+      "valuation_date": "2026-01-15"
+    },
+    {
+      "account_id": "ACCT-002",
+      "amount": "15000.00",
+      "call_id": "MC-50901EBBFB27",
+      "call_type": "VM_CALL",
+      "currency": "USD",
+      "idempotency_key": "2026-01-15|NS-SHORT-COMM|VM_CALL|rev1",
+      "netting_set_id": "NS-SHORT-COMM",
+      "reason": "Daily VM loss transfer due (variation_margin=-15000.00)",
+      "reference_call_id": null,
+      "revision": 1,
+      "run_id": "RUN-20260115-R1-AE30BD4315EAC7E5",
+      "valuation_date": "2026-01-15"
+    },
+    {
+      "account_id": "ACCT-002",
+      "amount": "22500.00",
+      "call_id": "MC-B4A462A86D82",
+      "call_type": "VM_CREDIT",
+      "currency": "USD",
+      "idempotency_key": "2026-01-16|NS-SHORT-COMM|VM_CREDIT|rev1",
+      "netting_set_id": "NS-SHORT-COMM",
+      "reason": "Daily VM gain credit payable (variation_margin=22500.00)",
+      "reference_call_id": null,
+      "revision": 1,
+      "run_id": "RUN-20260116-R1-18C8B5C4E4042D9E",
+      "valuation_date": "2026-01-16"
+    },
+    {
+      "account_id": "ACCT-001",
+      "amount": "94520.00",
+      "call_id": "MC-623700520206",
+      "call_type": "IM_CALL",
+      "currency": "USD",
+      "idempotency_key": "2026-01-19|NS-ALPHA|IM_CALL|rev1",
+      "netting_set_id": "NS-ALPHA",
+      "reason": "IM shortfall 94520.00 (net_im=269520.00, eligible_collateral=175000.00)",
+      "reference_call_id": null,
+      "revision": 1,
+      "run_id": "RUN-20260119-R1-BDA7F23101C1A3E5",
+      "valuation_date": "2026-01-19"
+    },
+    {
+      "account_id": "ACCT-001",
+      "amount": "18000.00",
+      "call_id": "MC-84AAD436AC7D",
+      "call_type": "VM_CALL",
+      "currency": "USD",
+      "idempotency_key": "2026-01-19|NS-ALPHA|VM_CALL|rev1",
+      "netting_set_id": "NS-ALPHA",
+      "reason": "Daily VM loss transfer due (variation_margin=-18000.00)",
+      "reference_call_id": null,
+      "revision": 1,
+      "run_id": "RUN-20260119-R1-BDA7F23101C1A3E5",
+      "valuation_date": "2026-01-19"
+    },
+    {
+      "account_id": "ACCT-002",
+      "amount": "15000.00",
+      "call_id": "MC-793D1632BAB7",
+      "call_type": "VM_CALL",
+      "currency": "USD",
+      "idempotency_key": "2026-01-19|NS-SHORT-COMM|VM_CALL|rev1",
+      "netting_set_id": "NS-SHORT-COMM",
+      "reason": "Daily VM loss transfer due (variation_margin=-15000.00)",
+      "reference_call_id": null,
+      "revision": 1,
+      "run_id": "RUN-20260119-R1-BDA7F23101C1A3E5",
+      "valuation_date": "2026-01-19"
+    },
+    {
+      "account_id": "ACCT-001",
+      "amount": "5000.00",
+      "call_id": "MC-42D99E2329A3",
+      "call_type": "SETTLEMENT_CORRECTION",
+      "currency": "USD",
+      "idempotency_key": "2026-01-19|NS-ALPHA|SETTLEMENT_CORRECTION|rev2",
+      "netting_set_id": "NS-ALPHA",
+      "reason": "SETTLEMENT_CORRECTION_CREDIT for rev 2 (delta_vm=5000.00)",
+      "reference_call_id": "MC-84AAD436AC7D",
+      "revision": 2,
+      "run_id": "RUN-20260119-R2-8239C3B3EEECAD3C",
+      "valuation_date": "2026-01-19"
+    }
+  ],
+  "policy_id": "EDU-DEFAULT-V1",
+  "reconciliation": {
+    "account_balances": [
+      {
+        "account": "CASH_COLLATERAL_IM",
+        "credit": "0.00",
+        "currency": "USD",
+        "debit": "94520.00",
+        "net_balance": "94520.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "CASH_SETTLEMENT_ACCOUNT",
+        "credit": "5000.00",
+        "currency": "USD",
+        "debit": "23000.00",
+        "net_balance": "18000.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "COLLATERAL_CUSTODY_POST_HAIRCUT",
+        "credit": "0.00",
+        "currency": "USD",
+        "debit": "911000.00",
+        "net_balance": "911000.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "COLLATERAL_PLEDGE_LIABILITY",
+        "credit": "911000.00",
+        "currency": "USD",
+        "debit": "0.00",
+        "net_balance": "-911000.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "IM_MARGIN_RECEIVABLE",
+        "credit": "94520.00",
+        "currency": "USD",
+        "debit": "94520.00",
+        "net_balance": "0.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "IM_REQUIREMENT_CLEARING",
+        "credit": "94520.00",
+        "currency": "USD",
+        "debit": "0.00",
+        "net_balance": "-94520.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "VM_CASH_RECEIVABLE",
+        "credit": "23000.00",
+        "currency": "USD",
+        "debit": "23000.00",
+        "net_balance": "0.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "VM_CORRECTION_PAYABLE",
+        "credit": "5000.00",
+        "currency": "USD",
+        "debit": "5000.00",
+        "net_balance": "0.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "VM_SETTLEMENT_CLEARING",
+        "credit": "23000.00",
+        "currency": "USD",
+        "debit": "5000.00",
+        "net_balance": "-18000.00",
+        "netting_set_id": "NS-ALPHA"
+      },
+      {
+        "account": "CASH_SETTLEMENT_ACCOUNT",
+        "credit": "22500.00",
+        "currency": "USD",
+        "debit": "30000.00",
+        "net_balance": "7500.00",
+        "netting_set_id": "NS-SHORT-COMM"
+      },
+      {
+        "account": "COLLATERAL_CUSTODY_POST_HAIRCUT",
+        "credit": "0.00",
+        "currency": "USD",
+        "debit": "600000.00",
+        "net_balance": "600000.00",
+        "netting_set_id": "NS-SHORT-COMM"
+      },
+      {
+        "account": "COLLATERAL_PLEDGE_LIABILITY",
+        "credit": "600000.00",
+        "currency": "USD",
+        "debit": "0.00",
+        "net_balance": "-600000.00",
+        "netting_set_id": "NS-SHORT-COMM"
+      },
+      {
+        "account": "VM_CASH_PAYABLE",
+        "credit": "22500.00",
+        "currency": "USD",
+        "debit": "22500.00",
+        "net_balance": "0.00",
+        "netting_set_id": "NS-SHORT-COMM"
+      },
+      {
+        "account": "VM_CASH_RECEIVABLE",
+        "credit": "30000.00",
+        "currency": "USD",
+        "debit": "30000.00",
+        "net_balance": "0.00",
+        "netting_set_id": "NS-SHORT-COMM"
+      },
+      {
+        "account": "VM_SETTLEMENT_CLEARING",
+        "credit": "30000.00",
+        "currency": "USD",
+        "debit": "22500.00",
+        "net_balance": "-7500.00",
+        "netting_set_id": "NS-SHORT-COMM"
+      }
+    ],
+    "currency_totals": {
+      "USD": {
+        "imbalance": "0.00",
+        "total_credit": "1861040.00",
+        "total_debit": "1861040.00"
+      }
+    },
+    "duplicate_collateral_violations": [],
+    "errors": [],
+    "is_reconciled": true,
+    "total_journal_entries": 56,
+    "total_margin_calls": 7,
+    "total_runs": 4,
+    "unreconciled_calls": []
+  },
+  "report_type": "multiday_settlement_replay",
+  "runtime_environment": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "sqlite_version": "3.51.0"
+  },
+  "scenario_set_id": "REF-SCENARIOS-V1"
+}

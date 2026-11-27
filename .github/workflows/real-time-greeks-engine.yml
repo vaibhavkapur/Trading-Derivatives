@@ -1,0 +1,31 @@
+name: Real-Time Greeks Engine CI
+
+on:
+  push:
+    paths:
+      - "real-time-greeks-engine/**"
+  pull_request:
+    paths:
+      - "real-time-greeks-engine/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: real-time-greeks-engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install package and dev dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Run unit, integration, failure, and API tests
+        run: pytest -v
+      - name: Run deterministic demo and benchmark validation
+        run: |
+          python scripts/run_demo.py
+          python scripts/run_benchmark.py

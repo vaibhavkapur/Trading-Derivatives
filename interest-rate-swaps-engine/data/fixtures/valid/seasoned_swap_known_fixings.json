@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Seasoned swap valued mid-life with 1 settled fixed period, 2 settled floating periods, 1 historically fixed active floating period, and remaining projected periods.",
+    "provenance": "synthetic_offline_fixture"
+  },
+  "trade": {
+    "trade_id": "USD-SEASONED-IRS-002",
+    "currency": "USD",
+    "notional": 5000000.0,
+    "direction": "RECEIVER",
+    "effective_date": "2025-07-07",
+    "maturity_date": "2028-07-07",
+    "fixed_leg": {
+      "fixed_rate": 0.0440,
+      "frequency": "SEMI_ANNUAL",
+      "day_count": "30/360",
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "USD_NY",
+      "stub_type": "FRONT_SHORT",
+      "end_of_month": false,
+      "payment_lag_days": 0
+    },
+    "floating_leg": {
+      "index_name": "USD-SOFR-3M",
+      "frequency": "QUARTERLY",
+      "day_count": "ACT/360",
+      "spread": 0.0005,
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "USD_NY",
+      "stub_type": "FRONT_SHORT",
+      "end_of_month": false,
+      "fixing_lag_days": 2,
+      "payment_lag_days": 0
+    }
+  },
+  "discount_curve": {
+    "curve_id": "USD-OIS-DISC-20260210",
+    "role": "DISCOUNT",
+    "currency": "USD",
+    "valuation_date": "2026-02-10",
+    "day_count": "ACT/365F",
+    "compounding": "CONTINUOUS",
+    "interpolation": "LINEAR_ZERO",
+    "nodes": [
+      { "tenor_years": 0.25, "zero_rate": 0.0405, "label": "3M" },
+      { "tenor_years": 1.00, "zero_rate": 0.0415, "label": "1Y" },
+      { "tenor_years": 2.00, "zero_rate": 0.0422, "label": "2Y" },
+      { "tenor_years": 3.00, "zero_rate": 0.0430, "label": "3Y" },
+      { "tenor_years": 5.00, "zero_rate": 0.0440, "label": "5Y" }
+    ]
+  },
+  "forward_curve": {
+    "curve_id": "USD-SOFR3M-FWD-20260210",
+    "role": "FORWARD",
+    "currency": "USD",
+    "index_name": "USD-SOFR-3M",
+    "valuation_date": "2026-02-10",
+    "day_count": "ACT/365F",
+    "compounding": "CONTINUOUS",
+    "interpolation": "LINEAR_ZERO",
+    "nodes": [
+      { "tenor_years": 0.25, "zero_rate": 0.0420, "label": "3M" },
+      { "tenor_years": 1.00, "zero_rate": 0.0430, "label": "1Y" },
+      { "tenor_years": 2.00, "zero_rate": 0.0438, "label": "2Y" },
+      { "tenor_years": 3.00, "zero_rate": 0.0446, "label": "3Y" },
+      { "tenor_years": 5.00, "zero_rate": 0.0456, "label": "5Y" }
+    ]
+  },
+  "fixing_history": {
+    "entries": [
+      { "index_name": "USD-SOFR-3M", "fixing_date": "2025-07-02", "rate": 0.0435 },
+      { "index_name": "USD-SOFR-3M", "fixing_date": "2025-10-03", "rate": 0.0430 },
+      { "index_name": "USD-SOFR-3M", "fixing_date": "2026-01-05", "rate": 0.0422 }
+    ]
+  }
+}

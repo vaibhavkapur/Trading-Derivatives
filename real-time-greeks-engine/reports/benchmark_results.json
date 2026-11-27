@@ -1,0 +1,333 @@
+{
+  "analytic_vs_finite_difference": {
+    "cases": [
+      {
+        "case": "ATM_1Y_CALL",
+        "errors": {
+          "charm": {
+            "analytic": -0.0001799098,
+            "fd": -0.0001799097,
+            "rel_err": 2.804716333065896e-07
+          },
+          "delta": {
+            "analytic": 0.6368306512,
+            "fd": 0.6368306426,
+            "rel_err": 1.3503284370832574e-08
+          },
+          "gamma": {
+            "analytic": 0.0187620173,
+            "fd": 0.0187620169,
+            "rel_err": 2.186448385038164e-08
+          },
+          "price": {
+            "analytic": 10.4505835722,
+            "fd": 10.4505835722,
+            "rel_err": 0.0
+          },
+          "rho": {
+            "analytic": 0.5323248155,
+            "fd": 0.5323248077,
+            "rel_err": 1.4488178047270339e-08
+          },
+          "theta": {
+            "analytic": -0.0175726782,
+            "fd": -0.0175726782,
+            "rel_err": 3.229351572824278e-11
+          },
+          "vanna": {
+            "analytic": -0.0028143026,
+            "fd": -0.0028143029,
+            "rel_err": 1.1447233944428454e-07
+          },
+          "vega": {
+            "analytic": 0.3752403469,
+            "fd": 0.3752403439,
+            "rel_err": 8.11434730796142e-09
+          },
+          "volga": {
+            "analytic": 0.0009850059,
+            "fd": 0.0009850061,
+            "rel_err": 2.3169315329600496e-07
+          }
+        }
+      },
+      {
+        "case": "OTM_6M_PUT_DIV",
+        "errors": {
+          "charm": {
+            "analytic": 0.0001249371,
+            "fd": 0.000124937,
+            "rel_err": 6.881252031933587e-07
+          },
+          "delta": {
+            "analytic": -0.3284384065,
+            "fd": -0.3284384183,
+            "rel_err": 3.569962002352428e-08
+          },
+          "gamma": {
+            "analytic": 0.0203250015,
+            "fd": 0.0203250011,
+            "rel_err": 1.5924419655532015e-08
+          },
+          "price": {
+            "analytic": 4.2242399242,
+            "fd": 4.2242399242,
+            "rel_err": 0.0
+          },
+          "rho": {
+            "analytic": -0.1853404029,
+            "fd": -0.1853404044,
+            "rel_err": 8.323545529439245e-09
+          },
+          "theta": {
+            "analytic": -0.0151389494,
+            "fd": -0.0151389494,
+            "rel_err": 4.355020701138237e-10
+          },
+          "vanna": {
+            "analytic": -0.0037128326,
+            "fd": -0.0037128324,
+            "rel_err": 6.167838855639078e-08
+          },
+          "vega": {
+            "analytic": 0.2540625182,
+            "fd": 0.2540625158,
+            "rel_err": 9.490556082701391e-09
+          },
+          "volga": {
+            "analytic": 0.001142339,
+            "fd": 0.0011423392,
+            "rel_err": 1.7282801070425758e-07
+          }
+        }
+      },
+      {
+        "case": "ITM_3M_CALL_HIGHVOL",
+        "errors": {
+          "charm": {
+            "analytic": 0.0006442603,
+            "fd": 0.0006442602,
+            "rel_err": 3.061867294111068e-07
+          },
+          "delta": {
+            "analytic": 0.7180125621,
+            "fd": 0.7180125439,
+            "rel_err": 2.5397341040344002e-08
+          },
+          "gamma": {
+            "analytic": 0.0049622261,
+            "fd": 0.004962226,
+            "rel_err": 2.351328750603919e-08
+          },
+          "price": {
+            "analytic": 45.6005659022,
+            "fd": 45.6005659022,
+            "rel_err": 0.0
+          },
+          "rho": {
+            "analytic": 0.6937627176,
+            "fd": 0.6937627164,
+            "rel_err": 1.744099353560817e-09
+          },
+          "theta": {
+            "analytic": -0.1448203544,
+            "fd": -0.1448203545,
+            "rel_err": 8.243238212331265e-10
+          },
+          "vanna": {
+            "analytic": -0.0048562482,
+            "fd": -0.0048562473,
+            "rel_err": 1.8689406011019233e-07
+          },
+          "vega": {
+            "analytic": 0.753638087,
+            "fd": 0.7536380769,
+            "rel_err": 1.3349720933791522e-08
+          },
+          "volga": {
+            "analytic": 0.0063915174,
+            "fd": 0.0063915178,
+            "rel_err": 5.976911362441883e-08
+          }
+        }
+      },
+      {
+        "case": "OTM_2Y_CALL",
+        "errors": {
+          "charm": {
+            "analytic": -0.0001643264,
+            "fd": -0.0001643264,
+            "rel_err": 6.882868732006678e-08
+          },
+          "delta": {
+            "analytic": 0.5218628859,
+            "fd": 0.5218628824,
+            "rel_err": 6.600256188810866e-09
+          },
+          "gamma": {
+            "analytic": 0.0003034948,
+            "fd": 0.0003034948,
+            "rel_err": 1.6870135873945015e-08
+          },
+          "price": {
+            "analytic": 473.0594364097,
+            "fd": 473.0594364097,
+            "rel_err": 0.0
+          },
+          "rho": {
+            "analytic": 42.7250998596,
+            "fd": 42.7250987669,
+            "rel_err": 2.5576182356214642e-08
+          },
+          "theta": {
+            "analytic": -0.5176034128,
+            "fd": -0.5176034128,
+            "rel_err": 4.997236178497078e-11
+          },
+          "vanna": {
+            "analytic": 0.0034869062,
+            "fd": 0.0034869066,
+            "rel_err": 1.0623509735829349e-07
+          },
+          "vega": {
+            "analytic": 27.3145351154,
+            "fd": 27.3145350877,
+            "rel_err": 1.0123937858847684e-09
+          },
+          "volga": {
+            "analytic": -0.0227026253,
+            "fd": -0.0227026248,
+            "rel_err": 2.0315002856876642e-08
+          }
+        }
+      },
+      {
+        "case": "ITM_9M_PUT",
+        "errors": {
+          "charm": {
+            "analytic": -0.0004484885,
+            "fd": -0.0004484884,
+            "rel_err": 8.039825459502851e-08
+          },
+          "delta": {
+            "analytic": -0.5291613076,
+            "fd": -0.5291613094,
+            "rel_err": 3.235474287598217e-09
+          },
+          "gamma": {
+            "analytic": 0.007148984,
+            "fd": 0.0071489837,
+            "rel_err": 3.8012818631164965e-08
+          },
+          "price": {
+            "analytic": 29.3310691777,
+            "fd": 29.3310691777,
+            "rel_err": 0.0
+          },
+          "rho": {
+            "analytic": -1.0137249803,
+            "fd": -1.0137249827,
+            "rel_err": 2.3628071935003282e-09
+          },
+          "theta": {
+            "analytic": -0.0223062667,
+            "fd": -0.0223062667,
+            "rel_err": 3.1617955286143234e-10
+          },
+          "vanna": {
+            "analytic": 0.0043993141,
+            "fd": 0.0043993142,
+            "rel_err": 3.685384266516999e-08
+          },
+          "vega": {
+            "analytic": 0.6863024645,
+            "fd": 0.6863024628,
+            "rel_err": 2.592447190632315e-09
+          },
+          "volga": {
+            "analytic": 0.0005955621,
+            "fd": 0.0005955616,
+            "rel_err": 8.600059439680707e-07
+          }
+        }
+      }
+    ],
+    "max_all_greeks_rel_err": 8.600059439680707e-07,
+    "max_primary_greeks_rel_err": 3.8012818631164965e-08,
+    "passed": true,
+    "threshold_rel_err": 0.0001
+  },
+  "incremental_update_benchmark": {
+    "engine_diagnostics": {
+      "active_positions": 200,
+      "active_staleness_alerts": 0,
+      "cache": {
+        "enabled": 1,
+        "evictions": 0,
+        "hit_rate": 0.0,
+        "hits": 0,
+        "invalidations": 0,
+        "max_entries": 50000,
+        "misses": 20200,
+        "size": 20200
+      },
+      "counters": {
+        "curves_updated": 1,
+        "duplicate_ticks_ignored": 0,
+        "out_of_order_ticks_ignored": 0,
+        "positions_recomputed": 20200,
+        "positions_removed": 0,
+        "positions_upserted": 200,
+        "reconciliations_run": 1,
+        "scenarios_evaluated": 48,
+        "snapshot_race_conflicts": 0,
+        "stale_freezes": 0,
+        "ticks_accepted": 1010,
+        "vols_updated": 10
+      },
+      "engine_config_hash": "e463af0804e45828",
+      "engine_id": "rt-greeks-engine-v1",
+      "operational_alerts": 0,
+      "snapshot_seq": 1221,
+      "update_latency_ms": {
+        "count": 1221,
+        "max": 27.7953,
+        "mean": 0.4408,
+        "p50": 0.4407,
+        "p95": 0.5226,
+        "p99": 0.8326
+      }
+    },
+    "num_underlyings": 10,
+    "options_per_underlying": 20,
+    "portfolio_positions": 200,
+    "reconciliation_after_1000_ticks": {
+      "max_abs_diff": 2.7939677238464355e-09,
+      "max_rel_diff": 8.517119171887696e-14,
+      "passed": true,
+      "total_buckets_checked": 51
+    },
+    "scenario_recomputation_24x200": {
+      "parallel_4_workers_ms": 47.678,
+      "serial_ms": 46.185,
+      "serial_vs_parallel_max_pv_diff": 0.0
+    },
+    "spot_tick_update_latency_ms": {
+      "max": 27.7962,
+      "mean": 0.5194,
+      "p50": 0.4474,
+      "p95": 0.5371,
+      "p99": 0.8357
+    },
+    "ticks_measured": 1000
+  },
+  "metadata": {
+    "data_provenance": "Synthetic benchmark portfolio (no real market or customer data).",
+    "engine_config_hash": "e463af0804e45828",
+    "engine_id": "rt-greeks-engine-v1",
+    "generated_at_utc": "2026-11-27T12:39:39.766886+00:00",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.12.15",
+    "seed": 42
+  }
+}

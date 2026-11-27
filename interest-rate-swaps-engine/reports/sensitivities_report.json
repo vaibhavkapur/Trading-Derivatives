@@ -1,0 +1,301 @@
+{
+  "engine_version": "0.1.0",
+  "payer_sensitivities": {
+    "base_npv": 177599.34239872312,
+    "bump_bps": 1.0,
+    "currency": "USD",
+    "direction": "PAYER",
+    "discount_kr01": [
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": -2.6418730764416978,
+        "label": "3M",
+        "tenor_years": 0.25
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 1.0617231462383643,
+        "label": "6M",
+        "tenor_years": 0.5
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": -2.0741623528301716,
+        "label": "1Y",
+        "tenor_years": 1.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": -6.9333776098210365,
+        "label": "2Y",
+        "tenor_years": 2.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": -20.097235506982543,
+        "label": "3Y",
+        "tenor_years": 3.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 0.13054324686527252,
+        "label": "5Y",
+        "tenor_years": 5.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 0.10283696162514389,
+        "label": "7Y",
+        "tenor_years": 7.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 0.0,
+        "label": "10Y",
+        "tenor_years": 10.0
+      }
+    ],
+    "discount_kr01_sum": -30.451545191346668,
+    "discount_pv01": -30.451546016032808,
+    "discount_reconciliation_diff": 8.246861398220062e-07,
+    "forward_kr01": [
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": -246.84379875229206,
+        "label": "3M",
+        "tenor_years": 0.25
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 8.956736320396885,
+        "label": "6M",
+        "tenor_years": 0.5
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 35.92458716814872,
+        "label": "1Y",
+        "tenor_years": 1.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 81.06564421975054,
+        "label": "2Y",
+        "tenor_years": 2.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 195.03152933402453,
+        "label": "3Y",
+        "tenor_years": 3.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 4191.291036244482,
+        "label": "5Y",
+        "tenor_years": 5.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 11.123737278510816,
+        "label": "7Y",
+        "tenor_years": 7.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 0.0,
+        "label": "10Y",
+        "tenor_years": 10.0
+      }
+    ],
+    "forward_kr01_sum": 4276.549471813021,
+    "forward_pv01": 4276.549466777593,
+    "forward_reconciliation_diff": 5.0354283303022385e-06,
+    "par_rate": 0.046493314174770636,
+    "parallel_convexity": -2.168542086146772,
+    "parallel_pv01": 4246.098098913208,
+    "reconciliation_within_tolerance": true,
+    "schema_version": "1.0.0",
+    "scheme": "CENTRAL",
+    "total_kr01_sum": 4246.097926621675,
+    "total_reconciliation_diff": -0.0001722915330901742,
+    "total_reconciliation_rel_diff": 4.057643725524673e-08,
+    "trade_id": "USD-5Y-IRS-001",
+    "valuation_date": "2026-01-05",
+    "valuation_id": "val_115da881c42aab8e"
+  },
+  "pv01_symmetry_sum": 0.0,
+  "receiver_sensitivities": {
+    "base_npv": -177599.34239872312,
+    "bump_bps": 1.0,
+    "currency": "USD",
+    "direction": "RECEIVER",
+    "discount_kr01": [
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 2.6418730764416978,
+        "label": "3M",
+        "tenor_years": 0.25
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": -1.0617231462383643,
+        "label": "6M",
+        "tenor_years": 0.5
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 2.0741623528301716,
+        "label": "1Y",
+        "tenor_years": 1.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 6.9333776098210365,
+        "label": "2Y",
+        "tenor_years": 2.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 20.097235506982543,
+        "label": "3Y",
+        "tenor_years": 3.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": -0.13054324686527252,
+        "label": "5Y",
+        "tenor_years": 5.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": -0.10283696162514389,
+        "label": "7Y",
+        "tenor_years": 7.0
+      },
+      {
+        "curve_id": "USD-OIS-DISC-20260105",
+        "curve_role": "DISCOUNT",
+        "kr01": 0.0,
+        "label": "10Y",
+        "tenor_years": 10.0
+      }
+    ],
+    "discount_kr01_sum": 30.451545191346668,
+    "discount_pv01": 30.451546016032808,
+    "discount_reconciliation_diff": -8.246861398220062e-07,
+    "forward_kr01": [
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 246.84379875229206,
+        "label": "3M",
+        "tenor_years": 0.25
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": -8.956736320396885,
+        "label": "6M",
+        "tenor_years": 0.5
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": -35.92458716814872,
+        "label": "1Y",
+        "tenor_years": 1.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": -81.06564421975054,
+        "label": "2Y",
+        "tenor_years": 2.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": -195.03152933402453,
+        "label": "3Y",
+        "tenor_years": 3.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": -4191.291036244482,
+        "label": "5Y",
+        "tenor_years": 5.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": -11.123737278510816,
+        "label": "7Y",
+        "tenor_years": 7.0
+      },
+      {
+        "curve_id": "USD-SOFR3M-FWD-20260105",
+        "curve_role": "FORWARD",
+        "kr01": 0.0,
+        "label": "10Y",
+        "tenor_years": 10.0
+      }
+    ],
+    "forward_kr01_sum": -4276.549471813021,
+    "forward_pv01": -4276.549466777593,
+    "forward_reconciliation_diff": -5.0354283303022385e-06,
+    "par_rate": 0.046493314174770636,
+    "parallel_convexity": 2.168542086146772,
+    "parallel_pv01": -4246.098098913208,
+    "reconciliation_within_tolerance": true,
+    "schema_version": "1.0.0",
+    "scheme": "CENTRAL",
+    "total_kr01_sum": -4246.097926621675,
+    "total_reconciliation_diff": 0.0001722915330901742,
+    "total_reconciliation_rel_diff": 4.057643725524673e-08,
+    "trade_id": "USD-5Y-IRS-001",
+    "valuation_date": "2026-01-05",
+    "valuation_id": "val_c6eb00f1047b96dc"
+  },
+  "runtime": {
+    "engine_version": "0.1.0",
+    "generated_at_utc": "2026-11-27T12:43:27.757354+00:00",
+    "machine": "arm64",
+    "packages": {
+      "QuantLib": "not_installed",
+      "fastapi": "0.165.0",
+      "httpx": "0.28.1",
+      "pydantic": "2.14.4",
+      "pytest": "8.4.2",
+      "uvicorn": "0.54.0"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.12.15",
+    "schema_version": "1.0.0"
+  },
+  "schema_version": "1.0.0"
+}

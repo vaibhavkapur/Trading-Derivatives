@@ -1,0 +1,15 @@
+{
+  "elapsed_ms": 47.45,
+  "errors": 0,
+  "failures": 0,
+  "report_type": "test_suite_results",
+  "runtime_environment": {
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "sqlite_version": "3.51.0"
+  },
+  "skipped": 0,
+  "tests_run": 20,
+  "was_successful": true
+}

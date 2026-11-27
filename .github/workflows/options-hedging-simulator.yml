@@ -1,0 +1,45 @@
+name: Options Hedging Simulator CI
+
+on:
+  push:
+    paths:
+      - "options-hedging-simulator/**"
+  pull_request:
+    paths:
+      - "options-hedging-simulator/**"
+  workflow_dispatch:
+
+jobs:
+  test-and-validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: options-hedging-simulator
+
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run unit, integration, boundary, and reproducibility tests
+        run: |
+          pytest -v
+
+      - name: Run reproducible CLI smoke check and replay verification
+        run: |
+          python -m options_hedging_simulator validate --config config/baseline_gbm.json
+          python -m options_hedging_simulator run --config config/baseline_gbm.json --output-dir /tmp/ohs-ci-run
+          python -m options_hedging_simulator replay --run-dir /tmp/ohs-ci-run

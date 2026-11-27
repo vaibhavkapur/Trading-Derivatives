@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=58.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "options-hedging-simulator"
+version = "0.1.0"
+description = "Discrete options delta-hedging simulator with self-financing ledger, transaction costs, jump/gap stress paths, and policy comparison."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Trading-Derivatives Contributors"},
+]
+dependencies = [
+    "numpy>=1.24,<3.0",
+    "pandas>=2.0,<3.0",
+    "matplotlib>=3.7,<4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+]
+
+[project.scripts]
+options-hedging-sim = "options_hedging_simulator.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra -q"

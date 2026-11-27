@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Invalid fixture: seasoned swap missing the historical fixing required for the active period fixed on 2026-01-05.",
+    "expected_error_code": "MISSING_FIXING"
+  },
+  "trade": {
+    "trade_id": "USD-MISSING-FIXING-001",
+    "currency": "USD",
+    "notional": 5000000.0,
+    "direction": "PAYER",
+    "effective_date": "2025-07-07",
+    "maturity_date": "2028-07-07",
+    "fixed_leg": {
+      "fixed_rate": 0.0440,
+      "frequency": "SEMI_ANNUAL",
+      "day_count": "30/360",
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "USD_NY",
+      "stub_type": "FRONT_SHORT"
+    },
+    "floating_leg": {
+      "index_name": "USD-SOFR-3M",
+      "frequency": "QUARTERLY",
+      "day_count": "ACT/360",
+      "spread": 0.0,
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "USD_NY",
+      "stub_type": "FRONT_SHORT",
+      "fixing_lag_days": 2
+    }
+  },
+  "discount_curve": {
+    "curve_id": "USD-OIS-DISC-20260210",
+    "role": "DISCOUNT",
+    "currency": "USD",
+    "valuation_date": "2026-02-10",
+    "nodes": [
+      { "tenor_years": 0.25, "zero_rate": 0.0405, "label": "3M" },
+      { "tenor_years": 5.00, "zero_rate": 0.0440, "label": "5Y" }
+    ]
+  },
+  "forward_curve": {
+    "curve_id": "USD-SOFR3M-FWD-20260210",
+    "role": "FORWARD",
+    "currency": "USD",
+    "index_name": "USD-SOFR-3M",
+    "valuation_date": "2026-02-10",
+    "nodes": [
+      { "tenor_years": 0.25, "zero_rate": 0.0420, "label": "3M" },
+      { "tenor_years": 5.00, "zero_rate": 0.0456, "label": "5Y" }
+    ]
+  },
+  "fixing_history": {
+    "entries": []
+  }
+}

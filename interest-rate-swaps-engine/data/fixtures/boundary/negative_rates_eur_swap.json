@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "metadata": {
+    "description": "Boundary fixture: negative EUR discount and forward zero-rate regime.",
+    "provenance": "synthetic_boundary_fixture"
+  },
+  "trade": {
+    "trade_id": "EUR-3Y-NEG-RATES",
+    "currency": "EUR",
+    "notional": 10000000.0,
+    "direction": "PAYER",
+    "effective_date": "2026-01-05",
+    "maturity_date": "2029-01-05",
+    "fixed_leg": {
+      "fixed_rate": -0.0025,
+      "frequency": "ANNUAL",
+      "day_count": "30E/360",
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "EUR_TARGET",
+      "stub_type": "FRONT_SHORT"
+    },
+    "floating_leg": {
+      "index_name": "EUR-EURIBOR-6M",
+      "frequency": "SEMI_ANNUAL",
+      "day_count": "ACT/360",
+      "spread": 0.0,
+      "business_day_convention": "MODIFIED_FOLLOWING",
+      "calendar": "EUR_TARGET",
+      "stub_type": "FRONT_SHORT",
+      "fixing_lag_days": 2
+    }
+  },
+  "discount_curve": {
+    "curve_id": "EUR-ESTR-NEG-20260105",
+    "role": "DISCOUNT",
+    "currency": "EUR",
+    "valuation_date": "2026-01-05",
+    "day_count": "ACT/365F",
+    "compounding": "CONTINUOUS",
+    "interpolation": "LINEAR_ZERO",
+    "nodes": [
+      { "tenor_years": 0.5, "zero_rate": -0.0055, "label": "6M" },
+      { "tenor_years": 1.0, "zero_rate": -0.0050, "label": "1Y" },
+      { "tenor_years": 2.0, "zero_rate": -0.0040, "label": "2Y" },
+      { "tenor_years": 3.0, "zero_rate": -0.0030, "label": "3Y" },
+      { "tenor_years": 5.0, "zero_rate": -0.0010, "label": "5Y" }
+    ]
+  },
+  "forward_curve": {
+    "curve_id": "EUR-EURIBOR6M-NEG-20260105",
+    "role": "FORWARD",
+    "currency": "EUR",
+    "index_name": "EUR-EURIBOR-6M",
+    "valuation_date": "2026-01-05",
+    "day_count": "ACT/365F",
+    "compounding": "CONTINUOUS",
+    "interpolation": "LINEAR_ZERO",
+    "nodes": [
+      { "tenor_years": 0.5, "zero_rate": -0.0045, "label": "6M" },
+      { "tenor_years": 1.0, "zero_rate": -0.0040, "label": "1Y" },
+      { "tenor_years": 2.0, "zero_rate": -0.0030, "label": "2Y" },
+      { "tenor_years": 3.0, "zero_rate": -0.0020, "label": "3Y" },
+      { "tenor_years": 5.0, "zero_rate": 0.0005, "label": "5Y" }
+    ]
+  },
+  "fixing_history": {
+    "entries": [
+      { "index_name": "EUR-EURIBOR-6M", "fixing_date": "2025-12-31", "rate": -0.0046 }
+    ]
+  }
+}

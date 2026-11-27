@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fixed-income-analytics-engine"
+version = "0.1.0"
+description = "Auditable fixed income bond pricing, yield curve bootstrapping, rate sensitivities, and scenario attribution engine."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Trading-Derivatives Research Prototype" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+scientific = [
+  "numpy==1.26.4",
+  "scipy==1.13.1",
+]
+dev = [
+  "pytest==8.3.3",
+]
+
+[project.scripts]
+fi-analytics = "fixed_income.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

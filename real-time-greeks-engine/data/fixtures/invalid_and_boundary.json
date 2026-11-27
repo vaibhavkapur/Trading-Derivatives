@@ -1,0 +1,170 @@
+{
+  "fixture_id": "invalid-and-boundary-v1",
+  "description": "Invalid schema inputs, unsupported exercise styles, and numerical boundary fixtures (near-expiry, expired, low-vol, extreme moneyness, stale surface, duplicate ticks).",
+  "valuation_time_utc": "2026-06-01T14:30:00Z",
+  "invalid_inputs": [
+    {
+      "case_id": "negative_spot_tick",
+      "kind": "spot_tick",
+      "expected_error": "ValidationError",
+      "payload": {
+        "tick_id": "BAD-TICK-1",
+        "underlying": "ACME",
+        "spot": -10.0,
+        "sequence_no": 2,
+        "event_time_utc": "2026-06-01T14:30:00Z",
+        "received_time_utc": "2026-06-01T14:30:00Z",
+        "source": "SYNTHETIC_FEED"
+      }
+    },
+    {
+      "case_id": "zero_strike_position",
+      "kind": "position",
+      "expected_error": "ValidationError",
+      "payload": {
+        "position_id": "BAD-POS-1",
+        "account_id": "DESK-TEST",
+        "quantity": 10.0,
+        "version": 1,
+        "updated_at_utc": "2026-06-01T14:00:00Z",
+        "instrument": {
+          "instrument_id": "BAD-INST-1",
+          "underlying": "ACME",
+          "option_type": "CALL",
+          "strike": 0.0,
+          "expiry_utc": "2026-12-01T14:30:00Z",
+          "currency": "USD",
+          "contract_multiplier": 100.0,
+          "exercise_style": "EUROPEAN",
+          "day_count": "ACT_365F"
+        }
+      }
+    },
+    {
+      "case_id": "negative_multiplier_position",
+      "kind": "position",
+      "expected_error": "ValidationError",
+      "payload": {
+        "position_id": "BAD-POS-2",
+        "account_id": "DESK-TEST",
+        "quantity": 10.0,
+        "version": 1,
+        "updated_at_utc": "2026-06-01T14:00:00Z",
+        "instrument": {
+          "instrument_id": "BAD-INST-2",
+          "underlying": "ACME",
+          "option_type": "PUT",
+          "strike": 100.0,
+          "expiry_utc": "2026-12-01T14:30:00Z",
+          "currency": "USD",
+          "contract_multiplier": -50.0,
+          "exercise_style": "EUROPEAN",
+          "day_count": "ACT_365F"
+        }
+      }
+    },
+    {
+      "case_id": "american_exercise_unsupported_analytic",
+      "kind": "position",
+      "expected_error": "UnsupportedInstrumentError",
+      "payload": {
+        "position_id": "UNSUP-POS-AMER",
+        "account_id": "DESK-TEST",
+        "quantity": 5.0,
+        "version": 1,
+        "updated_at_utc": "2026-06-01T14:00:00Z",
+        "instrument": {
+          "instrument_id": "ACME-20261201-C-100-AMER",
+          "underlying": "ACME",
+          "option_type": "CALL",
+          "strike": 100.0,
+          "expiry_utc": "2026-12-01T14:30:00Z",
+          "currency": "USD",
+          "contract_multiplier": 100.0,
+          "exercise_style": "AMERICAN",
+          "day_count": "ACT_365F"
+        }
+      }
+    }
+  ],
+  "boundary_positions": [
+    {
+      "case_id": "near_expiry_6_hours",
+      "expected_flags": ["NEAR_EXPIRY"],
+      "position": {
+        "position_id": "BND-NEAR-EXP",
+        "account_id": "DESK-TEST",
+        "quantity": 10.0,
+        "version": 1,
+        "updated_at_utc": "2026-06-01T14:00:00Z",
+        "instrument": {
+          "instrument_id": "ACME-20260601-C-100-6H",
+          "underlying": "ACME",
+          "option_type": "CALL",
+          "strike": 100.0,
+          "expiry_utc": "2026-06-01T20:30:00Z",
+          "currency": "USD",
+          "contract_multiplier": 100.0,
+          "exercise_style": "EUROPEAN",
+          "day_count": "ACT_365F"
+        }
+      }
+    },
+    {
+      "case_id": "expired_itm_call",
+      "expected_flags": ["NEAR_EXPIRY"],
+      "position": {
+        "position_id": "BND-EXPIRED",
+        "account_id": "DESK-TEST",
+        "quantity": 5.0,
+        "version": 1,
+        "updated_at_utc": "2026-06-01T14:00:00Z",
+        "instrument": {
+          "instrument_id": "ACME-20260601-C-90-EXP",
+          "underlying": "ACME",
+          "option_type": "CALL",
+          "strike": 90.0,
+          "expiry_utc": "2026-06-01T14:00:00Z",
+          "currency": "USD",
+          "contract_multiplier": 100.0,
+          "exercise_style": "EUROPEAN",
+          "day_count": "ACT_365F"
+        }
+      }
+    },
+    {
+      "case_id": "extreme_otm_call",
+      "expected_flags": ["EXTREME_MONEYNESS"],
+      "position": {
+        "position_id": "BND-DEEP-OTM",
+        "account_id": "DESK-TEST",
+        "quantity": 100.0,
+        "version": 1,
+        "updated_at_utc": "2026-06-01T14:00:00Z",
+        "instrument": {
+          "instrument_id": "ACME-20270601-C-300",
+          "underlying": "ACME",
+          "option_type": "CALL",
+          "strike": 300.0,
+          "expiry_utc": "2027-06-01T14:30:00Z",
+          "currency": "USD",
+          "contract_multiplier": 100.0,
+          "exercise_style": "EUROPEAN",
+          "day_count": "ACT_365F"
+        }
+      }
+    }
+  ],
+  "stale_vol_surface": {
+    "vol_version": "VOL-ACME-STALE-000",
+    "underlying": "ACME",
+    "as_of_utc": "2026-06-01T14:25:00Z",
+    "ttl_seconds": 60.0,
+    "expiries_years": [0.25, 1.0],
+    "strikes": [90.0, 110.0],
+    "vols": [
+      [0.25, 0.25],
+      [0.25, 0.25]
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "fixture_version": "1.0.0",
+  "provenance": "Independently derived closed-form analytical reference oracles (hand-calculated formulas).",
+  "oracles": {
+    "deposit_3m_act360": {
+      "formula": "DF = 1 / (1 + 0.045 * 92 / 360) = 1 / 1.0115",
+      "valuation_date": "2026-03-16",
+      "deposit": {
+        "instrument_id": "ORACLE_DEP_3M",
+        "currency": "USD",
+        "start_date": "2026-03-16",
+        "maturity_date": "2026-06-16",
+        "rate": 0.045,
+        "day_count": "ACT/360",
+        "business_day_convention": "UNADJUSTED",
+        "calendar_name": "NONE"
+      },
+      "expected_alpha": 0.25555555555555554,
+      "expected_df": 0.9886307464162135,
+      "tolerance": 1e-12
+    },
+    "zero_coupon_5y_semiannual_ytm": {
+      "formula": "P = 100 / (1 + 0.05/2)^(2*5), MacDur = 5.0, ModDur = 5.0/1.025, Conv = 5*5.5/1.025^2",
+      "valuation_date": "2026-03-16",
+      "ytm": 0.05,
+      "bond": {
+        "bond_id": "ORACLE_ZERO_5Y",
+        "currency": "USD",
+        "notional": 100.0,
+        "coupon_rate": 0.0,
+        "frequency": 0,
+        "issue_date": "2026-03-16",
+        "maturity_date": "2031-03-16",
+        "day_count": "ACT/ACT_ICMA",
+        "business_day_convention": "UNADJUSTED",
+        "calendar_name": "NONE",
+        "yield_compounding": "SEMI_ANNUAL"
+      },
+      "expected_dirty_price": 78.11984017257274,
+      "expected_clean_price": 78.11984017257274,
+      "expected_accrued_interest": 0.0,
+      "expected_macaulay_duration": 5.0,
+      "expected_modified_duration": 4.878048780487805,
+      "expected_convexity": 26.174895895300417,
+      "expected_analytic_dv01": 0.03810723910857207,
+      "tolerance": 1e-10
+    },
+    "par_bond_2y_semiannual": {
+      "formula": "P = 100.0, MacDur = ((1 + y/2)/y)*(1 - (1 + y/2)^(-4)), ModDur = MacDur / (1 + y/2)",
+      "valuation_date": "2026-03-16",
+      "ytm": 0.05,
+      "bond": {
+        "bond_id": "ORACLE_PAR_2Y",
+        "currency": "USD",
+        "notional": 100.0,
+        "coupon_rate": 0.05,
+        "frequency": 2,
+        "issue_date": "2026-03-16",
+        "maturity_date": "2028-03-16",
+        "day_count": "ACT/ACT_ICMA",
+        "business_day_convention": "UNADJUSTED",
+        "calendar_name": "NONE",
+        "yield_compounding": "SEMI_ANNUAL"
+      },
+      "expected_dirty_price": 100.0,
+      "expected_clean_price": 100.0,
+      "expected_accrued_interest": 0.0,
+      "expected_total_coupons": 10.0,
+      "expected_total_cash_flows": 110.0,
+      "expected_macaulay_duration": 1.9280117816050184,
+      "expected_modified_duration": 1.8809871040048962,
+      "expected_analytic_dv01": 0.018809871040048963,
+      "tolerance": 1e-10
+    },
+    "mid_period_accrued_30360_and_icma": {
+      "formula": "30/360_US: 1000 * 0.06 * 90/360 = 15.0; ACT/ACT_ICMA: 1000 * 0.06 * 90 / (2 * 181)",
+      "valuation_date": "2026-04-15",
+      "expected_accrued_30360": 15.0,
+      "expected_accrued_icma": 14.917127071823204,
+      "tolerance": 1e-12
+    }
+  }
+}

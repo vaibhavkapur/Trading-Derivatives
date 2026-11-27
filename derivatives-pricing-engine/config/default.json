@@ -1,0 +1,43 @@
+{
+  "config_version": "1.0.0",
+  "engine": {
+    "default_day_count": "ACT/365F",
+    "default_calendar": "NONE_365",
+    "default_rate_compounding": "continuous",
+    "log_level": "INFO"
+  },
+  "methods": {
+    "black_scholes": {},
+    "binomial": {
+      "steps": 400
+    },
+    "monte_carlo": {
+      "paths": 100000,
+      "seed": 42,
+      "antithetic": true,
+      "confidence_level": 0.95
+    },
+    "pde_fd": {
+      "spot_steps": 400,
+      "time_steps": 400,
+      "scheme": "crank_nicolson",
+      "s_max_multiplier": 4.0,
+      "rannacher_steps": 4,
+      "psor_omega": 1.2,
+      "psor_tol": 1e-10,
+      "psor_max_iter": 10000
+    }
+  },
+  "benchmarks": {
+    "binomial_resolutions": [50, 100, 200, 400, 800],
+    "pde_resolutions": [
+      {"spot_steps": 100, "time_steps": 100},
+      {"spot_steps": 200, "time_steps": 200},
+      {"spot_steps": 400, "time_steps": 400}
+    ],
+    "mc_paths_sweep": [10000, 50000, 200000],
+    "mc_coverage_trials": 200,
+    "mc_coverage_paths": 10000,
+    "mc_coverage_seed_base": 10000
+  }
+}

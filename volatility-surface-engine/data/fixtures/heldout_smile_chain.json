@@ -1,0 +1,1062 @@
+{
+  "schema_version": "1.0.0",
+  "provenance": "Synthetic 4-expiry, 17-strike smile split into 13 training strikes (with 8 bps IV noise, seed=123) and 4 held-out interior strikes per expiry.",
+  "ground_truth_slices": [
+    {
+      "days": 30,
+      "svi": {
+        "a": 0.002,
+        "b": 0.022,
+        "rho": -0.4,
+        "m": 0.01,
+        "sigma": 0.14
+      }
+    },
+    {
+      "days": 90,
+      "svi": {
+        "a": 0.0072,
+        "b": 0.052,
+        "rho": -0.38,
+        "m": 0.01,
+        "sigma": 0.18
+      }
+    },
+    {
+      "days": 180,
+      "svi": {
+        "a": 0.0165,
+        "b": 0.092,
+        "rho": -0.35,
+        "m": 0.01,
+        "sigma": 0.22
+      }
+    },
+    {
+      "days": 365,
+      "svi": {
+        "a": 0.037,
+        "b": 0.155,
+        "rho": -0.32,
+        "m": 0.01,
+        "sigma": 0.28
+      }
+    }
+  ],
+  "train_snapshot": {
+    "schema_version": "1.0.0",
+    "snapshot_id": "heldout-train-synth-eqx-20260115",
+    "underlying": "SYNTH-EQX",
+    "valuation_timestamp": "2026-01-15T16:00:00Z",
+    "spot": 100.0,
+    "conventions": {
+      "currency": "USD",
+      "day_count": "ACT/365F",
+      "exercise_style": "european",
+      "price_unit": "currency_per_unit",
+      "vol_unit": "annualized_decimal",
+      "time_unit": "year_fraction"
+    },
+    "expiries": [
+      {
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "time_to_expiry_years": 0.0821917808,
+        "forward": 100.24687959,
+        "discount_factor": 0.9963082014
+      },
+      {
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "time_to_expiry_years": 0.2465753425,
+        "forward": 100.74246876,
+        "discount_factor": 0.9889654419
+      },
+      {
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "time_to_expiry_years": 0.4931506849,
+        "forward": 101.49045012,
+        "discount_factor": 0.9780526453
+      },
+      {
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "time_to_expiry_years": 1.0,
+        "forward": 103.0454534,
+        "discount_factor": 0.9559974818
+      }
+    ],
+    "quotes": [
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0001",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 78.857,
+        "option_type": "put",
+        "bid": 0.028691,
+        "ask": 0.029009,
+        "volume": 352,
+        "open_interest": 2269
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0002",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 81.2585,
+        "option_type": "put",
+        "bid": 0.05125,
+        "ask": 0.051786,
+        "volume": 381,
+        "open_interest": 2418
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0003",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 86.2833,
+        "option_type": "put",
+        "bid": 0.166425,
+        "ask": 0.167954,
+        "volume": 434,
+        "open_interest": 2684
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0004",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 88.911,
+        "option_type": "put",
+        "bid": 0.294816,
+        "ask": 0.297338,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0005",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 94.409,
+        "option_type": "put",
+        "bid": 0.956766,
+        "ask": 0.963737,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0006",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 94.409,
+        "option_type": "call",
+        "bid": 6.75198,
+        "ask": 6.801178,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0007",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 97.2841,
+        "option_type": "put",
+        "bid": 1.68219,
+        "ask": 1.69338,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0008",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 97.2841,
+        "option_type": "call",
+        "bid": 4.624246,
+        "ask": 4.655007,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0009",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 100.2469,
+        "option_type": "put",
+        "bid": 2.851587,
+        "ask": 2.868748,
+        "volume": 499,
+        "open_interest": 2999
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0010",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 100.2469,
+        "option_type": "call",
+        "bid": 2.851567,
+        "ask": 2.868728,
+        "volume": 499,
+        "open_interest": 2999
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0011",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 103.2999,
+        "option_type": "put",
+        "bid": 4.606432,
+        "ask": 4.637074,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0012",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 103.2999,
+        "option_type": "call",
+        "bid": 1.574766,
+        "ask": 1.585241,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0013",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 106.4458,
+        "option_type": "put",
+        "bid": 6.91653,
+        "ask": 6.966927,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0014",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 106.4458,
+        "option_type": "call",
+        "bid": 0.762914,
+        "ask": 0.768473,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0015",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 113.028,
+        "option_type": "put",
+        "bid": 12.812859,
+        "ask": 12.922492,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0016",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 113.028,
+        "option_type": "call",
+        "bid": 0.13317,
+        "ask": 0.13431,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0017",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 116.4703,
+        "option_type": "call",
+        "bid": 0.050311,
+        "ask": 0.050774,
+        "volume": 434,
+        "open_interest": 2684
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0018",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 123.6724,
+        "option_type": "call",
+        "bid": 0.005848,
+        "ask": 0.006048,
+        "volume": 381,
+        "open_interest": 2418
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0019",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 127.4388,
+        "option_type": "call",
+        "bid": 0.002107,
+        "ask": 0.002307,
+        "volume": 352,
+        "open_interest": 2269
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0020",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 79.2468,
+        "option_type": "put",
+        "bid": 0.501116,
+        "ask": 0.506679,
+        "volume": 352,
+        "open_interest": 2269
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0021",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 81.6603,
+        "option_type": "put",
+        "bid": 0.671949,
+        "ask": 0.67898,
+        "volume": 381,
+        "open_interest": 2418
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0022",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 86.7098,
+        "option_type": "put",
+        "bid": 1.177501,
+        "ask": 1.188324,
+        "volume": 434,
+        "open_interest": 2684
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0023",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 89.3506,
+        "option_type": "put",
+        "bid": 1.590858,
+        "ask": 1.60447,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0024",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 89.3506,
+        "option_type": "call",
+        "bid": 12.809029,
+        "ask": 12.918628,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0025",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 94.8757,
+        "option_type": "put",
+        "bid": 2.841558,
+        "ask": 2.862263,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0026",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 94.8757,
+        "option_type": "call",
+        "bid": 8.622528,
+        "ask": 8.685356,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0027",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 97.7651,
+        "option_type": "put",
+        "bid": 3.830493,
+        "ask": 3.855973,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0028",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 97.7651,
+        "option_type": "call",
+        "bid": 6.765246,
+        "ask": 6.810249,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0029",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 100.7425,
+        "option_type": "put",
+        "bid": 5.133798,
+        "ask": 5.164693,
+        "volume": 499,
+        "open_interest": 2999
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0030",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 100.7425,
+        "option_type": "call",
+        "bid": 5.133767,
+        "ask": 5.164662,
+        "volume": 499,
+        "open_interest": 2999
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0031",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 103.8105,
+        "option_type": "put",
+        "bid": 6.738021,
+        "ask": 6.782842,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0032",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 103.8105,
+        "option_type": "call",
+        "bid": 3.713902,
+        "ask": 3.738607,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0033",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 106.972,
+        "option_type": "put",
+        "bid": 8.800377,
+        "ask": 8.8645,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0034",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 106.972,
+        "option_type": "call",
+        "bid": 2.661949,
+        "ask": 2.681345,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0035",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 113.5868,
+        "option_type": "put",
+        "bid": 13.885889,
+        "ask": 14.004703,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0036",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 113.5868,
+        "option_type": "call",
+        "bid": 1.237402,
+        "ask": 1.24799,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0037",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 117.046,
+        "option_type": "call",
+        "bid": 0.813725,
+        "ask": 0.821205,
+        "volume": 434,
+        "open_interest": 2684
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0038",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 124.2838,
+        "option_type": "call",
+        "bid": 0.339562,
+        "ask": 0.343115,
+        "volume": 381,
+        "open_interest": 2418
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0039",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 128.0688,
+        "option_type": "call",
+        "bid": 0.2139,
+        "ask": 0.216274,
+        "volume": 352,
+        "open_interest": 2269
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0040",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 79.8352,
+        "option_type": "put",
+        "bid": 1.651826,
+        "ask": 1.670163,
+        "volume": 352,
+        "open_interest": 2269
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0041",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 82.2666,
+        "option_type": "put",
+        "bid": 1.975809,
+        "ask": 1.996485,
+        "volume": 381,
+        "open_interest": 2418
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0042",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 87.3536,
+        "option_type": "put",
+        "bid": 2.854231,
+        "ask": 2.880468,
+        "volume": 434,
+        "open_interest": 2684
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0043",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 90.014,
+        "option_type": "put",
+        "bid": 3.450159,
+        "ask": 3.47968,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0044",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 90.014,
+        "option_type": "call",
+        "bid": 14.626915,
+        "ask": 14.752069,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0045",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 95.5801,
+        "option_type": "put",
+        "bid": 5.10135,
+        "ask": 5.138521,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0046",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 95.5801,
+        "option_type": "call",
+        "bid": 10.861,
+        "ask": 10.940138,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0047",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 98.491,
+        "option_type": "put",
+        "bid": 6.204218,
+        "ask": 6.245489,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0048",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 98.491,
+        "option_type": "call",
+        "bid": 9.128113,
+        "ask": 9.188834,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0049",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 101.4905,
+        "option_type": "put",
+        "bid": 7.618269,
+        "ask": 7.664116,
+        "volume": 499,
+        "open_interest": 2999
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0050",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 101.4905,
+        "option_type": "call",
+        "bid": 7.61822,
+        "ask": 7.664067,
+        "volume": 499,
+        "open_interest": 2999
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0051",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 104.5813,
+        "option_type": "put",
+        "bid": 9.162787,
+        "ask": 9.223738,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0052",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 104.5813,
+        "option_type": "call",
+        "bid": 6.149794,
+        "ask": 6.190703,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0053",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 107.7663,
+        "option_type": "put",
+        "bid": 11.10102,
+        "ask": 11.181907,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0054",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 107.7663,
+        "option_type": "call",
+        "bid": 4.98519,
+        "ask": 5.021514,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0055",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 114.4302,
+        "option_type": "call",
+        "bid": 3.143144,
+        "ask": 3.170038,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0056",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 117.9151,
+        "option_type": "call",
+        "bid": 2.47678,
+        "ask": 2.499547,
+        "volume": 434,
+        "open_interest": 2684
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0057",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 125.2065,
+        "option_type": "call",
+        "bid": 1.516835,
+        "ask": 1.532708,
+        "volume": 381,
+        "open_interest": 2418
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0058",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 129.0196,
+        "option_type": "call",
+        "bid": 1.169385,
+        "ask": 1.182367,
+        "volume": 352,
+        "open_interest": 2269
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0059",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 81.0584,
+        "option_type": "put",
+        "bid": 3.822011,
+        "ask": 3.864441,
+        "volume": 352,
+        "open_interest": 2269
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0060",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 83.527,
+        "option_type": "put",
+        "bid": 4.357999,
+        "ask": 4.403604,
+        "volume": 381,
+        "open_interest": 2418
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0061",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 88.692,
+        "option_type": "put",
+        "bid": 5.592462,
+        "ask": 5.643869,
+        "volume": 434,
+        "open_interest": 2684
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0062",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 91.3931,
+        "option_type": "put",
+        "bid": 6.463053,
+        "ask": 6.518354,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0063",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 97.0446,
+        "option_type": "put",
+        "bid": 8.426601,
+        "ask": 8.488001,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0064",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 97.0446,
+        "option_type": "call",
+        "bid": 14.142577,
+        "ask": 14.245626,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0065",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 100.0,
+        "option_type": "put",
+        "bid": 9.656339,
+        "ask": 9.720574,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0066",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 100.0,
+        "option_type": "call",
+        "bid": 12.558133,
+        "ask": 12.641671,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0067",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 103.0455,
+        "option_type": "put",
+        "bid": 11.088968,
+        "ask": 11.155702,
+        "volume": 499,
+        "open_interest": 2999
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0068",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 103.0455,
+        "option_type": "call",
+        "bid": 11.088924,
+        "ask": 11.155658,
+        "volume": 499,
+        "open_interest": 2999
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0069",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 106.1837,
+        "option_type": "put",
+        "bid": 12.732666,
+        "ask": 12.817365,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0070",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 106.1837,
+        "option_type": "call",
+        "bid": 9.742456,
+        "ask": 9.807263,
+        "volume": 497,
+        "open_interest": 2986
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0071",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 109.4174,
+        "option_type": "put",
+        "bid": 14.55906,
+        "ask": 14.665144,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0072",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 109.4174,
+        "option_type": "call",
+        "bid": 8.489608,
+        "ask": 8.551467,
+        "volume": 488,
+        "open_interest": 2946
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0073",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 116.1834,
+        "option_type": "put",
+        "bid": 18.966957,
+        "ask": 19.129247,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0074",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 116.1834,
+        "option_type": "call",
+        "bid": 6.460618,
+        "ask": 6.515898,
+        "volume": 456,
+        "open_interest": 2793
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0075",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 119.7217,
+        "option_type": "call",
+        "bid": 5.496982,
+        "ask": 5.547511,
+        "volume": 434,
+        "open_interest": 2684
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0076",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 127.1249,
+        "option_type": "call",
+        "bid": 4.09234,
+        "ask": 4.135164,
+        "volume": 381,
+        "open_interest": 2418
+      },
+      {
+        "quote_id": "heldout-train-synth-eqx-20260115-q0077",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 130.9964,
+        "option_type": "call",
+        "bid": 3.519279,
+        "ask": 3.558348,
+        "volume": 352,
+        "open_interest": 2269
+      }
+    ]
+  },
+  "heldout_snapshot": {
+    "schema_version": "1.0.0",
+    "snapshot_id": "heldout-test-synth-eqx-20260115",
+    "underlying": "SYNTH-EQX",
+    "valuation_timestamp": "2026-01-15T16:00:00Z",
+    "spot": 100.0,
+    "conventions": {
+      "currency": "USD",
+      "day_count": "ACT/365F",
+      "exercise_style": "european",
+      "price_unit": "currency_per_unit",
+      "vol_unit": "annualized_decimal",
+      "time_unit": "year_fraction"
+    },
+    "expiries": [
+      {
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "time_to_expiry_years": 0.0821917808,
+        "forward": 100.24687959,
+        "discount_factor": 0.9963082014
+      },
+      {
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "time_to_expiry_years": 0.2465753425,
+        "forward": 100.74246876,
+        "discount_factor": 0.9889654419
+      },
+      {
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "time_to_expiry_years": 0.4931506849,
+        "forward": 101.49045012,
+        "discount_factor": 0.9780526453
+      },
+      {
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "time_to_expiry_years": 1.0,
+        "forward": 103.0454534,
+        "discount_factor": 0.9559974818
+      }
+    ],
+    "quotes": [
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0001",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 83.7332,
+        "option_type": "put",
+        "bid": 0.091587,
+        "ask": 0.092487,
+        "volume": 408,
+        "open_interest": 2558
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0002",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 91.6187,
+        "option_type": "put",
+        "bid": 0.529961,
+        "ask": 0.534159,
+        "volume": 474,
+        "open_interest": 2881
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0003",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 109.6876,
+        "option_type": "call",
+        "bid": 0.334367,
+        "ask": 0.337016,
+        "volume": 474,
+        "open_interest": 2881
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0004",
+        "expiry_timestamp": "2026-02-14T16:00:00Z",
+        "strike": 120.0173,
+        "option_type": "call",
+        "bid": 0.017946,
+        "ask": 0.018146,
+        "volume": 408,
+        "open_interest": 2558
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0005",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 84.1472,
+        "option_type": "put",
+        "bid": 0.882861,
+        "ask": 0.891538,
+        "volume": 408,
+        "open_interest": 2558
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0006",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 92.0717,
+        "option_type": "put",
+        "bid": 2.116431,
+        "ask": 2.133196,
+        "volume": 474,
+        "open_interest": 2881
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0007",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 110.2298,
+        "option_type": "call",
+        "bid": 1.820163,
+        "ask": 1.834581,
+        "volume": 474,
+        "open_interest": 2881
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0008",
+        "expiry_timestamp": "2026-04-15T16:00:00Z",
+        "strike": 120.6106,
+        "option_type": "call",
+        "bid": 0.522361,
+        "ask": 0.527495,
+        "volume": 408,
+        "open_interest": 2558
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0009",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 84.7719,
+        "option_type": "put",
+        "bid": 2.359413,
+        "ask": 2.382601,
+        "volume": 408,
+        "open_interest": 2558
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0010",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 92.7553,
+        "option_type": "put",
+        "bid": 4.193156,
+        "ask": 4.226371,
+        "volume": 474,
+        "open_interest": 2881
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0011",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 111.0482,
+        "option_type": "call",
+        "bid": 3.977563,
+        "ask": 4.009071,
+        "volume": 474,
+        "open_interest": 2881
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0012",
+        "expiry_timestamp": "2026-07-14T16:00:00Z",
+        "strike": 121.5061,
+        "option_type": "call",
+        "bid": 1.920449,
+        "ask": 1.939324,
+        "volume": 408,
+        "open_interest": 2558
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0013",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 86.0708,
+        "option_type": "put",
+        "bid": 4.935752,
+        "ask": 4.98426,
+        "volume": 408,
+        "open_interest": 2558
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0014",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 94.1765,
+        "option_type": "put",
+        "bid": 7.353623,
+        "ask": 7.411872,
+        "volume": 474,
+        "open_interest": 2881
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0015",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 112.7497,
+        "option_type": "call",
+        "bid": 7.384755,
+        "ask": 7.443251,
+        "volume": 474,
+        "open_interest": 2881
+      },
+      {
+        "quote_id": "heldout-test-synth-eqx-20260115-q0016",
+        "expiry_timestamp": "2027-01-15T16:00:00Z",
+        "strike": 123.3678,
+        "option_type": "call",
+        "bid": 4.75431,
+        "ask": 4.801035,
+        "volume": 408,
+        "open_interest": 2558
+      }
+    ]
+  }
+}

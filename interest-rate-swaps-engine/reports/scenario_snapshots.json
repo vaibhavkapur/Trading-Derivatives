@@ -1,0 +1,229 @@
+{
+  "base_npv": 177599.34239872312,
+  "base_valuation_id": "val_115da881c42aab8e",
+  "deterministic_scenarios": [
+    {
+      "description": "Parallel +100 bps shock to both discount and forward curves",
+      "fixed_leg_pv": 1840744.3223900779,
+      "floating_leg_pv": 2432286.882034258,
+      "metadata": {
+        "spec": {
+          "description": "Parallel +100 bps shock to both discount and forward curves",
+          "discount_shift_bps": 100.0,
+          "forward_shift_bps": 100.0,
+          "kind": "PARALLEL",
+          "scenario_id": "parallel_up_100bp"
+        }
+      },
+      "npv": 591542.5596441801,
+      "par_rate": 0.05615782226193935,
+      "par_rate_change_bps": 96.64508087168711,
+      "pnl": 413943.217245457,
+      "scenario_id": "parallel_up_100bp"
+    },
+    {
+      "description": "Parallel -100 bps shock to both discount and forward curves",
+      "fixed_leg_pv": 1941286.8872212372,
+      "floating_leg_pv": 1683253.1732534037,
+      "metadata": {
+        "spec": {
+          "description": "Parallel -100 bps shock to both discount and forward curves",
+          "discount_shift_bps": -100.0,
+          "forward_shift_bps": -100.0,
+          "kind": "PARALLEL",
+          "scenario_id": "parallel_down_100bp"
+        }
+      },
+      "npv": -258033.71396783344,
+      "par_rate": 0.036850946830259454,
+      "par_rate_change_bps": -96.42367344511183,
+      "pnl": -435633.05636655656,
+      "scenario_id": "parallel_down_100bp"
+    },
+    {
+      "description": "Short end -25 bps, long end +75 bps (linear pivot at 2Y/10Y)",
+      "fixed_leg_pv": 1887210.3329776146,
+      "floating_leg_pv": 2163398.0716478187,
+      "metadata": {
+        "spec": {
+          "apply_to": "BOTH",
+          "description": "Short end -25 bps, long end +75 bps (linear pivot at 2Y/10Y)",
+          "kind": "TWIST",
+          "long_shift_bps": 75.0,
+          "long_tenor": 10.0,
+          "scenario_id": "bear_steepener",
+          "short_shift_bps": -25.0,
+          "short_tenor": 0.5
+        }
+      },
+      "npv": 276187.73867020407,
+      "par_rate": 0.048719751284936885,
+      "par_rate_change_bps": 22.26437110166249,
+      "pnl": 98588.39627148095,
+      "scenario_id": "bear_steepener"
+    },
+    {
+      "description": "Short end +25 bps, long end -75 bps",
+      "fixed_leg_pv": 1893134.0986001233,
+      "floating_leg_pv": 1971100.1237166014,
+      "metadata": {
+        "spec": {
+          "apply_to": "BOTH",
+          "description": "Short end +25 bps, long end -75 bps",
+          "kind": "TWIST",
+          "long_shift_bps": -75.0,
+          "long_tenor": 10.0,
+          "scenario_id": "bull_flattener",
+          "short_shift_bps": 25.0,
+          "short_tenor": 0.5
+        }
+      },
+      "npv": 77966.0251164781,
+      "par_rate": 0.04425030182484196,
+      "par_rate_change_bps": -22.43012349928679,
+      "pnl": -99633.31728224503,
+      "scenario_id": "bull_flattener"
+    },
+    {
+      "description": "Wings -25 bps, 5Y belly +50 bps",
+      "fixed_leg_pv": 1876951.455043754,
+      "floating_leg_pv": 2270411.7040112377,
+      "metadata": {
+        "spec": {
+          "apply_to": "BOTH",
+          "belly_shift_bps": 50.0,
+          "belly_tenor": 5.0,
+          "description": "Wings -25 bps, 5Y belly +50 bps",
+          "kind": "BUTTERFLY",
+          "scenario_id": "butterfly_belly_up",
+          "wing_shift_bps": -25.0
+        }
+      },
+      "npv": 393460.24896748364,
+      "par_rate": 0.051409159869948935,
+      "par_rate_change_bps": 49.15845695178299,
+      "pnl": 215860.90656876052,
+      "scenario_id": "butterfly_belly_up"
+    },
+    {
+      "description": "Forward-discount basis widens +25 bps (forward curve up, discount unchanged)",
+      "fixed_leg_pv": 1890152.3200035444,
+      "floating_leg_pv": 2174698.8632920557,
+      "metadata": {
+        "spec": {
+          "description": "Forward-discount basis widens +25 bps (forward curve up, discount unchanged)",
+          "discount_shift_bps": 0.0,
+          "forward_shift_bps": 25.0,
+          "kind": "PARALLEL",
+          "scenario_id": "basis_widening_25bp"
+        }
+      },
+      "npv": 284546.5432885112,
+      "par_rate": 0.048898017747976565,
+      "par_rate_change_bps": 24.047035732059282,
+      "pnl": 106947.2008897881,
+      "scenario_id": "basis_widening_25bp"
+    },
+    {
+      "description": "Discount curve up +50 bps, forward curve unchanged",
+      "fixed_leg_pv": 1865236.6710395822,
+      "floating_leg_pv": 2041322.775234406,
+      "metadata": {
+        "spec": {
+          "description": "Discount curve up +50 bps, forward curve unchanged",
+          "discount_shift_bps": 50.0,
+          "forward_shift_bps": 0.0,
+          "kind": "PARALLEL",
+          "scenario_id": "discount_only_up_50bp"
+        }
+      },
+      "npv": 176086.10419482389,
+      "par_rate": 0.04651217686981729,
+      "par_rate_change_bps": 0.1886269504665361,
+      "pnl": -1513.2382038992364,
+      "scenario_id": "discount_only_up_50bp"
+    }
+  ],
+  "engine_version": "0.1.0",
+  "runtime": {
+    "engine_version": "0.1.0",
+    "generated_at_utc": "2026-11-27T12:43:27.757354+00:00",
+    "machine": "arm64",
+    "packages": {
+      "QuantLib": "not_installed",
+      "fastapi": "0.165.0",
+      "httpx": "0.28.1",
+      "pydantic": "2.14.4",
+      "pytest": "8.4.2",
+      "uvicorn": "0.54.0"
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.12.15",
+    "schema_version": "1.0.0"
+  },
+  "schema_version": "1.0.0",
+  "stochastic_seed_reproducibility_exact": true,
+  "stochastic_summary": {
+    "base_npv": 177599.34239872312,
+    "expected_shortfall_95": 588475.1221099298,
+    "max_pnl": 896714.4080375135,
+    "mean_npv": 185653.29845542856,
+    "mean_pnl": 8053.956056705443,
+    "min_pnl": -787206.3169433202,
+    "num_paths": 250,
+    "p05_pnl": -451814.02218079136,
+    "p50_pnl": -4820.213338889065,
+    "p95_pnl": 461994.5144433138,
+    "sample_paths": [
+      {
+        "basis_bps": 5.6159,
+        "curvature_bps": -1.6697,
+        "level_bps": -9.3659,
+        "npv": 150880.982706,
+        "path": 0.0,
+        "pnl": -26718.359693,
+        "slope_bps": -5.1871
+      },
+      {
+        "basis_bps": -2.1387,
+        "curvature_bps": 4.9848,
+        "level_bps": -8.2932,
+        "npv": 87767.453679,
+        "path": 1.0,
+        "pnl": -89831.888719,
+        "slope_bps": -44.9206
+      },
+      {
+        "basis_bps": 9.3085,
+        "curvature_bps": 3.4845,
+        "level_bps": -14.1023,
+        "npv": 170774.887275,
+        "path": 2.0,
+        "pnl": -6824.455123,
+        "slope_bps": 3.4765
+      },
+      {
+        "basis_bps": -8.1173,
+        "curvature_bps": -11.0748,
+        "level_bps": 42.6814,
+        "npv": 299246.578778,
+        "path": 3.0,
+        "pnl": 121647.23638,
+        "slope_bps": 3.3152
+      },
+      {
+        "basis_bps": -0.8506,
+        "curvature_bps": 0.6249,
+        "level_bps": 16.0122,
+        "npv": 293331.010599,
+        "path": 4.0,
+        "pnl": 115731.6682,
+        "slope_bps": 39.3324
+      }
+    ],
+    "seed": 42,
+    "std_npv": 287240.85313720145,
+    "std_pnl": 287240.85313720145,
+    "var_95": 451814.02218079136
+  }
+}
